@@ -1,0 +1,17 @@
+$prim-color: #64ff00;
+
+.title {
+  color: var(--prim-color);
+
+  &--h1 {
+    color: $prim-color;
+  }
+
+  &--h2 {
+    color: white;
+  }
+}
+
+:export {
+  primColor: $prim-color;
+}
