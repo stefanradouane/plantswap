@@ -1,0 +1,35 @@
+.filetile {
+  --preview-size: 60px;
+  column-gap: 1rem;
+  display: grid;
+  grid-template-areas: "preview name" "preview size";
+  grid-template-columns: var(--preview-size) auto;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--text-color);
+  padding: 1rem;
+
+  &__name {
+    grid-area: name;
+    font-weight: 400;
+    margin-bottom: 0.7rem;
+  }
+
+  &__size {
+    grid-area: size;
+    margin: 0;
+    opacity: 0.6;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 30ch;
+  }
+
+  &__preview {
+    grid-area: preview;
+    width: var(--preview-size);
+    height: var(--preview-size);
+    aspect-ratio: 1/1;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--text-color);
+    object-fit: cover;
+  }
+}

@@ -1,14 +1,17 @@
 $prim-color: #64ff00;
 
 .title {
-  color: var(--prim-color);
+  color: var(--header-color);
 
   &--h1 {
-    color: $prim-color;
   }
 
   &--h2 {
     color: white;
+  }
+
+  &--red {
+    color: red;
   }
 }
 

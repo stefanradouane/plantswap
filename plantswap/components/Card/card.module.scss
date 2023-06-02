@@ -1,4 +1,14 @@
 .card {
+  // &__label {
+
+  // }
+
+  &__description {
+    color: firebrick;
+  }
+}
+
+.card {
   padding: 1rem 1.2rem;
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
@@ -7,6 +17,7 @@
 }
 
 .card span {
+  // color: red;
   display: inline-block;
   transition: transform 200ms;
 }

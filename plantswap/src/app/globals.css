@@ -1,4 +1,11 @@
 :root {
+  --header-color: #07060f;
+  --text-color: #7d7d7d;
+
+  --color-orange: #f36621;
+
+  --shadow: rgba(0, 0, 0, 0.25);
+
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
@@ -44,8 +51,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    /* --background-start-rgb: 0, 0, 0; */
+    /* --background-end-rgb: 0, 0, 0; */
+    /* --background-end-rgb: 0, 0, 0; */
 
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
@@ -94,6 +102,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+  min-height: 100dvh;
 }
 
 a {
