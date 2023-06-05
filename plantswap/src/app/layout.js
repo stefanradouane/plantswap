@@ -1,8 +1,8 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "PlantSwap",
@@ -21,6 +21,11 @@ const customFont = localFont({
       weight: "400",
       style: "normal",
     },
+    // {
+    //   path: "../../public/fonts/custom-font.ext",
+    //   weight: "100-900",
+    //   style: "normal" | "italic",
+    // },
   ],
 });
 
