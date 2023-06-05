@@ -12,7 +12,12 @@ export default function Page() {
       <main className={styles.page}>
         <Title title={"h1"}>Plant Identificeren.</Title>
         <Text>Meer content over planten.</Text>
-        <Cta href="/planten">Bekijk alle planten</Cta>
+        <Cta href="/planten" role="secondary">
+          Bekijk alle planten
+        </Cta>
+        <Cta href="/swap" role="primary">
+          Swap een plant
+        </Cta>
       </main>
     </>
   );

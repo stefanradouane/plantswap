@@ -1,9 +1,9 @@
 import styles from "./cta.module.scss";
 import Link from "next/link";
 
-const Cta = ({ href, children }) => {
+const Cta = ({ href, role, children }) => {
   return (
-    <Link href={href} className={styles.cta}>
+    <Link href={href} className={`${styles.cta} ${styles[`cta--${role}`]}`}>
       {children}
     </Link>
   );

@@ -12,4 +12,14 @@
   &:hover {
     text-decoration: underline;
   }
+
+  &--primary {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+  }
+
+  &--secondary {
+    background-color: var(--color-green);
+    color: var(--color-white);
+  }
 }
