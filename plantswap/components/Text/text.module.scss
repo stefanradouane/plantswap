@@ -3,4 +3,8 @@
   line-height: 1.5;
   font-weight: 400;
   color: var(--text-color);
+
+  &--bold {
+    font-weight: 700;
+  }
 }

@@ -13,6 +13,12 @@ $prim-color: #64ff00;
   &--red {
     color: red;
   }
+
+  &--capitalize {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1.5em;
+  }
 }
 
 :export {
