@@ -10,10 +10,10 @@ export default function Page() {
 	return (
 		<>
 			<Header />
-			<main className={styles.page}>
+			<main className={styles.page__content}>
 				<section className={styles.homepage__content}>
 					<section>
-						<Title title={'h1'} modifier={'capitalize'}>
+						<Title title={'h1'} modifier={'gentle-appear'}>
 							Welkom bij plantswap
 						</Title>
 						<article>

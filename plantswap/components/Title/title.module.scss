@@ -1,26 +1,28 @@
 $prim-color: #64ff00;
 
 .title {
-  color: var(--header-color);
+	color: var(--header-color);
 
-  &--h1 {
-  }
+	&--h1 {
+		text-transform: uppercase;
+		font-weight: bolder;
+		font-size: 1.5em;
+	}
 
-  &--h2 {
-    color: white;
-  }
+	&--h2 {
+		color: white;
+	}
 
-  &--red {
-    color: red;
-  }
+	&--red {
+		color: red;
+	}
 
-  &--capitalize {
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 1.5em;
-  }
+	&--gentle-appear {
+		animation-name: gentle-appear;
+		animation-duration: 2s;
+	}
 }
 
 :export {
-  primColor: $prim-color;
+	primColor: $prim-color;
 }

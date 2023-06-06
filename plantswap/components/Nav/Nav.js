@@ -1,6 +1,6 @@
 'use client';
+import Link from 'next/link';
 import styles from './nav.module.scss';
-import NavItem from './NavItem';
 import { useState } from 'react';
 
 const menu_list = [
@@ -38,7 +38,12 @@ const Nav = () => {
 						}}
 						key={item.text}
 					>
-						<NavItem active={activeIndex === index} {...item} />
+						<Link
+							href={item.href}
+							className={`${styles.nav__item} ${index ? 'active' : ''}`}
+						>
+							{item.text}
+						</Link>
 					</li>
 				))}
 			</ul>
