@@ -3,7 +3,6 @@ import Title from "../Title/Title";
 import styles from "./results.module.scss";
 import Button from "../Button/Button";
 import Link from "next/link";
-import Image from "next/image";
 const Results = ({ data }) => {
   if (!data) return <Title title={"h1"}>Geen groene vrienden gevonden</Title>;
 
