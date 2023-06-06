@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./detailpage.module.scss";
 
 const Detailpage = ({ data }) => {
@@ -7,17 +8,22 @@ const Detailpage = ({ data }) => {
     <main>
       <h1 className={styles.detailpage__title}>{data.data.scientific_name}</h1>
       <section className={styles.detailpage__content}>
-        <img
+        <Image
           src={data.data.image_url}
           className={styles.detailpage__image}
           width={200}
+          height={200}
+          alt={"Image of the flower"}
         />
 
         {data.data.main_species.images.flower?.map((flower, i, arr) => (
-          <img
+          <Image
+            key={i}
             src={flower.image_url}
             className={styles.detailpage__image}
             width={200}
+            height={200}
+            alt={"Image of the flower"}
           />
         ))}
       </section>

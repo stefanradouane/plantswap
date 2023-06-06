@@ -12,7 +12,13 @@ const FileTile = ({ image, onDelete }) => {
     // const objectURL = new URL.createObjectURL(image);
     return (
       <section className={styles.filetile}>
-        <img src={img} className={styles.filetile__preview} />
+        {/* <Image
+          src={img}
+          className={styles.filetile__preview}
+          width={100}
+          height={100}
+          alt={"your uploaded image"}
+        /> */}
         <Title title={"h4"} className={styles.filetile__name}>
           Screenshot_123.png
         </Title>

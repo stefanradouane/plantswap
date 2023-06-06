@@ -3,6 +3,7 @@ import Title from "../Title/Title";
 import styles from "./results.module.scss";
 import Button from "../Button/Button";
 import Link from "next/link";
+import Image from "next/image";
 const Results = ({ data }) => {
   if (!data) return <Title title={"h1"}>Geen groene vrienden gevonden</Title>;
 
@@ -23,10 +24,12 @@ export const Result = ({ result }) => {
       <p className={styles.result__grade}>Score {result.score * 100}</p>
       <h1 className={styles.result__latin}>{result.species.scientificName}</h1>
       <h2 className={styles.result__name}>{result.species.commonNames[0]}</h2>
-      <img
+      <Image
         src={result.images[0].url.m}
         alt="logo plantswap"
         className={styles.result__img}
+        height={200}
+        width={200}
       />
       <Link
         className={styles.result__btn}
