@@ -24,7 +24,8 @@ const Uploader = () => {
   function handleButton(e) {
     e.preventDefault();
     // const img = e.target.form[0].files[0];
-    const apiKey = "2b10sw1HtIxDhyYPRVOGBQA";
+    const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+    console.log(apiKey, 1);
     const baseUrl = "https://my-api.plantnet.org";
     const testImg =
       "https%3A%2F%2Fm.media-amazon.com%2Fimages%2FI%2F61vlqixclKL._AC_SX679_.jpg";

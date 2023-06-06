@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Title from "../../../components/Title/Title.js";
+import Title from "../../../../components/Title/Title.js";
 export default function Home() {
   return (
     <main>

@@ -1,9 +1,13 @@
 import styles from "./cta.module.scss";
 import Link from "next/link";
 
-const Cta = ({ href, role, children }) => {
+const Cta = ({ href, role, locale, children }) => {
+  console.log(locale);
   return (
-    <Link href={href} className={`${styles.cta} ${styles[`cta--${role}`]}`}>
+    <Link
+      href={href}
+      className={`${styles.cta} ${styles[`cta--${role}`]}`}
+      locale={locale.toString()}>
       {children}
     </Link>
   );

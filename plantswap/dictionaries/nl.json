@@ -1,0 +1,19 @@
+{
+  "server-component": {
+    "title": "Plantjes Ruil",
+    "identify": "Identificeer <br/> plant"
+  },
+  "counter": {
+    "increment": "Plus 1",
+    "decrement": "Min 1"
+  },
+  "plant-list": {
+    "title": "Plantjes",
+    "add": "Voeg plantje toe",
+    "remove": "Verwijder plantje",
+    "plant-description": "Plant omschrijving",
+    "plant-image": "Plant foto",
+    "plant-quantity": "Plant aantal",
+    "plant-quantity-unit": "Plant aantal eenheid"
+  }
+}

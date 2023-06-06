@@ -1,0 +1,20 @@
+{
+  "server-component": {
+    "title": "Plant Swap",
+    "identify": "Identificy <br/> plant"
+  },
+  "counter": {
+    "increment": "Increment",
+    "decrement": "Decrement"
+  },
+  "plant-list": {
+    "title": "Plant List",
+    "add-plant": "Add Plant",
+    "plant-name": "Plant Name",
+    "plant-type": "Plant Type",
+    "plant-description": "Plant Description",
+    "plant-image": "Plant Image",
+    "plant-quantity": "Plant Quantity",
+    "plant-quantity-unit": "Plant Quantity Unit"
+  }
+}

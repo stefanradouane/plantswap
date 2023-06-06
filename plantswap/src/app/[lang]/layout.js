@@ -12,12 +12,12 @@ export const metadata = {
 const customFont = localFont({
   src: [
     {
-      path: "../../public/Poppins-Bold.ttf",
+      path: "../../../public/Poppins-Bold.ttf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../../public/Poppins-Regular.ttf",
+      path: "../../../public/Poppins-Regular.ttf",
       weight: "400",
       style: "normal",
     },
@@ -29,9 +29,9 @@ const customFont = localFont({
   ],
 });
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, params }) {
   return (
-    <html lang="nl">
+    <html lang={params.lang}>
       <body className={customFont.className}>{children}</body>
     </html>
   );
