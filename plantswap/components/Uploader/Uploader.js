@@ -9,7 +9,7 @@ import Title from "../Title/Title";
 import styles from "./uploader.module.scss";
 import Results from "../Results/Results";
 
-const Uploader = ({ dummydata }) => {
+const Uploader = ({ locale, dummydata }) => {
   const [image, setImage] = useState(undefined);
   const [data, setData] = useState(dummydata);
   console.log(data);
@@ -21,6 +21,7 @@ const Uploader = ({ dummydata }) => {
 
     const formData = new FormData();
     formData.append("image", image);
+    formData.append("lang", locale);
 
     console.log(formData.get("image"));
     const res = await fetch(API_URL, {

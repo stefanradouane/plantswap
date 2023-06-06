@@ -24,7 +24,7 @@ export default function Home({ params }) {
           Maak een foto of upload deze hieronder. Wij helpen je om de naam en
           behoeftes van je plant te vinden.
         </Text>
-        <Uploader dummydata={dummydata?.data} />
+        <Uploader locale={params.lang} dummydata={dummydata?.data} />
       </main>
     </>
   );
