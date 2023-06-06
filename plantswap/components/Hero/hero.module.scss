@@ -1,0 +1,20 @@
+.hero {
+	position: relative;
+	color: firebrick;
+
+	&__image {
+	}
+
+	&__test {
+		position: absolute;
+		z-index: -1;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -40%);
+		width: 40vw;
+		min-width: 24em;
+		border-radius: 50%;
+		aspect-ratio: 1;
+		background-color: #7AA556;
+	}
+}
