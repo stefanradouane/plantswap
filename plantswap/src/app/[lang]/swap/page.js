@@ -1,16 +1,14 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
-// import Link from "next/link";
-import Title from "../../../../components/Title/Title";
-import Header from "../../../../components/Header/Header";
-import Text from "../../../../components/Text/Text";
-import Uploader from "../../../../components/Uploader/Uploader";
-// import SingleHeader from "../../../components/SingleHeader/SingleHeader";
+import Title from "@/../components/Title/Title";
+import Header from "@/../components/Header/Header";
+import Text from "@/../components/Text/Text";
+import Uploader from "@/../components/Uploader/Uploader";
 
-export default function Home() {
+export default function Home({ params }) {
   return (
     <>
-      <Header />
+      <Header locale={params.lang} />
       <main className={styles.main}>
         <Title title={"h1"}>
           Plant

@@ -10,37 +10,64 @@ import styles from "./uploader.module.scss";
 import Results from "../Results/Results";
 
 const Uploader = () => {
-  const [img, setImg] = useState(undefined);
+  const [image, setImage] = useState(undefined);
   const [data, setData] = useState(undefined);
+
+  const API_URL = "/api/identify";
+
+  const fetchPlant = async () => {
+    console.log("fetching plant");
+
+    const formData = new FormData();
+    formData.append("image", image);
+
+    console.log(formData.get("image"));
+    const res = await fetch(API_URL, {
+      method: "POST",
+      body: formData,
+    });
+    console.log(res);
+    const { data } = await res.json();
+    console.log("data", data);
+
+    setData(data);
+    // setLoading(false)
+    // setIsCapturing(false);
+  };
 
   function uploadImg(e) {
     // console.log("uploading image");
     // console.log(e.target.files[0]);
-    setImg(e.target.files[0]);
+    if (e.target.files && e.target.files[0]) {
+      const file = e.target.files[0];
+      setImage(file);
+    }
   }
 
-  console.log(img);
+  // console.log(img);
 
   function handleButton(e) {
     e.preventDefault();
     // const img = e.target.form[0].files[0];
-    const apiKey = process.env.NEXT_PUBLIC_API_KEY;
-    console.log(apiKey, 1);
-    const baseUrl = "https://my-api.plantnet.org";
-    const testImg =
-      "https%3A%2F%2Fm.media-amazon.com%2Fimages%2FI%2F61vlqixclKL._AC_SX679_.jpg";
-    const base = `${baseUrl}/v2/identify/all?images=${testImg}&include-related-images=true&no-reject=true&lang=nl&type=legacy&api-key=${apiKey}`;
-    fetch(base)
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      });
+    // const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+    // console.log(apiKey);
+    // const baseUrl = "https://my-api.plantnet.org";
+    // const testImg =
+    //   "https%3A%2F%2Fm.media-amazon.com%2Fimages%2FI%2F61vlqixclKL._AC_SX679_.jpg";
+    // const base = `${baseUrl}/v2/identify/all?images=${testImg}&include-related-images=true&no-reject=true&lang=nl&type=legacy&api-key=${apiKey}`;
+    // fetch(base)
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     setData(data);
+    //   });
+
+    fetchPlant();
   }
 
   if (!data) {
     return (
       <>
-        <form
+        <div
           className={styles.uploader}
           onSubmit={(e) => {
             e.preventDefault();
@@ -66,11 +93,11 @@ const Uploader = () => {
             />
           </label>
 
-          <FileTile image={img} />
-          <Button disabled={!img} next={handleButton}>
+          <FileTile image={image} />
+          <Button disabled={!image} next={handleButton}>
             Start Identificatie
           </Button>
-        </form>
+        </div>
       </>
     );
   }

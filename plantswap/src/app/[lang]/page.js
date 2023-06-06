@@ -1,32 +1,37 @@
 import styles from "./page.module.scss";
-import Title from "../../../components/Title/Title";
-import Header from "../../../components/Header/Header";
-import Text from "../../../components/Text/Text";
-import Cta from "../../../components/Cta/Cta";
-import Hero from "../../../components/Hero/Hero";
+import Title from "@/../components/Title/Title";
+import Header from "@/../components/Header/Header";
+import Text from "@/../components/Text/Text";
+import Cta from "@/../components/Cta/Cta";
+import Hero from "@/../components/Hero/Hero";
+import { getDictionary } from "@/../get-dictionary";
 
 // Maak het fancy :)
-export default function Page({ params }) {
+export default async function Page({ params }) {
+  // console.log(await getDictionary(params.lang));
+  const dictionary = await getDictionary(params.lang);
   return (
     <>
-      <Header />
+      <Header locale={params.lang} />
       <main className={styles.page}>
         <section className={styles.page__content}>
           <section>
             <Title title={"h1"} modifier={"gentle-appear"}>
-              Welkom bij plantswap
+              {dictionary.homepage.title}
             </Title>
             <article>
-              <Text modifier={"bold"}>
-                Ontdek Plant Swap - de webapplicatie die je buurt socialer maakt
-                en je plantenkennis vergroot! Ruil, doneer en bekijk stekjes op
-                ons platform. Kom naar de bibliotheek en word onderdeel van onze
-                groeiende community. Laat je groene pareltjes floreren en maak
-                nieuwe vrienden met dezelfde passie. Doe mee met Plant Swap en
-                ontdek een wereld vol groene magie!{" "}
-              </Text>
-              <Cta href="/planten" role="primary" locale={params.lang}>
-                Ontdek onze groene vriendejs
+              <Text modifier={"bold"}>{dictionary.homepage.intro}</Text>
+              <Cta
+                href={`/${params.lang}/planten`}
+                role="secondary"
+                locale={params.lang}>
+                Ontdek onze groene vriendjes
+              </Cta>
+              <Cta
+                href={`/${params.lang}/swap`}
+                role="primary"
+                locale={params.lang}>
+                Swap een van jouw groene vriendjes
               </Cta>
             </article>
             {/* <Cta href="/swap" role="primary">

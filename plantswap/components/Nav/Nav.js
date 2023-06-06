@@ -1,54 +1,62 @@
-'use client';
-import Link from 'next/link';
-import styles from './nav.module.scss';
-import { useState } from 'react';
+"use client";
+import Link from "next/link";
+import styles from "./nav.module.scss";
+import { useState } from "react";
+import LangChanger from "../LangChanger/LangChanger";
+import { usePathname } from "next/navigation";
 
-const menu_list = [
-	{ text: 'Home', href: '/' },
-	{ text: 'Alle stekjes', href: '/planten' },
-	{ text: 'Doneren', href: '/doneren' },
-	{ text: 'Contact', href: '/contact' },
-	{ text: 'Over ons', href: '/over-ons' },
-];
+const Nav = ({ locale }) => {
+  const pathname = usePathname();
+  const currentPage = pathname.replace(`/${locale}`, "");
 
-const Nav = () => {
-	const [navActive, setNavActive] = useState(null);
-	const [activeIndex, setActiveIndex] = useState(-1);
+  const menu_list = [
+    { text: "Home", href: `/${locale}` },
+    { text: "Alle stekjes", href: `/${locale}` + "/planten" },
+    { text: "Swap", href: `/${locale}` + "/swap" },
+    // { text: "Doneren", href: `/${locale}` + "/doneren" },
+    // { text: "Contact", href: `/${locale}` + "/contact" },
+    // { text: "Over ons", href: `/${locale}` + "/over-ons" },
+  ];
 
-	return (
-		<nav className={styles.nav}>
-			{/* Set nav active (mobile) */}
-			<div
-				onClick={() => {
-					setNavActive(!navActive);
-				}}
-				className={styles.nav__toggle}
-			>
-				<span></span>
-				<span></span>
-			</div>
+  const [open, setOpen] = useState(false);
+  const [activeName, setActiveName] = useState(
+    menu_list
+      .map((item, i) => {
+        if (item.href === pathname) return item.text;
+      })
+      .find((x) => x)
+  );
 
-			<ul className={`${navActive ? 'active' : ''} nav__menu-list`}>
-				{/* Update the current navitem index */}
-				{menu_list.map((item, index) => (
-					<li
-						onClick={() => {
-							setActiveIndex(index);
-							setNavActive(false);
-						}}
-						key={item.text}
-					>
-						<Link
-							href={item.href}
-							className={`${styles.nav__item} ${index ? 'active' : ''}`}
-						>
-							{item.text}
-						</Link>
-					</li>
-				))}
-			</ul>
-		</nav>
-	);
+  return (
+    <nav className={styles.nav}>
+      {/* Set nav active (mobile) */}
+      <div
+        onClick={() => {
+          setOpen(!open);
+        }}
+        className={styles.nav__toggle}>
+        <span></span>
+        <span></span>
+      </div>
+      <ul
+        className={`${styles.nav__list} ${
+          open ? styles["nav__list--active"] : ""
+        }`}>
+        {menu_list.map((item) => (
+          <li
+            key={item.text}
+            className={`${styles["nav__list-item"]} ${
+              item.text === activeName ? styles["nav__list-item--active"] : ""
+            }`}>
+            <Link href={item.href} className={styles.nav__item}>
+              {item.text}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <LangChanger locale={locale} currentPage={currentPage} />
+    </nav>
+  );
 };
 
 export default Nav;

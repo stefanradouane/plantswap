@@ -1,4 +1,8 @@
 {
+  "homepage": {
+    "title": "Welcome to Plant Swap",
+    "intro": "Discover Plant Swap - the web application that makes your neighborhood more social and increases your plant knowledge! Exchange, donate and view cuttings on our platform. Come to the library and become part of our growing community. Let your green gems flourish and make new friends with the same passion. Join Plant Swap and discover a world full of green magic!"
+  },
   "server-component": {
     "title": "Plant Swap",
     "identify": "Identificy <br/> plant"

@@ -1,95 +1,100 @@
+$transition-speed: 200ms;
+
 .nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	font-size: 0.9em;
-	height: 60px;
-	color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+  height: 60px;
+  color: black;
 
-	ul {
-		position: fixed;
-		top: 60px;
-		right: -430px;
-		width: 100vw;
-		height: 100%;
+  &__list {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100vw;
+    height: 100%;
 
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		row-gap: 24px;
-		padding: 24px 16px;
-		transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px;
+    padding: 24px 16px;
+    transition: all $transition-speed;
+    transform: translate(0%, 5%);
 
-		&.active {
-			right: 0;
-			background-color: #ffffff5c;
-			backdrop-filter: blur(9px);
-			transform: translate(0%, 5%);
-		}
+    &--active {
+      right: 0;
+      background-color: #ffffff5c;
+      backdrop-filter: blur(9px);
+    }
 
-		li {
-			display: inline-block;
-			padding: 1em;
-			height: 3em;
-			min-width: 1.5em;
-			font-size: 1.2em;
-			color: inherit;
-			cursor: pointer;
-		}
-	}
+    &-item {
+      display: inline-block;
+      padding: 1em;
+      min-width: 1.5em;
+      font-size: 1.2em;
+      color: inherit;
+      cursor: pointer;
 
-	&:has(ul.active) &__toggle {
-		span {
-			transition: all 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-			transition-delay: 0.2s;
+      &--active {
+        color: #7aa556;
+      }
+    }
+  }
 
-			&:first-of-type {
-				transform: translateY(4px) rotate(45deg);
-			}
+  &:has(.nav__list--active) &__toggle {
+    span {
+      transition: all $transition-speed cubic-bezier(0.4, 0.01, 0.165, 0.99);
 
-			&:last-of-type {
-				transform: translateY(3px) rotate(-45deg);
-			}
-		}
-	}
+      &:first-of-type {
+        transform: translateY(4px) rotate(45deg);
+      }
 
-	&__toggle {
-		display: block;
-		width: 2em;
-		cursor: pointer;
-		background: none;
-		border: none;
-		margin: 0 auto;
+      &:last-of-type {
+        transform: translateY(3px) rotate(-45deg);
+      }
+    }
+  }
 
-		span {
-			display: block;
-			width: 100%;
-			height: 2px;
-			background: white;
-			transition: all 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-			transition-delay: 0s;
+  &__toggle {
+    display: block;
+    width: 2em;
+    cursor: pointer;
+    background: none;
+    border: none;
+    margin: 0 auto;
+    // height: 30px;
 
-			&:first-of-type {
-				transform: translateY(0px) rotate(0deg);
-			}
+    span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: white;
+      transition: all 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+      transition-delay: 0s;
 
-			&:last-of-type {
-				transform: translateY(6px) rotate(0deg);
-			}
-		}
-	}
+      &:first-of-type {
+        transform: translateY(0px) rotate(0deg);
+      }
 
-	@media screen and (min-width: 768px) {
-		&__toggle {
-			display: none;
-		}
+      &:last-of-type {
+        transform: translateY(6px) rotate(0deg);
+      }
+    }
+  }
 
-		ul {
-			position: unset;
-			display: flex;
-			flex-direction: row;
-			width: auto;
-			height: auto;
-		}
-	}
+  @media screen and (min-width: 48em) {
+    &__toggle {
+      display: none;
+    }
+
+    &__list {
+      position: unset;
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      height: auto;
+    }
+  }
 }
