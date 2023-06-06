@@ -10,8 +10,8 @@ export default function Page() {
 	return (
 		<>
 			<Header />
-			<main className={styles.page__content}>
-				<section className={styles.homepage__content}>
+			<main className={styles.page}>
+				<section className={styles.page__content}>
 					<section>
 						<Title title={'h1'} modifier={'gentle-appear'}>
 							Welkom bij plantswap
