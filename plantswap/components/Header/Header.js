@@ -1,11 +1,14 @@
 import Image from "next/image";
 import styles from "./header.module.scss";
 import Nav from "../Nav/Nav";
+import Link from "next/link";
+import { getDictionary } from "@/../get-dictionary";
 
-const Header = ({ locale }) => {
+const Header = async ({ locale }) => {
+  const dictionary = await getDictionary(locale);
   return (
     <header className={styles.header}>
-      <a href="/">
+      <Link href={"/" + locale}>
         <Image
           src="/logo.webp"
           alt="logo plantswap"
@@ -14,8 +17,8 @@ const Header = ({ locale }) => {
           height={103}
           priority
         />
-      </a>
-      <Nav locale={locale} />
+      </Link>
+      <Nav locale={locale} dictionary={dictionary} />
     </header>
   );
 };

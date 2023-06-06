@@ -4,11 +4,11 @@ import Title from "@/../components/Title/Title";
 import Header from "@/../components/Header/Header";
 import Text from "@/../components/Text/Text";
 import Uploader from "@/../components/Uploader/Uploader";
-import dataset from "./data.json";
+// import dataset from "./data.json";
 
 // console.log(data);
-const dummydata =
-  process.env.NEXT_PUBLIC_DEVELOPMENT === "false" ? dataset : null;
+const dummydata = null;
+// process.env.NEXT_PUBLIC_DEVELOPMENT === "false" ? dataset : null;
 
 export default function Home({ params }) {
   return (

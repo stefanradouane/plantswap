@@ -5,17 +5,17 @@ import { useState } from "react";
 import LangChanger from "../LangChanger/LangChanger";
 import { usePathname } from "next/navigation";
 
-const Nav = ({ locale }) => {
+const Nav = async ({ locale, dictionary }) => {
   const pathname = usePathname();
   const currentPage = pathname.replace(`/${locale}`, "");
 
   const menu_list = [
-    { text: "Home", href: `/${locale}` },
-    { text: "Alle stekjes", href: `/${locale}` + "/planten" },
-    { text: "Swap", href: `/${locale}` + "/swap" },
+    { text: dictionary.nav.home, href: `/${locale}` },
+    { text: dictionary.nav.plant, href: `/${locale}` + "/planten" },
+    { text: dictionary.nav.swap, href: `/${locale}` + "/swap" },
+    { text: dictionary.nav.about, href: `/${locale}` + "/over-ons" },
     // { text: "Doneren", href: `/${locale}` + "/doneren" },
     // { text: "Contact", href: `/${locale}` + "/contact" },
-    // { text: "Over ons", href: `/${locale}` + "/over-ons" },
   ];
 
   const [open, setOpen] = useState(false);
@@ -54,7 +54,11 @@ const Nav = ({ locale }) => {
           </li>
         ))}
       </ul>
-      <LangChanger locale={locale} currentPage={currentPage} />
+      <LangChanger
+        locale={locale}
+        currentPage={currentPage}
+        dictionary={dictionary}
+      />
     </nav>
   );
 };
