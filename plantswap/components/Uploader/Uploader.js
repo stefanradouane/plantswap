@@ -9,9 +9,10 @@ import Title from "../Title/Title";
 import styles from "./uploader.module.scss";
 import Results from "../Results/Results";
 
-const Uploader = () => {
+const Uploader = ({ dummydata }) => {
   const [image, setImage] = useState(undefined);
-  const [data, setData] = useState(undefined);
+  const [data, setData] = useState(dummydata);
+  console.log(data);
 
   const API_URL = "/api/identify";
 

@@ -3,7 +3,7 @@ import FormData from "form-data";
 import axios from "axios";
 
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
-const API_URL = `https://my-api.plantnet.org/v2/identify/all?include-related-images=false&no-reject=false&lang=en&api-key=${API_KEY}`;
+const API_URL = `https://my-api.plantnet.org/v2/identify/all?include-related-images=true&no-reject=true&lang=nl&api-key=${API_KEY}`;
 
 export const runtime = "nodejs";
 

@@ -1,0 +1,359 @@
+{
+  "data": {
+    "query": {
+      "project": "all",
+      "images": ["ad6b892f827df9ced65c14a53016ec4b"],
+      "organs": ["auto"],
+      "includeRelatedImages": false
+    },
+    "language": "en",
+    "preferedReferential": "the-plant-list",
+    "bestMatch": "Sansevieria trifasciata Prain",
+    "results": [
+      {
+        "score": 0.37346,
+        "species": {
+          "scientificNameWithoutAuthor": "Sansevieria trifasciata",
+          "scientificNameAuthorship": "Prain",
+          "genus": {
+            "scientificNameWithoutAuthor": "Sansevieria",
+            "scientificNameAuthorship": "",
+            "scientificName": "Sansevieria"
+          },
+          "family": {
+            "scientificNameWithoutAuthor": "Asparagaceae",
+            "scientificNameAuthorship": "",
+            "scientificName": "Asparagaceae"
+          },
+          "commonNames": ["Snakeplant", "Mother-in-law's-tongue", "سانسوریا"],
+          "scientificName": "Sansevieria trifasciata Prain"
+        },
+        "gbif": {
+          "id": "2770610"
+        }
+      },
+      {
+        "score": 0.26565,
+        "species": {
+          "scientificNameWithoutAuthor": "Sansevieria hyacinthoides",
+          "scientificNameAuthorship": "(L.) Druce",
+          "genus": {
+            "scientificNameWithoutAuthor": "Sansevieria",
+            "scientificNameAuthorship": "",
+            "scientificName": "Sansevieria"
+          },
+          "family": {
+            "scientificNameWithoutAuthor": "Asparagaceae",
+            "scientificNameAuthorship": "",
+            "scientificName": "Asparagaceae"
+          },
+          "commonNames": [
+            "Snake Plant",
+            "Mother-in-law’s Tongue",
+            "African bowstring-hemp"
+          ],
+          "scientificName": "Sansevieria hyacinthoides (L.) Druce"
+        },
+        "gbif": {
+          "id": "2770547"
+        }
+      },
+      {
+        "score": 0.14961,
+        "species": {
+          "scientificNameWithoutAuthor": "Sansevieria zeylanica",
+          "scientificNameAuthorship": "(L.) Willd.",
+          "genus": {
+            "scientificNameWithoutAuthor": "Sansevieria",
+            "scientificNameAuthorship": "",
+            "scientificName": "Sansevieria"
+          },
+          "family": {
+            "scientificNameWithoutAuthor": "Asparagaceae",
+            "scientificNameAuthorship": "",
+            "scientificName": "Asparagaceae"
+          },
+          "commonNames": ["Ceylon bowstring-hemp"],
+          "scientificName": "Sansevieria zeylanica (L.) Willd."
+        },
+        "gbif": {
+          "id": "2770531"
+        }
+      },
+      {
+        "score": 0.06287,
+        "species": {
+          "scientificNameWithoutAuthor": "Sansevieria metallica",
+          "scientificNameAuthorship": "Gérôme & Labroy",
+          "genus": {
+            "scientificNameWithoutAuthor": "Sansevieria",
+            "scientificNameAuthorship": "",
+            "scientificName": "Sansevieria"
+          },
+          "family": {
+            "scientificNameWithoutAuthor": "Asparagaceae",
+            "scientificNameAuthorship": "",
+            "scientificName": "Asparagaceae"
+          },
+          "commonNames": ["Sansevieria"],
+          "scientificName": "Sansevieria metallica Gérôme & Labroy"
+        },
+        "gbif": {
+          "id": "2770604"
+        }
+      },
+      {
+        "score": 0.03729,
+        "species": {
+          "scientificNameWithoutAuthor": "Sansevieria stuckyi",
+          "scientificNameAuthorship": "God.-Leb.",
+          "genus": {
+            "scientificNameWithoutAuthor": "Sansevieria",
+            "scientificNameAuthorship": "",
+            "scientificName": "Sansevieria"
+          },
+          "family": {
+            "scientificNameWithoutAuthor": "Asparagaceae",
+            "scientificNameAuthorship": "",
+            "scientificName": "Asparagaceae"
+          },
+          "commonNames": ["Snake plant", "Mother-in-law Tongue", "Sanso"],
+          "scientificName": "Sansevieria stuckyi God.-Leb."
+        },
+        "gbif": {
+          "id": "2770632"
+        }
+      },
+      {
+        "score": 0.02354,
+        "species": {
+          "scientificNameWithoutAuthor": "Sansevieria pearsonii",
+          "scientificNameAuthorship": "N.E.Br.",
+          "genus": {
+            "scientificNameWithoutAuthor": "Sansevieria",
+            "scientificNameAuthorship": "",
+            "scientificName": "Sansevieria"
+          },
+          "family": {
+            "scientificNameWithoutAuthor": "Asparagaceae",
+            "scientificNameAuthorship": "",
+            "scientificName": "Asparagaceae"
+          },
+          "commonNames": ["Spiky Mother-in-law's Tongue"],
+          "scientificName": "Sansevieria pearsonii N.E.Br."
+        },
+        "gbif": {
+          "id": "2770674"
+        }
+      },
+      {
+        "score": 0.02246,
+        "species": {
+          "scientificNameWithoutAuthor": "Sansevieria cylindrica",
+          "scientificNameAuthorship": "Bojer ex Hook.",
+          "genus": {
+            "scientificNameWithoutAuthor": "Sansevieria",
+            "scientificNameAuthorship": "",
+            "scientificName": "Sansevieria"
+          },
+          "family": {
+            "scientificNameWithoutAuthor": "Asparagaceae",
+            "scientificNameAuthorship": "",
+            "scientificName": "Asparagaceae"
+          },
+          "commonNames": [
+            "African bowstring hemp",
+            "African Spear",
+            "Cylindrical Snake"
+          ],
+          "scientificName": "Sansevieria cylindrica Bojer ex Hook."
+        },
+        "gbif": {
+          "id": "2770617"
+        }
+      },
+      {
+        "score": 0.01773,
+        "species": {
+          "scientificNameWithoutAuthor": "Sansevieria canaliculata",
+          "scientificNameAuthorship": "Carrière",
+          "genus": {
+            "scientificNameWithoutAuthor": "Sansevieria",
+            "scientificNameAuthorship": "",
+            "scientificName": "Sansevieria"
+          },
+          "family": {
+            "scientificNameWithoutAuthor": "Asparagaceae",
+            "scientificNameAuthorship": "",
+            "scientificName": "Asparagaceae"
+          },
+          "commonNames": ["Starfish Snakeplant"],
+          "scientificName": "Sansevieria canaliculata Carrière"
+        },
+        "gbif": {
+          "id": "2770534"
+        }
+      },
+      {
+        "score": 0.00418,
+        "species": {
+          "scientificNameWithoutAuthor": "Sansevieria dawei",
+          "scientificNameAuthorship": "Stapf",
+          "genus": {
+            "scientificNameWithoutAuthor": "Sansevieria",
+            "scientificNameAuthorship": "",
+            "scientificName": "Sansevieria"
+          },
+          "family": {
+            "scientificNameWithoutAuthor": "Asparagaceae",
+            "scientificNameAuthorship": "",
+            "scientificName": "Asparagaceae"
+          },
+          "commonNames": [],
+          "scientificName": "Sansevieria dawei Stapf"
+        },
+        "gbif": {
+          "id": "2770609"
+        }
+      },
+      {
+        "score": 0.00299,
+        "species": {
+          "scientificNameWithoutAuthor": "Himantoglossum hircinum",
+          "scientificNameAuthorship": "(L.) Spreng.",
+          "genus": {
+            "scientificNameWithoutAuthor": "Himantoglossum",
+            "scientificNameAuthorship": "",
+            "scientificName": "Himantoglossum"
+          },
+          "family": {
+            "scientificNameWithoutAuthor": "Orchidaceae",
+            "scientificNameAuthorship": "",
+            "scientificName": "Orchidaceae"
+          },
+          "commonNames": ["Lizard orchid"],
+          "scientificName": "Himantoglossum hircinum (L.) Spreng."
+        },
+        "gbif": {
+          "id": "5324951"
+        }
+      },
+      {
+        "score": 0.00267,
+        "species": {
+          "scientificNameWithoutAuthor": "Sansevieria aethiopica",
+          "scientificNameAuthorship": "Thunb.",
+          "genus": {
+            "scientificNameWithoutAuthor": "Sansevieria",
+            "scientificNameAuthorship": "",
+            "scientificName": "Sansevieria"
+          },
+          "family": {
+            "scientificNameWithoutAuthor": "Asparagaceae",
+            "scientificNameAuthorship": "",
+            "scientificName": "Asparagaceae"
+          },
+          "commonNames": [],
+          "scientificName": "Sansevieria aethiopica Thunb."
+        },
+        "gbif": {
+          "id": "2770677"
+        }
+      },
+      {
+        "score": 0.00259,
+        "species": {
+          "scientificNameWithoutAuthor": "Stanleya viridiflora",
+          "scientificNameAuthorship": "Nutt.",
+          "genus": {
+            "scientificNameWithoutAuthor": "Stanleya",
+            "scientificNameAuthorship": "",
+            "scientificName": "Stanleya"
+          },
+          "family": {
+            "scientificNameWithoutAuthor": "Brassicaceae",
+            "scientificNameAuthorship": "",
+            "scientificName": "Brassicaceae"
+          },
+          "commonNames": [
+            "Desert plume",
+            "Green prince's-plume",
+            "Green princesplume"
+          ],
+          "scientificName": "Stanleya viridiflora Nutt."
+        },
+        "gbif": {
+          "id": "5373718"
+        }
+      },
+      {
+        "score": 0.00162,
+        "species": {
+          "scientificNameWithoutAuthor": "Sansevieria gracilis",
+          "scientificNameAuthorship": "N.E.Br.",
+          "genus": {
+            "scientificNameWithoutAuthor": "Sansevieria",
+            "scientificNameAuthorship": "",
+            "scientificName": "Sansevieria"
+          },
+          "family": {
+            "scientificNameWithoutAuthor": "Asparagaceae",
+            "scientificNameAuthorship": "",
+            "scientificName": "Asparagaceae"
+          },
+          "commonNames": [],
+          "scientificName": "Sansevieria gracilis N.E.Br."
+        },
+        "gbif": {
+          "id": "2770666"
+        }
+      },
+      {
+        "score": 0.00124,
+        "species": {
+          "scientificNameWithoutAuthor": "Sansevieria senegambica",
+          "scientificNameAuthorship": "Baker",
+          "genus": {
+            "scientificNameWithoutAuthor": "Sansevieria",
+            "scientificNameAuthorship": "",
+            "scientificName": "Sansevieria"
+          },
+          "family": {
+            "scientificNameWithoutAuthor": "Asparagaceae",
+            "scientificNameAuthorship": "",
+            "scientificName": "Asparagaceae"
+          },
+          "commonNames": ["Bowstring hemp"],
+          "scientificName": "Sansevieria senegambica Baker"
+        },
+        "gbif": {
+          "id": "2770596"
+        }
+      },
+      {
+        "score": 0.00101,
+        "species": {
+          "scientificNameWithoutAuthor": "Sansevieria suffruticosa",
+          "scientificNameAuthorship": "N.E.Br.",
+          "genus": {
+            "scientificNameWithoutAuthor": "Sansevieria",
+            "scientificNameAuthorship": "",
+            "scientificName": "Sansevieria"
+          },
+          "family": {
+            "scientificNameWithoutAuthor": "Asparagaceae",
+            "scientificNameAuthorship": "",
+            "scientificName": "Asparagaceae"
+          },
+          "commonNames": [],
+          "scientificName": "Sansevieria suffruticosa N.E.Br."
+        },
+        "gbif": {
+          "id": "2770587"
+        }
+      }
+    ],
+    "version": "2022-10-24 (7.0)",
+    "remainingIdentificationRequests": 496
+  }
+}
