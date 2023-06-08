@@ -5,13 +5,20 @@ import Text from "@/../components/Text/Text";
 import Cta from "@/../components/Cta/Cta";
 import Hero from "@/../components/Hero/Hero";
 import { getDictionary } from "@/../get-dictionary";
+import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
+// import { NextResponse } from "next/server";
+
+import Layout from "../../../components/Layout/Base";
 
 // Maak het fancy :)
 export default async function Page({ params }) {
+  // const router =;
+  // console.log(NextResponse)
   // console.log(await getDictionary(params.lang));
   const dictionary = await getDictionary(params.lang);
   return (
-    <>
+    <Layout locale={params.lang} dictionary={dictionary}>
       <main className={styles.page}>
         <section className={styles.page__content}>
           <section>
@@ -41,6 +48,6 @@ export default async function Page({ params }) {
           <Hero />
         </section>
       </main>
-    </>
+    </Layout>
   );
 }

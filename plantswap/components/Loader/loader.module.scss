@@ -1,0 +1,33 @@
+.loader {
+  height: 30px;
+  width: 30px;
+  * {
+    animation-name: beat !important;
+  }
+}
+
+@keyframes beat {
+  0% {
+    animation-timing-function: cubic-bezier(0.1028, 0.2484, 0.1372, 0.849);
+    transform: scale(1);
+  }
+
+  34% {
+    animation-timing-function: cubic-bezier(0.7116, 0.2095, 0.8159, 0.6876);
+    transform: scale(1.2);
+  }
+
+  68% {
+    animation-timing-function: cubic-bezier(0.1475, 0.2888, 0.294, 0.883);
+    transform: scale(1.0268);
+  }
+
+  84% {
+    animation-timing-function: cubic-bezier(0.8176, 0.2193, 0.867, 0.6889);
+    transform: scale(1.0932);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

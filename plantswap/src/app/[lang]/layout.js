@@ -1,6 +1,3 @@
-import Footer from "../../../components/Footer/Footer";
-import Header from "../../../components/Header/Header";
-import { getDictionary } from "../../../get-dictionary";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -24,15 +21,10 @@ const customFont = localFont({
   ],
 });
 
-export default async function RootLayout({ children, params }) {
-  const dictionary = await getDictionary(params.lang);
+export default function RootLayout({ children, params }) {
   return (
     <html lang={params.lang}>
-      <body className={customFont.className}>
-        <Header locale={params.lang} dictionary={dictionary} />
-        {children}
-        <Footer locale={params.lang} dictionary={dictionary} />
-      </body>
+      <body className={customFont.className}>{children}</body>
     </html>
   );
 }

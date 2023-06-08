@@ -2,9 +2,8 @@ import Image from "next/image";
 import styles from "./header.module.scss";
 import Nav from "../Nav/Nav";
 import Link from "next/link";
-import { getDictionary } from "@/../get-dictionary";
 
-const Header = async ({ locale, dictionary }) => {
+const Header = ({ locale, dictionary }) => {
   return (
     <header className={styles.header}>
       <Link href={"/" + locale}>

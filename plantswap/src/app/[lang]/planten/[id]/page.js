@@ -4,8 +4,11 @@ import Detailpage from "../../../../../components/Detailpage/Detailpage.js";
 // import DOMParser from "dom-parser";
 
 import { graphql, buildSchema } from "graphql";
+import Layout from "../../../../../components/Layout/Base.js";
+import { getDictionary } from "../../../../../get-dictionary.js";
 
 export default async function Home({ params }) {
+  const dictionary = await getDictionary(params.lang);
   const revalidateTime = 60; // time in seconds
   const endpoint = "https://trefle.io";
   const apiKey = process.env.NEXT_PUBLIC_API_KEY2;
@@ -70,10 +73,18 @@ export default async function Home({ params }) {
 
   if (items.err)
     // Error page
-    return <Title title="h1">Planten soort {params.id} niet gevonden</Title>;
+    return (
+      <Layout dictionary={dictionary} locale={params.lang}>
+        <Title title="h1">Planten soort {params.id} niet gevonden</Title>
+      </Layout>
+    );
 
   // console.log(items);
   // Detail page
-  return <Detailpage data={items} />;
+  return (
+    <Layout dictionary={dictionary} locale={params.lang}>
+      <Detailpage data={items} />
+    </Layout>
+  );
   return <Title title="h1">Hier komt de {params.id}</Title>;
 }
