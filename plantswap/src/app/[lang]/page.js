@@ -12,7 +12,6 @@ export default async function Page({ params }) {
   const dictionary = await getDictionary(params.lang);
   return (
     <>
-      <Header locale={params.lang} />
       <main className={styles.page}>
         <section className={styles.page__content}>
           <section>

@@ -4,13 +4,12 @@ import Nav from "../Nav/Nav";
 import Link from "next/link";
 import { getDictionary } from "@/../get-dictionary";
 
-const Header = async ({ locale }) => {
-  const dictionary = await getDictionary(locale);
+const Header = async ({ locale, dictionary }) => {
   return (
     <header className={styles.header}>
       <Link href={"/" + locale}>
         <Image
-          src="/logo.webp"
+          src="/images/logo.webp"
           alt="logo plantswap"
           className={styles.header__logo}
           width={256}

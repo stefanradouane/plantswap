@@ -13,7 +13,6 @@ const dummydata = null;
 export default function Home({ params }) {
   return (
     <>
-      <Header locale={params.lang} />
       <main className={styles.main}>
         <Title title={"h1"}>
           Plant
