@@ -21,8 +21,8 @@ export const Result = ({ result }) => {
   return (
     <section className={styles.result}>
       <p className={styles.result__grade}>Score {result.score * 100}</p>
-      <h1 className={styles.result__latin}>{result.species.scientificName}</h1>
-      <h2 className={styles.result__name}>{result.species.commonNames[0]}</h2>
+      <h2 className={styles.result__latin}>{result.species.scientificName}</h2>
+      <h3 className={styles.result__name}>{result.species.commonNames[0]}</h3>
       <Image
         src={result.images[0].url.m}
         alt="logo plantswap"
@@ -35,7 +35,7 @@ export const Result = ({ result }) => {
         href={`/planten/${result.species.scientificNameWithoutAuthor
           .replaceAll(" ", "-")
           .toLowerCase()}`}>
-        Dit is mijn plant
+        Meld aan
       </Link>
     </section>
   );
