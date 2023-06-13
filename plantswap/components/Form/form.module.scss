@@ -18,6 +18,8 @@ $primary-text-color: #212121;
 $secondary-text-color: #ffffff;
 $tertiary-text-color: #777777;
 
+$wireframe-input-border-color: #C4C4C4;
+
 .form {
     padding: 1rem;
 
@@ -26,7 +28,7 @@ $tertiary-text-color: #777777;
     width: 100%;
     height: 100%;
 
-    background-color: #E9E9E9;
+    background-color: var(--wireframe-background-color);
 
   &__fieldset {
     padding-bottom: $L-spacer;
@@ -45,7 +47,7 @@ $tertiary-text-color: #777777;
     font-family: $primary-font-family;
     font-size: $legend-font-size;
 
-    color: $primary-text-color;
+    color: var(--primary-text-color);
   }
 
   &__legend span {
@@ -70,7 +72,7 @@ $tertiary-text-color: #777777;
     font-family: $primary-font-family;
     font-size: $label-font-size;
 
-    color: $primary-text-color;
+    color: var(--primary-text-color);
   }
 
   &__label_description {
@@ -78,7 +80,7 @@ $tertiary-text-color: #777777;
 
     font-size: $label-description-font-size;
 
-    color: $tertiary-text-color;
+    color: var(--tertiary-text-color);
   }
 
   &__input_text {
@@ -86,10 +88,10 @@ $tertiary-text-color: #777777;
 
     height: $input-height;
 
-    border: 1px solid #E1E1E1;
-    border-radius: 8px;
+    border: 1px solid $wireframe-input-border-color;
+    border-radius: var(--border-radius);
 
-    color: $primary-text-color;
+    color: var(--primary-text-color);
     background-color: white;
   }
 
@@ -112,7 +114,7 @@ $tertiary-text-color: #777777;
 
     font-size: 12px;
 
-    color: $primary-text-color;
+    color: var(--primary-text-color);
 
     width: 100%;
     height: 1rem;
@@ -130,7 +132,7 @@ $tertiary-text-color: #777777;
     width: 1rem;
     height: 1rem;
 
-    border: 1px solid #C4C4C4;
+    border: 1px solid $wireframe-input-border-color;
     border-radius: 4px;
 
     background-color: #fff;
@@ -154,8 +156,8 @@ $tertiary-text-color: #777777;
 
     height: $input-height;
 
-    border: 1px solid #E1E1E1;
-    border-radius: 8px;
+    border: 1px solid $wireframe-input-border-color;
+    border-radius: var(--border-radius);
   }
 
   &__input_water_interval_group {
@@ -194,9 +196,9 @@ $tertiary-text-color: #777777;
     padding: 1rem 2rem;
 
     border: none;
-    border-radius: 99px;
+    border-radius: var(--pill-border-radius);
 
-    background-color: #acacac;
+    background-color: var(--wireframe-btn-background-color);
   }
 
   &__submit_button.active {
@@ -207,7 +209,7 @@ $tertiary-text-color: #777777;
     padding: 1rem 2rem;
 
     border: none;
-    border-radius: 99px;
+    border-radius: var(--pill-border-radius);
 
     background-color: black;
   }

@@ -2,12 +2,11 @@
 
 import React from 'react';
 
+import Button from "../Button/Button";
+
 import styles from "./form.module.scss";
 
 const Form = ({ data }) => {
-
-
-    console.log(data);
     
     return (
         <main>
