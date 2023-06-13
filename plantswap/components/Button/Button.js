@@ -2,10 +2,16 @@
 
 import styles from "./button.module.scss";
 
-const Button = ({ disabled, next, children, className }) => {
+const Button = ({ disabled, next, children, className, modifier }) => {
   return (
     <button
-      className={styles.button + `${className ? " " + className : ""}`}
+      className={
+        styles.button +
+        " " +
+        `${modifier ? styles[`button--${modifier}`] : ""}` +
+        " " +
+        `${className ? "" + className : ""}`
+      }
       onClick={(e) => {
         e.preventDefault();
         next(e);
