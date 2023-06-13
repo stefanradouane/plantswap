@@ -1,8 +1,6 @@
 :root {
   --header-color: #07060f;
-  /* --text-color: #7d7d7d; */
   --text-color: #000000;
-
   --color-orange: #f36621;
   --color-green: #00b894;
   --color-white: #f1f1f1;
@@ -57,10 +55,6 @@
   :root {
     --foreground-rgb: 255, 255, 255;
     --text-color: #000;
-    /* --background-start-rgb: 0, 0, 0; */
-    /* --background-end-rgb: 0, 0, 0; */
-    /* --background-end-rgb: 0, 0, 0; */
-
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
       to bottom right,

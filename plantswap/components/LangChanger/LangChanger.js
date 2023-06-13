@@ -19,8 +19,6 @@ const LangChanger = ({ locale, dictionary }) => {
         }>
         {dictionary.language.switch}
       </Button>
-      {/* <Link href={locale === "nl" ? `/en${currentPage}` : `/nl${currentPage}`}> */}
-      {/* </Link> */}
     </section>
   );
 };

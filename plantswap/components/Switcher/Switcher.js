@@ -3,8 +3,6 @@
 import Text from "../Text/Text";
 import Title from "../Title/Title";
 import styles from "./switcher.module.scss";
-// import dataset from "../../src/app/[lang]/swap/data.json"
-// ../swap/data.json";
 import dummydata from "./plantdata.json";
 import Button from "../Button/Button";
 import { useState } from "react";
@@ -26,10 +24,7 @@ const Svg = () => (
 );
 
 const Switcher = ({ flowdata, myPlant, data }) => {
-  const [chosenPlant, setChosenPlant] = useState(undefined);
   const { flowData, setFlowData } = flowdata;
-  // console.log(flowdata.flowData);
-  const count = data.results.length;
   const usedData = dummydata.stekjes;
   const myplant = {
     naam: "Monstera",

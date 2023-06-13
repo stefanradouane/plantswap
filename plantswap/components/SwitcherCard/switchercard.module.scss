@@ -2,18 +2,16 @@
   display: grid;
   grid-template-areas: "img img" "name selector" "latin-name selector";
   grid-template-columns: 1fr auto;
-  // align-items: center;
-  // gap: 1rem;
   background-color: var(--color-white);
   border-radius: 0.5rem;
   padding: 1rem;
   cursor: pointer;
 
   &:has(input:checked) {
-    background-color: black;
+    background-color: var(--color-black);
 
     & .switcher__card-name {
-      color: white;
+      color: var(--color-white);
     }
   }
 
@@ -34,19 +32,14 @@
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
-      //   background-color: green;
       appearance: none;
       align-self: flex-end;
       border: 1px solid #e3e3e3;
 
       &:checked {
-        background-color: white;
+        background-color: var(--color-white);
       }
     }
-    // display: flex;
-    // flex-direction: column;
-    // gap: 0.5rem;
-    // align-items: flex-end;
   }
 
   &__name {
