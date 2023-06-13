@@ -2,9 +2,10 @@ $prim-color: #64ff00;
 
 .title {
   color: var(--header-color);
+  // font-family: GT-Flexa, sans-serif;
 
   &--h1 {
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-weight: bolder;
     font-size: 1.5em;
   }

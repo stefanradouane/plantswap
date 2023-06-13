@@ -11,12 +11,16 @@ const SwapFlowReturn = ({ flowData, setFlowData, totalSteps }) => {
   }
   return (
     <section className={styles.swapflowreturn}>
-      <section className={styles.swapflowreturn__click} onClick={handleClick}>
-        <div className={styles.swapflowreturn__icon}>
-          <Svg />
-        </div>
-        <Text className={styles.swapflowreturn__text}>Keer terug</Text>
-      </section>
+      {flowData.step !== 1 ? (
+        <section className={styles.swapflowreturn__click} onClick={handleClick}>
+          <div className={styles.swapflowreturn__icon}>
+            <Svg />
+          </div>
+          <Text className={styles.swapflowreturn__text}>Keer terug</Text>
+        </section>
+      ) : (
+        <section></section>
+      )}
       <section>Step {flowData.step}</section>
     </section>
   );

@@ -9,13 +9,13 @@ export const metadata = {
 const customFont = localFont({
   src: [
     {
-      path: "../../../public/Poppins-Bold.ttf",
-      weight: "700",
+      path: "../../../public/Poppins-Regular.ttf",
+      weight: "400",
       style: "normal",
     },
     {
-      path: "../../../public/Poppins-Regular.ttf",
-      weight: "400",
+      path: "../../../public/GT-Flexa-Bold-Trial.otf",
+      weight: "700",
       style: "normal",
     },
   ],

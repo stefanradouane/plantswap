@@ -8,10 +8,11 @@ import SwapFlowReturn from "../SwapFlowReturn/SwapFlowReturn";
 import Uploader from "../Uploader/Uploader";
 import useStorage from "../../utils/useStorage";
 import Results from "../Results/Results";
+import Form from "../Form/Form";
 
 const flowdata = {
   swaptype: "swap",
-  step: 4,
+  step: 1,
   plant: {},
   apidata: {},
   plantinfo: {},
@@ -56,19 +57,31 @@ const SwapFlow = ({ data, dictionary, locale }) => {
   );
 
   function FlowBase() {
+    const data = {
+      flowdata: { flowData, setFlowData },
+      locale,
+      dictionary,
+    };
     switch (flowData.step) {
       case 1:
         return (
           <Uploader
+            // data={data}
             flowdata={{ flowData, setFlowData }}
             locale={locale}
             dummydata={null}
           />
         ); // identifier
       case 2:
-        return <Results data={flowData.apidata} />; // dit is mijn plant
+        return (
+          <Results
+            flowdata={{ flowData, setFlowData }}
+            data={flowData.apidata}
+          />
+        ); // dit is mijn plant
       case 3:
-        return <h1>Page under construction 🚧</h1>; // formulier
+        return <Form flowdata={{ flowData, setFlowData }} data={dataset} />;
+      // formulier
       case 4:
         return <Switcher flowdata={{ flowData, setFlowData }} data={data} />;
       case 5:

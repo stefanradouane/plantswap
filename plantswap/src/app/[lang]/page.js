@@ -26,7 +26,7 @@ export default async function Page({ params }) {
               {dictionary.homepage.title}
             </Title>
             <article>
-              <Text modifier={"bold"}>{dictionary.homepage.intro}</Text>
+              <Text>{dictionary.homepage.intro}</Text>
               <Cta
                 href={`/${params.lang}/planten`}
                 role="secondary"

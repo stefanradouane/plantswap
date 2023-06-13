@@ -5,6 +5,8 @@
   border: 1px solid var(--text-color);
   border-radius: 10px;
   gap: 1.5rem;
+  max-width: 500px;
+  // margin: auto;
 
   &__holder {
     display: flex;
