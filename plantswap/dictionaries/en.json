@@ -11,11 +11,25 @@
   },
   "language": {
     "hint": "Select your language",
-    "switch": "Switch to 🇬🇧"
+    "switch": "Wissel naar 🇳🇱"
   },
   "server-component": {
     "title": "Plant Swap",
     "identify": "Identificy <br/> plant"
+  },
+  "swapflow": {
+    "steptitle": {
+      "step-1": "Identify plant",
+      "step-2": "Choose your plant",
+      "step-3": "Plant info",
+      "step-4": "Select Swap"
+    },
+    "stepdescription": {
+      "step-1": "Take a picture or upload one below. We will help you to find the name and needs of your plant.",
+      "step-2": "Select the plant that matches your plant.",
+      "step-3": "Fill in the details of your plant.",
+      "step-4": "Select a plant to swap with."
+    }
   },
   "counter": {
     "increment": "Increment",

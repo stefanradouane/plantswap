@@ -1,18 +1,14 @@
-"use client";
-
 import Image from "next/image";
 import Text from "../Text/Text";
 import Title from "../Title/Title";
 import styles from "./filetile.module.scss";
 import prettyBytes from "pretty-bytes";
 
-const FileTile = ({ image, uploadedValue, removeImage, onDelete }) => {
-  // console.log(image);
-  console.log("render");
-  if (image) {
-    // const obj = new URL.createObjectURL(image);
-    const img = URL.createObjectURL(image);
-    // const objectURL = new URL.createObjectURL(image);
+const FileTile = ({ data, uploadedValue, onDelete }) => {
+  if (!data) return <></>;
+
+  if (data?.plant?.url) {
+    const image = data.plant;
     return (
       <section className={styles.filetile}>
         <Title title={"h4"} className={styles.filetile__name}>
@@ -20,7 +16,6 @@ const FileTile = ({ image, uploadedValue, removeImage, onDelete }) => {
         </Title>
         <Text modifier={"small"} className={styles.filetile__size}>
           {prettyBytes(image.size)}
-          {/* {image.size} bytes */}
         </Text>
 
         <div className={styles.filetile__loader}>
@@ -58,22 +53,14 @@ const FileTile = ({ image, uploadedValue, removeImage, onDelete }) => {
         </div>
         <Image
           className={styles.filetile__preview}
-          src={img}
+          src={image.url}
           width={60}
           height={60}
           alt="Uploaded image"
         />
-        {/* <progress
-          value={uploadedValue}
-          max="100"
-          onClick={(e) => {
-            e.preventDefault();
-            onDelete(e, true);
-          }}></progress> */}
       </section>
     );
   }
-  return <></>;
 };
 
 export default FileTile;

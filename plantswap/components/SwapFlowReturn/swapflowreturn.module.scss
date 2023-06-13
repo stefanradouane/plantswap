@@ -1,0 +1,27 @@
+.swapflowreturn {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  color: palevioletred;
+
+  &__click {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--button-color);
+    border-radius: 50%;
+  }
+
+  &__text {
+    font-size: 0.875rem;
+  }
+}

@@ -16,7 +16,8 @@ const ease = "linear";
 const animation = (delay) =>
   `1.11111s linear ${delay} infinite normal forwards running beating`;
 
-const Loader = () => {
+const Loader = ({ disabled }) => {
+  if (disabled) return null;
   return (
     <svg
       viewBox="0 0 100 100"

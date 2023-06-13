@@ -1,7 +1,6 @@
 :root {
   --header-color: #07060f;
-  --text-color: #7d7d7d;
-
+  --text-color: #000000;
   --color-orange: #f36621;
   --color-green: #00b894;
   --color-white: #f1f1f1;
@@ -48,15 +47,14 @@
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
   --prim-color: crimson;
+
+  --button-color: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    /* --background-start-rgb: 0, 0, 0; */
-    /* --background-end-rgb: 0, 0, 0; */
-    /* --background-end-rgb: 0, 0, 0; */
-
+    --text-color: #000;
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
       to bottom right,
@@ -81,6 +79,8 @@
     --callout-border-rgb: 108, 108, 108;
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
+
+    --button-color: #000000;
   }
 }
 
@@ -98,12 +98,13 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+  background-color: #afc999;
 
   min-height: 100dvh;
 }
@@ -111,6 +112,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 @media (prefers-color-scheme: dark) {
