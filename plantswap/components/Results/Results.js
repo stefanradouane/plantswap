@@ -3,6 +3,7 @@ import Title from "../Title/Title";
 import styles from "./results.module.scss";
 import Button from "../Button/Button";
 import Link from "next/link";
+import Text from "../Text/Text";
 const Results = ({ data }) => {
   if (!data) return <Title title={"h1"}>Geen groene vrienden gevonden</Title>;
 
@@ -20,9 +21,18 @@ const Results = ({ data }) => {
 export const Result = ({ result }) => {
   return (
     <section className={styles.result}>
-      <p className={styles.result__grade}>Score {result.score * 100}</p>
-      <h2 className={styles.result__latin}>{result.species.scientificName}</h2>
-      <h3 className={styles.result__name}>{result.species.commonNames[0]}</h3>
+
+      {/* ({parseFloat((sum * 100 / 100 )/ 1000000).toFixed(2)} */}
+      {/* <p className={styles.result__grade}>Score {result.score * 100 / 100 )}</p> */}
+      {/* <p className={styles.result__grade}>Score {result.score * 100}</p> */}
+
+      <Text className={styles.result__grade} title={"p"}>{result.score * 100}</Text>
+      <Title className={styles.result__latin} title={"h3"}>{result.species.scientificName}</Title> 
+      <Title className={styles.result__name} title={"h3"}>{result.species.commonNames[0]}</Title> 
+
+      {/* <h2 className={styles.result__latin}>{result.species.scientificName}</h2>
+      <h3 className={styles.result__name}>{result.species.commonNames[0]}</h3> */}
+      
       <Image
         src={result.images[0].url.m}
         alt="logo plantswap"
@@ -30,6 +40,7 @@ export const Result = ({ result }) => {
         height={200}
         width={200}
       />
+
       <Link
         className={styles.result__btn}
         href={`/planten/${result.species.scientificNameWithoutAuthor
@@ -37,6 +48,8 @@ export const Result = ({ result }) => {
           .toLowerCase()}`}>
         Meld aan
       </Link>
+
+      {/* <Button></Button> */}
     </section>
   );
 };

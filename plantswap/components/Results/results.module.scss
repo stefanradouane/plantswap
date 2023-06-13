@@ -18,42 +18,30 @@
 
 .result {
   display: grid;
-  // grid-template-areas: "grade img" "latin img" "name img" "btn img";
   grid-template-columns: 2fr 4fr 3fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  height: 140px;
   width: 100%;
-  
   border-radius: var(--border-radius);
   color: var(--text-color);
-  background-color: white;
+  background-color: var(--color-white);
 
   &__grade {
-    // grid-area: grade;
     font-size: 14px;
     font-weight: 400;
     grid-row: 1;
     grid-column: 3;
     margin: 10px;
-
-    
-    // margin-bottom: 0.7rem;
   }
 
   &__name {
-    // grid-area: name;
     grid-column: 2;
     grid-row: 1;
-    font-size: px;
     font-weight: 700;
     margin: 10px;
-    // margin-bottom: 0.7rem;
   }
 
   &__latin {
-    // grid-area: latin;
+    color: var(--color-black);
     font-weight: 400;
-    // margin-bottom: 0.7rem;
     font-size: 16px;
     grid-column: 2;
     grid-row: 2;
@@ -61,31 +49,22 @@
   }
 
   &__btn {
-    // grid-area: btn;
     height: 40px; 
     width: 140px;
     background-color: #bebebe;
     border-radius: 20px;
     grid-column: 3;
     grid-row: 2;
-
-    
     align-self: end;
     text-align: center;
-
     margin: 20px 0;
-    
   }
   &__img {
     grid-column: 1; 
     grid-row:  span 3;
-    
-    // grid-area: img;
     width: 7em;
     height: 7em;
-    
     border-radius: var(--border-radius);
     margin: 10px;
-    // object-fit: cover;
   }
 }
