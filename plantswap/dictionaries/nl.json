@@ -11,11 +11,25 @@
   },
   "language": {
     "hint": "Selecteer een taal",
-    "switch": "Wissel naar 🇳🇱"
+    "switch": "Switch to 🇬🇧"
   },
   "server-component": {
     "title": "Plantjes Ruil",
     "identify": "Identificeer <br/> plant"
+  },
+  "swapflow": {
+    "steptitle": {
+      "step-1": "Indentificeer Plant",
+      "step-2": "Selecteer Plant",
+      "step-3": "Plant Informatie",
+      "step-4": "Ruil Selecteren."
+    },
+    "stepdescription": {
+      "step-1": "Maak een foto of upload deze hieronder. Wij helpen je om de naam en behoeftes van je plant te vinden.",
+      "step-2": "Selecteer de plant die overeenkomt met jouw plant.",
+      "step-3": "Vul de volgende informatie in over de plant.",
+      "step-4": "Selecteer een plant om mee te ruilen."
+    }
   },
   "counter": {
     "increment": "Plus 1",

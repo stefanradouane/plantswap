@@ -1,0 +1,61 @@
+.switchercard {
+  display: grid;
+  grid-template-areas: "img img" "name selector" "latin-name selector";
+  grid-template-columns: 1fr auto;
+  // align-items: center;
+  // gap: 1rem;
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  cursor: pointer;
+
+  &:has(input:checked) {
+    background-color: black;
+
+    & .switcher__card-name {
+      color: white;
+    }
+  }
+
+  &__image {
+    grid-area: img;
+    border-radius: 0.25rem;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  &__selector {
+    grid-area: selector;
+    display: flex;
+    align-items: flex-end;
+
+    input {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      //   background-color: green;
+      appearance: none;
+      align-self: flex-end;
+      border: 1px solid #e3e3e3;
+
+      &:checked {
+        background-color: white;
+      }
+    }
+    // display: flex;
+    // flex-direction: column;
+    // gap: 0.5rem;
+    // align-items: flex-end;
+  }
+
+  &__name {
+    grid-area: name;
+    margin-top: 0.5rem;
+
+    &-latin {
+      margin-top: 0.25rem;
+      grid-area: latin-name;
+    }
+  }
+}
