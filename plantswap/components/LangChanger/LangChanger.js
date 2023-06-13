@@ -2,17 +2,23 @@
 
 import Link from "next/link";
 import styles from "./langchanger.module.scss";
-import { usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import Button from "../Button/Button";
 
 const LangChanger = ({ locale, dictionary }) => {
   const pathname = usePathname();
   const currentPage = pathname.replace(`/${locale}`, "");
-
+  const router = useRouter();
   return (
     <section>
-      <Link href={locale === "nl" ? `/en${currentPage}` : `/nl${currentPage}`}>
+      <Button
+        next={() =>
+          router.replace(
+            locale === "nl" ? `/en${currentPage}` : `/nl${currentPage}`
+          )
+        }>
         {dictionary.language.switch}
-      </Link>
+      </Button>
     </section>
   );
 };
