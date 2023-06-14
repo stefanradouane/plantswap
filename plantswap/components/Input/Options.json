@@ -1,0 +1,79 @@
+{
+  "herkomst":  [
+      "Afrika",
+      "Antartica",
+      "Azië",
+      "Australië",
+      "Europa",
+      "Noord Amerika",
+      "Zuid Amerika"
+    ]
+  ,
+  "moeilijkheidsgraad": [
+    "Niet moeilijk te onderhouden",
+    "Vereist wat ervaring om te onderhouden",
+    "Heel moeilijk te onderhouden"
+  ],
+  "waterbehoefte": ["Standaard", "Per dag", "Per week", "Per maand"],
+  "lichtbehoefte": ["Standaard", "Veel", "Weinig"],
+  "grondsoort": ["Standaard", "Zand", "Klei", "Veen"],
+  "voedingbehoefte": ["Standaard", "Veel", "Weinig"],
+  "luchtvochtigheid": ["Standaard", "Veel", "Weinig"],
+  "luchtzuiverend": ["Standaard", "Ja", "Nee"],
+  "giftig": ["Standaard", "Ja", "Nee"],
+  "bloeitijd": ["Standaard", "Voorjaar", "Zomer", "Herfst", "Winter"],
+  "bloeikleur": [
+    "Standaard",
+    "Rood",
+    "Oranje",
+    "Geel",
+    "Groen",
+    "Blauw",
+    "Paars",
+    "Roze",
+    "Wit",
+    "Zwart"
+  ],
+  "bladkleur": [
+    "Standaard",
+    "Rood",
+    "Oranje",
+
+    "Geel",
+    "Groen",
+    "Blauw",
+    "Paars",
+    "Roze",
+    "Wit",
+    "Zwart"
+  ],
+  "bladgrootte": ["Standaard", "Klein", "Middel", "Groot"],
+  "bladvorm": [
+    "Standaard",
+    "Rond",
+    "Ovaal",
+    "Langwerpig",
+    "Hartvormig",
+    "Eirond",
+    "Lobbig",
+    "Gevind",
+    "Handvormig",
+    "Gespleten",
+    "Gekarteld",
+    "Gekroesd",
+    "Geknikt",
+    "Gesnaveld",
+    "Gespoord",
+    "Gestekeld",
+    "Gestreept",
+    "Gevlekt",
+    "Glad",
+    "Golvend",
+    "Groot",
+    "Gruwelijk",
+    "Gek",
+    "Gewoon",
+    "Geweldig"
+  ]
+}
+

@@ -1,28 +1,47 @@
 .button {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
 
-  background-color: var(--color-orange);
-  box-shadow: 0px 4px 4px var(--shadow);
-  padding: 12px 22px;
-  border-radius: 1em;
-  border: none;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 1.4;
-  cursor: pointer;
+	background-color: var(--color-orange);
+	box-shadow: 0px 4px 4px var(--shadow);
+	padding: 12px 22px;
+	border-radius: 1em;
+	border: none;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 1.4;
+	cursor: pointer;
 
-  &--square {
-    height: 52px;
-    width: 52px;
-    border-radius: 0;
-    box-shadow: none;
-  }
+	&[disabled] {
+		cursor: default;
+	}
 
-  &[disabled] {
-    cursor: default;
-  }
+	&__submit {
+		cursor: pointer;
+
+		justify-self: end;
+
+		padding: 1rem 2rem;
+
+		border: none;
+		border-radius: var(--pill-border-radius);
+
+		background-color: var(--wireframe-btn-background-color);
+	}
+
+	&__submit:active {
+		cursor: pointer;
+
+		justify-self: end;
+
+		padding: 1rem 2rem;
+
+		border: none;
+		border-radius: var(--pill-border-radius);
+
+		background-color: black;
+	}
 }
