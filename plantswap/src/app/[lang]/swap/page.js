@@ -6,10 +6,10 @@ import Text from "@/../components/Text/Text";
 import Uploader from "@/../components/Uploader/Uploader";
 import Layout from "../../../../components/Layout/Base";
 import { getDictionary } from "../../../../get-dictionary";
-// import dataset from "./data.json";
+import dataset from "./data.json";
 
 // console.log(data);
-const dummydata = null;
+const dummydata = dataset;
 // process.env.NEXT_PUBLIC_DEVELOPMENT === "false" ? dataset : null;
 
 export default async function Home({ params }) {

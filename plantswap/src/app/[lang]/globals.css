@@ -1,5 +1,13 @@
 :root {
   --header-color: #07060f;
+
+  --primary-text-color: #212121;
+  --secondary-text-color: #ffffff;
+  --tertiary-text-color: #777777;
+
+  --wireframe-background-color: #E9E9E9;
+  --wireframe-btn-background-color: #acacac;
+
   --text-color: #000000;
   --color-orange: #f36621;
   --color-green: #00b894;
@@ -8,6 +16,7 @@
   --shadow: rgba(0, 0, 0, 0.25);
 
   --max-width: 1100px;
+  --pill-border-radius: 99px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
