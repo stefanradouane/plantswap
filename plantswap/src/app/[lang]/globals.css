@@ -1,4 +1,13 @@
 :root {
+  --XXS-spacer: 4px;
+  --XS-spacer: 8px;
+  --S-spacer: 16px;
+  --M-spacer: 24px;
+  --L-spacer: 32px;
+  --XL-spacer: 40px;
+  --XXL-spacer: 48px;
+  --XXXL-spacer: 56px;
+
   --header-color: #07060f;
 
   --primary-text-color: #212121;
@@ -8,16 +17,19 @@
   --wireframe-background-color: #E9E9E9;
   --wireframe-btn-background-color: #acacac;
 
+  --plant-based-background-color: red;
+
   --text-color: #000000;
   --color-orange: #f36621;
   --color-green: #00b894;
+  --color-black: #000000;
   --color-white: #f1f1f1;
 
   --shadow: rgba(0, 0, 0, 0.25);
 
   --max-width: 1100px;
   --pill-border-radius: 99px;
-  --border-radius: 12px;
+  --border-radius: 8px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;

@@ -44,5 +44,8 @@
     "plant-image": "Plant Image",
     "plant-quantity": "Plant Quantity",
     "plant-quantity-unit": "Plant Quantity Unit"
+  },
+  "plant_form": {
+    "tip_description": "In the form, we have already filled in some details about the identified plant for you." 
   }
 }
