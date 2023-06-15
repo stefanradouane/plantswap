@@ -43,5 +43,9 @@
     "plant-image": "Plant foto",
     "plant-quantity": "Plant aantal",
     "plant-quantity-unit": "Plant aantal eenheid"
+  },
+  "plant_form": {
+    "tip_description": "In het formulier hebben we alvast enkele gegevens over de geïdentificeerde plant voor je ingevuld." 
   }
 }
+

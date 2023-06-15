@@ -1,31 +1,25 @@
-import Image from "next/image";
+import DetailpageHeader from "../DetailpageHeader/DetailpageHeader";
+import DetailpageArticle from "../DetailpageArticle/DetailpageArticle";
+
 import styles from "./detailpage.module.scss";
 
-const Detailpage = ({ data }) => {
-  //   console.log(data.data);
-  //   console.log(data.data.main_species.images?.flower[0]);
+const Detailpage = ({ dictionary }) => {
+  const data = {
+    title: "Alocasia Zebrina",
+    subtitle: "Alocasia Zebrina",
+    url: "https://planturl.com",
+    difficulty: "Eenvoudig te onderhouden",
+    origin: "Azië",
+    description: "Korte beschrijving"
+  };
   return (
-    <main>
-      <h1 className={styles.detailpage__title}>{data.data.scientific_name}</h1>
-      <section className={styles.detailpage__content}>
-        <Image
-          src={data.data.image_url}
-          className={styles.detailpage__image}
-          width={200}
-          height={200}
-          alt={"Image of the flower"}
-        />
+    <main className={styles.detailpage}>
+      <DetailpageHeader data={data}/>
 
-        {data.data.main_species.images.flower?.map((flower, i, arr) => (
-          <Image
-            key={i}
-            src={flower.image_url}
-            className={styles.detailpage__image}
-            width={200}
-            height={200}
-            alt={"Image of the flower"}
-          />
-        ))}
+      <section className={styles.detailpage__section}>
+        <DetailpageArticle title="Herkomst" content={data.origin} />
+        <DetailpageArticle title="Moeilijkheidsgraad" content={data.difficulty} />
+        <DetailpageArticle title="Beschrijving" content={data.description} />
       </section>
     </main>
   );
