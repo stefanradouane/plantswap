@@ -2,7 +2,7 @@ $transition-speed: 200ms;
 
 .navtoggle {
   cursor: pointer;
-  background: none;
+  background: var(--color-white);
   border: none;
   margin: 0 auto;
   height: var(--header-height);
