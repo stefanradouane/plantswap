@@ -7,6 +7,7 @@ import Uploader from "@/../components/Uploader/Uploader";
 import Layout from "../../../../components/Layout/Base";
 import { getDictionary } from "../../../../get-dictionary";
 import dataset from "./data.json";
+import Results from "../../../../components/Results/Results";
 
 // console.log(data);
 const dummydata = dataset;
@@ -26,7 +27,8 @@ export default async function Home({ params }) {
           Maak een foto of upload deze hieronder. Wij helpen je om de naam en
           behoeftes van je plant te vinden.
         </Text>
-        <Uploader locale={params.lang} dummydata={dummydata?.data} />
+        <Results data={dataset.data} />
+        {/* <Uploader locale={params.lang} dummydata={dummydata?.data} /> */}
       </main>
     </Layout>
   );
