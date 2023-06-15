@@ -2,8 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // padding: 20px;
-  height: 52px;
+  height: var(--header-height);
   width: 100%;
   background-color: var(--color-green);
 
