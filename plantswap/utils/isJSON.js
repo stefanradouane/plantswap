@@ -5,7 +5,7 @@ function isJSON(jsonString) {
       return o;
     }
   } catch (e) {
-    console.log("not valid json");
+    return false;
   }
 
   return false;

@@ -5,14 +5,15 @@ import styles from "./filetile.module.scss";
 import prettyBytes from "pretty-bytes";
 
 const FileTile = ({ data, uploadedValue, onDelete }) => {
-  if (!data) return <></>;
-
-  if (data?.plant?.url) {
+  console.log(data);
+  if (!data) {
+    return <></>;
+  } else if (data?.plant?.url) {
     const image = data.plant;
     return (
       <section className={styles.filetile}>
         <Title title={"h4"} className={styles.filetile__name}>
-          {image.name}
+          {image.error ? image.error : image.name}
         </Title>
         <Text modifier={"small"} className={styles.filetile__size}>
           {prettyBytes(image.size)}
@@ -58,6 +59,18 @@ const FileTile = ({ data, uploadedValue, onDelete }) => {
           height={60}
           alt="Uploaded image"
         />
+      </section>
+    );
+  } else if (data?.plant?.error) {
+    return (
+      <section className={styles.filetile}>
+        <Title title={"h4"} className={styles.filetile__name}>
+          {data.plant.error.type}
+        </Title>
+        <Text modifier={"small"} className={styles.filetile__size}>
+          {data.plant.error.description}
+        </Text>
+        <div className={styles.filetile__preview}></div>
       </section>
     );
   }

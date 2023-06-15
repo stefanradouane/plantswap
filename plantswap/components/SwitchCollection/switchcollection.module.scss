@@ -1,6 +1,6 @@
 .switchcollection {
   display: grid;
-  grid-template-columns: repeat(var(--count), minmax(0, 1fr));
+  grid-template-columns: repeat(var(--column-count), minmax(0, 1fr));
   gap: 1rem;
   margin-bottom: 175px;
 
