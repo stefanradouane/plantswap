@@ -1,16 +1,28 @@
+import Image from "next/image";
 import Text from "../Text/Text";
 import Title from "../Title/Title";
 import styles from "./switchercard.module.scss";
 
 /** @todo Put everything inside the label. */
-const SwitcherCard = ({ plant, setChosenPlant }) => {
+const SwitcherCard = ({ plant, flowData, setFlowData }) => {
+  const checked = flowData.chosenplant.naam === plant.naam;
   return (
-    <div className={styles.switchercard}>
-      <img
+    <div
+      onClick={() => {
+        if (checked) setFlowData({ ...flowData, chosenplant: {} });
+        else setFlowData({ ...flowData, chosenplant: plant });
+      }}
+      className={
+        styles.switchercard +
+        " " +
+        (checked ? styles["switchercard--checked"] : "")
+      }>
+      <Image
         className={styles.switchercard__image}
         src={plant.fotos[0].url}
         alt={plant.naam}
         width={100}
+        height={100}
       />
       <Title
         title={"h3"}
@@ -20,7 +32,7 @@ const SwitcherCard = ({ plant, setChosenPlant }) => {
       </Title>
       <Text
         modifier={"small"}
-        className={styles.switchercard["switchercard__card-name-latin"]}>
+        className={styles["switchercard__card-name-latin"]}>
         {plant.naam.split("'")[1] ? plant.naam.split("'")[0] : ""}
       </Text>
 
@@ -29,8 +41,9 @@ const SwitcherCard = ({ plant, setChosenPlant }) => {
           type="radio"
           name="plant"
           value={plant.naam}
-          onInput={() => {
-            setChosenPlant((prev) => {
+          checked={checked}
+          onChange={() => {
+            setFlowData((prev) => {
               return {
                 ...prev,
                 chosenplant: plant,

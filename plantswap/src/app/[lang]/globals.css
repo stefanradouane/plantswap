@@ -12,6 +12,7 @@
   --color-orange: #f36621;
   --color-green: #00b894;
   --color-white: #f1f1f1;
+  --color-black: var(--text-color);
 
   --shadow: rgba(0, 0, 0, 0.25);
 
@@ -60,6 +61,7 @@
   --button-color: #000000;
 
   --header-height: 52px;
+  --column-count: 1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -132,5 +134,19 @@ ul {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+/* Mobile */
+@media (min-width: 22em) {
+  :root {
+    --column-count: 2;
+  }
+}
+
+/* Mobile */
+@media (min-width: 44em) {
+  :root {
+    --column-count: 3;
   }
 }
