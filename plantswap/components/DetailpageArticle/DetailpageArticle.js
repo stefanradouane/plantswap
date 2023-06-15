@@ -6,7 +6,7 @@ import styles from "./detailpagearticle.module.scss";
 const DetailpageArticle = ({ title, content }) => {
     return (
         <article className={styles.detailpagearticle}>
-            <Title title="h2">{title}</Title>
+            <Title title="h4">{title}</Title>
             <Text>{content}</Text>
         </article>
     );

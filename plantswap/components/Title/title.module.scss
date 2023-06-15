@@ -11,15 +11,22 @@ $prim-color: #64ff00;
   }
 
   &--h2 {
-    color: mediumvioletred;
+    padding-bottom: var(--XXS-spacer);
+
+    font-weight: bolder;
+    font-size: 2em;
   }
 
   &--h3 {
-    color: darkorchid;
+    font-weight: normal;
+    font-size: 1.25em;
+
+    color: var(--primary-text-color);
   }
 
   &--h4 {
-    color: darkslateblue;
+    font-size: 1em;
+    color: font;
   }
 
   &--h5 {
