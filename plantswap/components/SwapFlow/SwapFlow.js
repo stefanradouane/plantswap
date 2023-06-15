@@ -8,7 +8,7 @@ import SwapFlowReturn from "../SwapFlowReturn/SwapFlowReturn";
 import Uploader from "../Uploader/Uploader";
 import useStorage from "../../utils/useStorage";
 import Results from "../Results/Results";
-import Form from "../Form/Form";
+import PlantForm from "../Forms/PlantForm";
 
 const flowdata = {
   swaptype: "swap",
@@ -80,8 +80,8 @@ const SwapFlow = ({ data, dictionary, locale }) => {
           />
         ); // dit is mijn plant
       case 3:
-        return <Form flowdata={{ flowData, setFlowData }} data={dataset} />;
-      // formulier
+        // return <h1>Page under construction 🚧</h1>; // formulier
+        return <PlantForm data={data} />; 
       case 4:
         return <Switcher flowdata={{ flowData, setFlowData }} data={data} />;
       case 5:
