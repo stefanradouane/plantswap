@@ -1,38 +1,57 @@
 import Image from "next/image";
 import Title from "../Title/Title";
 import styles from "./results.module.scss";
-import Button from "../Button/Button";
 import Link from "next/link";
 import Text from "../Text/Text";
+// import dataset from "../Switcher/"
 const Results = ({ data }) => {
-  if (!data) return <Title title={"h1"}>Geen groene vrienden gevonden</Title>;
 
+  if (!data) return <Title title={"h1"}>Geen groene vrienden gevonden</Title>;
+  const getClassByIndex = (index) => {
+    if (index === 0) {
+      return styles.first;
+    } else if (index === 1) {
+      return styles.second;
+    } else if (index === 2) {
+      return styles.third;
+    } else {
+      return '';
+    }
+  };
   return (
+    
     <section className={styles.results}>
       <Title title={"h1"}>Resultaten</Title>
-      <Title title={"h2"}>{data.results.length} groene vrienden</Title>
-      {data.results.map((result, i, arr) => (
-        <Result result={result} key={i} />
-      ))}
+      <Title className={styles.results__resultlength} title={"h2"}>{data.results.length} groene kanidaten gevonden</Title>
+
+{
+  data.results.map((result, i) => (
+    <>
+    <Result
+      result={result}
+      key={i}
+      className={`${styles.result} ${getClassByIndex(i)}`}
+    />
+    {i === 2 && <Text className={styles.result__remaining} title={"p"}>Resterende {data.results.length - 3} groene kanidaten.</Text>}
+    </>
+  ))
+  
+}
     </section>
+    
   );
+  
 };
 
-export const Result = ({ result }) => {
+export const Result = ({ result, className }) => {
+  // console.log(className)
   return (
-    <section className={styles.result}>
+    <section className={`${styles.result} ${className}`}>
 
-      {/* ({parseFloat((sum * 100 / 100 )/ 1000000).toFixed(2)} */}
-      {/* <p className={styles.result__grade}>Score {result.score * 100 / 100 )}</p> */}
-      {/* <p className={styles.result__grade}>Score {result.score * 100}</p> */}
-
-      <Text className={styles.result__grade} title={"p"}>{result.score * 100}</Text>
-      <Title className={styles.result__latin} title={"h3"}>{result.species.scientificName}</Title> 
+      <Text className={styles.result__grade} title={"p"}>{Math.round(result.score * 100)}%</Text>
+      <Title className={styles.result__latin} title={"h3"}>{result.species.scientificNameWithoutAuthor}</Title> 
       <Title className={styles.result__name} title={"h3"}>{result.species.commonNames[0]}</Title> 
 
-      {/* <h2 className={styles.result__latin}>{result.species.scientificName}</h2>
-      <h3 className={styles.result__name}>{result.species.commonNames[0]}</h3> */}
-      
       <Image
         src={result.images[0].url.m}
         alt="logo plantswap"
@@ -48,8 +67,6 @@ export const Result = ({ result }) => {
           .toLowerCase()}`}>
         Meld aan
       </Link>
-
-      {/* <Button></Button> */}
     </section>
   );
 };
