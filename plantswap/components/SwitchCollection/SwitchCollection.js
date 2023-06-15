@@ -3,7 +3,7 @@ import SwitcherCard from "../SwitcherCard/SwitcherCard";
 import Text from "../Text/Text";
 import Title from "../Title/Title";
 
-const SwitchCollection = ({ collection, setChosenPlant }) => {
+const SwitchCollection = ({ collection, flowData, setFlowData }) => {
   return (
     <section className={styles["switchcollection-base"]}>
       <Title title={"h2"}>Collectie</Title>
@@ -11,7 +11,12 @@ const SwitchCollection = ({ collection, setChosenPlant }) => {
 
       <section className={styles.switchcollection}>
         {collection.map((plant, i) => (
-          <SwitcherCard key={i} plant={plant} setChosenPlant={setChosenPlant} />
+          <SwitcherCard
+            key={i}
+            plant={plant}
+            flowData={flowData}
+            setFlowData={setFlowData}
+          />
         ))}
       </section>
     </section>

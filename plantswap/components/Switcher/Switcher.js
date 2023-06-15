@@ -8,6 +8,7 @@ import Button from "../Button/Button";
 import { useState } from "react";
 import SwitcherCard from "../SwitcherCard/SwitcherCard";
 import SwitchCollection from "../SwitchCollection/SwitchCollection";
+import Image from "next/image";
 
 const Svg = () => (
   <svg
@@ -41,7 +42,8 @@ const Switcher = ({ flowdata, myPlant, data }) => {
       <SwitchCollection
         styles={styles}
         collection={usedData}
-        setChosenPlant={setFlowData}
+        flowData={flowData}
+        setFlowData={setFlowData}
       />
 
       <footer className={styles.plantswitcher__footer}>
@@ -62,10 +64,12 @@ const FooterCard = ({ myplant, type }) => {
   return (
     <section className={styles[`plantswitcher__footer-card-${type}`]}>
       {myplant && myplant.fotos ? (
-        <img
+        <Image
           src={myplant?.fotos[0]?.url}
           width={48}
+          height={48}
           className={styles["plantswitcher__footer-card-img"]}
+          alt={myplant.naam}
         />
       ) : (
         <div

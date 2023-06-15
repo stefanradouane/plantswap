@@ -1,6 +1,7 @@
 import Text from "../Text/Text";
 import styles from "./swapflowreturn.module.scss";
 
+/** @todo change div to button for acccesability  */
 const SwapFlowReturn = ({ flowData, setFlowData, totalSteps }) => {
   function handleClick() {
     if (flowData.step > 1) {

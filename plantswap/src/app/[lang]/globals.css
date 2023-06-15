@@ -5,13 +5,14 @@
   --secondary-text-color: #ffffff;
   --tertiary-text-color: #777777;
 
-  --wireframe-background-color: #E9E9E9;
+  --wireframe-background-color: #e9e9e9;
   --wireframe-btn-background-color: #acacac;
 
   --text-color: #000000;
   --color-orange: #f36621;
   --color-green: #00b894;
   --color-white: #f1f1f1;
+  --color-black: var(--text-color);
 
   --shadow: rgba(0, 0, 0, 0.25);
 
@@ -58,6 +59,8 @@
   --prim-color: crimson;
 
   --button-color: #000000;
+
+  --column-count: 1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -130,5 +133,19 @@ ul {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+/* Mobile */
+@media (min-width: 22em) {
+  :root {
+    --column-count: 2;
+  }
+}
+
+/* Mobile */
+@media (min-width: 44em) {
+  :root {
+    --column-count: 3;
   }
 }

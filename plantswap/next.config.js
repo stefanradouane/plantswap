@@ -2,7 +2,11 @@
 
 const nextConfig = {
   images: {
-    domains: ["media.graphassets.com", "bs.plantnet.org"],
+    domains: [
+      "media.graphassets.com",
+      "bs.plantnet.org",
+      "images.unsplash.com",
+    ],
   },
 };
 
