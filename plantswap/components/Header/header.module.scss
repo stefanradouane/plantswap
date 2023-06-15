@@ -2,11 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  height: var(--header-height);
   width: 100%;
+  background-color: var(--color-green);
 
   &__logo {
-    height: 100px;
     width: auto;
+    height: 100%;
+    display: block;
+    padding: 0.5rem;
+
+    &_link {
+      height: 100%;
+    }
   }
 }

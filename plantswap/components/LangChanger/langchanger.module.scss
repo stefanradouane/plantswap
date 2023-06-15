@@ -1,0 +1,13 @@
+@media screen and (max-width: 48em) {
+  .langchanger {
+    transition: 200ms ease-in-out;
+    order: -1;
+    // display: none
+    position: relative;
+    left: 52px;
+
+    &--shown {
+      left: 0;
+    }
+  }
+}

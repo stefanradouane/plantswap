@@ -6,7 +6,7 @@ import Link from "next/link";
 const Header = ({ locale, dictionary }) => {
   return (
     <header className={styles.header}>
-      <Link href={"/" + locale}>
+      <Link href={"/" + locale} className={styles.header__logo_link}>
         <Image
           src="/images/logo.webp"
           alt="logo plantswap"
