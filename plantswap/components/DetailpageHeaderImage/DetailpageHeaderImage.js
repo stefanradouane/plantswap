@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from 'react';
-import NextImage from 'next/image';
+import Image from 'next/image';
 import ColorThief from 'colorthief';
 import styles from '../DetailpageHeaderImage/detailpageheaderimage.module.scss';
 
@@ -24,9 +24,9 @@ const DetailpageHeaderImage = ({ data, onColorExtracted }) => {
 
     return (
         <figure className={styles.detailpageheaderimage}>
-            <NextImage
+            <Image
                 ref={imgRef}
-                src="/images/testplant_2.jpg"
+                src="/images/testplant.jpg"
                 alt="Picture of the plant 'vrouwentongen' in a pot"
                 width={100}
                 height={100}
