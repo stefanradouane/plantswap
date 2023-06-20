@@ -10,9 +10,9 @@
     ]
   ,
   "moeilijkheidsgraad": [
-    "Niet moeilijk te onderhouden",
-    "Vereist wat ervaring om te onderhouden",
-    "Heel moeilijk te onderhouden"
+    "Makkelijk",
+    "Standaard",
+    "Uitdagend"
   ],
   "waterbehoefte": ["Standaard", "Per dag", "Per week", "Per maand"],
   "lichtbehoefte": ["Standaard", "Veel", "Weinig"],
