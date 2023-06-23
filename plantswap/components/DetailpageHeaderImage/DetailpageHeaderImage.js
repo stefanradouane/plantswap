@@ -1,36 +1,55 @@
 "use client"
 
 import { useEffect, useRef, useState } from 'react';
-import NextImage from 'next/image';
+import Image from 'next/image';
 import ColorThief from 'colorthief';
 import styles from '../DetailpageHeaderImage/detailpageheaderimage.module.scss';
 
 const DetailpageHeaderImage = ({ data, onColorExtracted }) => {
     const imgRef = useRef();
 
+    const isGreen = (rgb) => {
+        const [r, g, b] = rgb;
+        return g > r && g > b;  // Check if green is the dominant color.
+    };
+
     useEffect(() => {
         const img = new window.Image();
         img.src = imgRef.current.src;
-        img.crossOrigin = 'Anonymous'; // This is important if your image is hosted on another domain
+        img.crossOrigin = 'Anonymous'; // Important if your image is hosted on another domain.
         img.onload = function() {
             const colorThief = new ColorThief();
-            const rgb = colorThief.getColor(img);
-            const hex = rgbToHex(rgb);
-            console.log(`Rgb waarde: ${rgb}`);
-            console.log(`Rgb waarde in hex: ${hex}`);
+            let colors = colorThief.getPalette(img, 5);  // Extract 5 dominant colors from image.
+            
+            const nonGreenColors = colors.filter(rgb => !isGreen(rgb));  // Filter out the green color shades.
+
+            let colorToUse;
+            if (nonGreenColors.length > 0) {
+                // If there are non- green colors, use the most dominant one.
+                colorToUse = nonGreenColors[0];
+            } else if (colors.length > 1) {
+                // If all dominant colors are green, use the second most dominant color.
+                colorToUse = colors[1];
+            } else {
+                // If there's only one color and it's green, use it.
+                colorToUse = colors[0];
+            }
+
+            const hex = rgbToHex(colorToUse);
+            console.log(`Rgb value: ${colorToUse}`);
+            console.log(`Rgb value in hex: ${hex}`);
             onColorExtracted(hex);
         };
     }, []);
 
     return (
         <figure className={styles.detailpageheaderimage}>
-            <NextImage
+            <Image
                 ref={imgRef}
                 src="/images/testplant_2.jpg"
                 alt="Picture of the plant 'vrouwentongen' in a pot"
-                width={100}
-                height={100}
                 quality={100}
+                fill={true}
             />
         </figure>
     );

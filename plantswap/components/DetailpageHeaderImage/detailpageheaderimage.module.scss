@@ -1,8 +1,10 @@
 .detailpageheaderimage {
-    padding-bottom: var(--M-spacer);
+    position: relative;
+
+    margin-bottom: var(--XL-spacer);
 
     width: 100%;
-    height: 40rem;
+    height: 35rem;
 
     img {
         width: 100%;
