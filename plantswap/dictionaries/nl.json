@@ -1,7 +1,10 @@
 {
   "homepage": {
-    "title": "Welkom bij Plant Swap",
-    "intro": "Ontdek Plant Swap - de webapplicatie die je buurt socialer maakt en je plantenkennis vergroot! Ruil, doneer en bekijk stekjes op ons platform. Kom naar de bibliotheek en word onderdeel van onze groeiende community. Laat je groene pareltjes floreren en maak nieuwe vrienden met dezelfde passie. Doe mee met Plant Swap en ontdek een wereld vol groene magie!"
+    "title": "Verbind Leer, en Draag Bij aan een Groene Buurt",
+    "intro": "Ruil jouw stekje om, of doneer deze. Maak een keuze uit onze collectie beschikbare stekjes en kom je gekozen stekje bij ons omruilen!",
+    "button": "Plant Doneren",
+    "sideNote": "Er is meer",
+    "subTitle" : "Onze Collectie"
   },
   "nav": {
     "home": "Home",

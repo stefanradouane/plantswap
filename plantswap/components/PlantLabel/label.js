@@ -11,39 +11,34 @@ const PlantLabel = ({type}) => {
 		switch (label) {
 			case 1:
 				return {
-					icon: '/images/logo.webp',
-					alt: 'Zeer makkelijk',
-					discription: 'Zeer makkelijk',
+					icon: '/images/vingers/Groene_Vingers-1.svg',
+					alt: 'Zeer makkelijk , 1 groene vinger',
 				};
 			case 2:
 				return {
-					icon: '/images/logo.webp',
-					alt: 'Makkelijk',
-					discription: 'Makkelijk',
+					icon: '/images/vingers/Groene_Vingers-2.svg',
+					alt: 'Makkelijk, 2 groene vingers',
 				};
 			case 3:
 				return {
-					icon: '/images/logo.webp',
-					alt: 'Normaal',
-					discription: 'Normaal',
+					icon: '/images/vingers/Groene_Vingers-3.svg',
+					alt: 'Normaal, 3 groene vingers',
 				};
 			case 4:
 				return {
-					icon: '/images/logo.webp',
-					alt: 'Uitdagend',
-					discription: 'Uitdagend',
+					icon: '/images/vingers/Groene_Vingers-4.svg',
+					alt: 'Uitdagend, 4 groene vingers',
 				};
 
 			case 5:
 				return {
-					icon: '/images/logo.webp',
-					alt: 'Moeilijk',
-					discription: 'Moeilijk',
+					icon: '/images/vingers/Groene_Vingers-5.svg',
+					alt: 'Moeilijk, 5 groene vingers',
 				};
 
 			case 'giftig':
 				return {
-					icon: '/images/logo.webp',
+					icon: '/images/icons/skull.svg',
 					alt: 'Giftig',
 					discription: 'Giftig',
 				};
@@ -51,9 +46,7 @@ const PlantLabel = ({type}) => {
 			default:
 				return {
 					icon: '',
-					alt: 'oma',
-
-					discription: 'opa',
+					alt: 'Groene vingers',
 				};
 		}
 	}
@@ -64,12 +57,12 @@ const PlantLabel = ({type}) => {
 				className={styles['label--icon']}
 				src={icon}
 				alt={alt}
-				width={20}
-				height={20}
+				width={16}
+				height={16}
 			/> 
 
 			<Text className={styles['label--text']} modifier={'x-small'}>
-				{discription}
+				{ discription ? discription : "Groene vingers" }
 			 </Text>
 		</div>
 	);

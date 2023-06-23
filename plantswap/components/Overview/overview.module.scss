@@ -1,5 +1,11 @@
 .overview {
-	padding: var(--L-spacer);
+	position: relative;
+	padding: var(--M-spacer);
+	height: fit-content;
+
+	&:has(.window.filterWindow ) {
+		background-color: red;
+	}
 
 	&__plants {
 		display: grid;

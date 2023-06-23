@@ -1,12 +1,11 @@
 .tooltip {
     $tooltip-description-max-width: 19rem;
 
-    $tooltip-border-radius: var(--border-radius);
     $tooltip-background-color: var(--color-white);
 
     width: 25rem;
 
-    border-radius: $tooltip-border-radius;
+    border-radius: 12px;
 
     background-color: $tooltip-background-color;
 

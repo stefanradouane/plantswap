@@ -60,6 +60,10 @@
 			gap: var(--XXS-spacer);
 		}
 		
+		&--icon {
+			filter: invert(1);
+		}
+		
 		&--black {
 			color: var(--color-black);
 		}

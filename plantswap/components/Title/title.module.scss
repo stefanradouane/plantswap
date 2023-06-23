@@ -2,8 +2,15 @@
   color: var(--header-color);
   // font-family: GT-Flexa, sans-serif;
 
+  &--h0 {
+    font-weight: 700;
+    font-size: calc(1rem + 3vw);
+    line-height: 1em;
+    color: var(--color-text);
+
+  }
+
   &--h1 {
-    // text-transform: uppercase;
     font-weight: bolder;
     font-size: 1.5em;
   }
@@ -30,6 +37,8 @@
   &--h5 {
     color: darkslategray;
   }
+
+
 
   &--card-size {
     font-weight: 400;

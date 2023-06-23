@@ -1,12 +1,24 @@
 .filter {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 1rem;
-	padding: 0 1rem;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	height: 4em;
+	margin-bottom: calc(var(--M-spacer) + 1vh);
+	z-index: 5;
 
-	font-size: 0.65rem;
+	&__header {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: end;
+		gap: var(--S-spacer) 0;
+		justify-content: space-between;
+		background-color: var(--background-light);
+		box-shadow: 0 0 0.1rem 0 rgba(0, 0, 0, 0.1);
+		margin-bottom: 1rem;
+		margin-bottom: 1.875rem;
+		z-index: 5;
+		font-size: 0.65rem;
+	}
 
 	&--index {
 		display: flex;
@@ -34,7 +46,8 @@
 		flex: 1;
 		flex-basis: 22em;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: flex-end;
+		gap: var(--S-spacer);
 		padding: 0.3rem 0;
 		border-bottom: 2px solid var(--color-black);
 		width: 100%;
@@ -46,8 +59,12 @@
 		}
 	}
 	&--btn {
+		display: flex;
+		align-items: center;
 		background: none;
 		border: none;
+		color: var(--color-black);
+		gap: var(--XS-spacer);
 		cursor: pointer;
 	}
 }

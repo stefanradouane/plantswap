@@ -14,7 +14,7 @@
     "Standaard",
     "Uitdagend"
   ],
-  "waterbehoefte": ["Standaard", "Per dag", "Per week", "Per maand"],
+  "waterbehoefte": ["Standaard", "veel", "weinig"],
   "lichtbehoefte": ["Standaard", "Veel", "Weinig"],
   "grondsoort": ["Standaard", "Zand", "Klei", "Veen"],
   "voedingbehoefte": ["Standaard", "Veel", "Weinig"],

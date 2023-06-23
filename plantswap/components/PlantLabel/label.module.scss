@@ -3,11 +3,11 @@
     align-items: center;
     gap: var(--S-spacer);
     background-color: #ccc;
-    padding: 0 var(--XS-spacer);
+    padding: 2px var(--XS-spacer);
     border-radius: 4px;
 
     &--icon {
         aspect-ratio: 1/1;
-        width: 1.5em;
+        width: .8em;
     }
 }

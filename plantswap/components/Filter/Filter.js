@@ -1,53 +1,44 @@
+'use client';
+
+import { useState, useEffect, useRef } from 'react';
 import styles from './filter.module.scss';
-import Text from '../Text/Text.js';
-import { useState } from 'react';
+import FilterWindow from './Window/FilterWindow';
+import Image from 'next/image';
 
-const PlantFilter = (plants) => {
-	const [filteredPlants, setFilteredPlants] = useState(null);
+const PlantFilter = ({ plants, setSelectedFilters, setSearchQuery }) => {
+	const [collapsed, setCollapsed] = useState(true);
+	const [filterCount, setFilterCount] = useState(0); // State to track the number of filters
+	const removeFilters = () => {
+		setSelectedFilters({}); // Clear the selected filters
+		setFilterCount(0); // Reset the filter count
 
-	function filterPlants(e) {
-		e.preventDefault();
-		let difficulty = e.target.querySelector('select').value;
-		let filteredPlants = plants.data.filter(
-			(plant) => plant.categories[0].naam === difficulty
-		);
+		const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+		checkboxes.forEach((checkbox) => {
+			checkbox.checked = false;
+		});
+	};
 
-		setFilteredPlants(filteredPlants);
-	}
+	useEffect(() => {
+		// Update the filter count whenever the selected filters change
+		const count = Object.keys(setSelectedFilters).reduce((total, key) => {
+			return total + setSelectedFilters[key].length;
+		}, 0);
+		setFilterCount(count);
+	}, [setSelectedFilters]);
 
-	function closeFilter(e) {
-		e.preventDefault();
-		setFilteredPlants(null);
-	}
+	const filtertoggle = collapsed
+		? '/images/icons/Close.svg'
+		: '/images/icons/Arrow-down.svg';
 
-	function searchPlants(e) {
-		e.preventDefault();
-		let search = e.target.querySelector('input').value;
-		let filteredPlants = plants.data.filter((plant) => {
-            if (plant.naam === search ) {
-                return plant;
-            } else {
-                return null;
-            }
-        
-        });
-
-        filterPlants ? setFilteredPlants(filteredPlants) : faildHandler();
-	}
-
-    function faildHandler() {
-        console.log('faild');
-    }
-
-	const usedPlants = filteredPlants ? filteredPlants : plants.data;
-	// const resultAmount = usedPlants.length;
 	return (
 		<section className={styles.filter}>
-				<form className={styles.filter__search} onSubmit={searchPlants}>
+			<header className={styles.filter__header}>
+				<form className={styles.filter__search}>
 					<input
 						type="text"
 						placeholder="Zoek een stekje"
 						className={styles['filter__search--input']}
+						onChange={(e) => setSearchQuery(e.target.value)}
 					/>
 					<button className={styles['filter--btn']}>
 						<svg
@@ -62,56 +53,46 @@ const PlantFilter = (plants) => {
 								fill="#000"
 							/>
 						</svg>
+						{/* <Icon className={styles['filter__search--icon']} /> */}
 					</button>
 				</form>
 
 				<section className={styles.filter__meta}>
-					<Text
-						modifier={'meta'}
-						className={styles['filter__meta--delete']}
+					<button
+						className={styles['filter--btn']}
+						onClick={removeFilters}
 					>
-						Verwijdert alle filters
-					</Text>
+						{' '}
+						Verwijder filters
+					</button>
 
-					<aside className={styles['filter--index']}>
-						<Text
-							modifier={'meta'}
-							className={styles['filter__meta--black']}
-						>
-							Filter ( <span>1</span> )
-							{/* Filter ( <span>{filterAmount}</span> ) */}
-						</Text>
+					<button
+						className={styles['filter--btn']}
+						onClick={() => {
+							setCollapsed(!collapsed);
+						}}
+					>
+						<span>
+							Filter (<strong>{filterCount}</strong>)
+						</span>
 
-						<button
-							className={styles['filter--btn']}
-							onClick={closeFilter}
-						>
-							<svg
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M18 6L6 18"
-									stroke="#000"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								/>
-
-								<path
-									d="M6 6L18 18"
-									stroke="#000"
-									strokeWidth="2"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								/>
-							</svg>
-						</button>
-					</aside>
+						<Image
+							src={filtertoggle}
+							alt="filter button icon"
+							width={12}
+							height={12}
+						/>
+					</button>
 				</section>
+			</header>
+
+			<FilterWindow
+				plants={plants}
+				active={collapsed}
+				setSelectedFilters={setSelectedFilters}
+				setFilterCount={setFilterCount}
+				collapsed={setCollapsed}
+			/>
 		</section>
 	);
 };
