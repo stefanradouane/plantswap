@@ -19,10 +19,10 @@ const DetailpageHeader = ({ data }) => {
         <header className={styles.detailpageheader} style={{ backgroundColor: backgroundColor }}>
             <article className={styles.detailpageheader__content_wrapper}>
                 <DetailPageHeaderImage onColorExtracted={handleColorExtracted}></DetailPageHeaderImage>
-                <Title title={"h1"} className={styles.header__title}>
+                <Title title={"h2"} className={styles.detailpageheader__title}>
                     {data.title}
                 </Title>
-                <Text className={styles.header__subtitle}>{data.subtitle}</Text>
+                <Title title={"h4"} className={styles.detailpageheader__subtitle}>{data.subtitle}</Title>
             </article>
         </header>
     );

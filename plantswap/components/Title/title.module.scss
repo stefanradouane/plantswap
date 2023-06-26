@@ -14,16 +14,21 @@ $prim-color: #64ff00;
   }
 
   &--h2 {
-    font-size: 1.5rem;
-  }
+     padding-bottom: var(--XXS-spacer);
 
+    font-weight: bolder;
+    font-size: 1.5rem;
+   
+    
   &--h3 {
+    font-weight: normal;
     font-size: 1rem;
-    // color: darkorchid;
+    color: var(--primary-text-color);
   }
 
   &--h4 {
     font-size: 0.875rem;
+    color: font;
   }
 
   &--h5 {
