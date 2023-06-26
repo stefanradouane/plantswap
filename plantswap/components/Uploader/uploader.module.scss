@@ -2,25 +2,46 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  border: 1px solid var(--text-color);
+  // border: 1px solid var(--text-color);
+  background-color: white;
+
   border-radius: 10px;
   gap: 1.5rem;
-  max-width: 500px;
-  // margin: auto;
+  width: 100%;
+
+  // max-width: 500px;
+  color: var(--text-color);
+
+  > svg {
+    margin-bottom: 0.5rem;
+  }
+
+  &__description {
+    max-width: 15rem;
+    text-align: center;
+  }
 
   &__holder {
+    border: 1px dashed var(--color-grey);
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px dashed var(--text-color);
+    //   border: 1px dashed var(--text-color);
     border-radius: 10px;
     padding: 1rem;
-    cursor: pointer;
+    gap: 0.5rem;
+    width: 100%;
+    //   cursor: pointer;
   }
 
   &__file {
     appearance: none;
     display: none;
+
+    &size {
+      margin-bottom: 1rem;
+    }
   }
 }

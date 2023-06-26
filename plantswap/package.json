@@ -16,16 +16,19 @@
     "eslint-config-next": "13.4.4",
     "formidable": "^3.2.5",
     "formik": "^2.4.1",
-    "graphql": "^16.6.0",
+    "graphql": "^16.7.1",
+    "graphql-request": "^6.1.0",
     "multiparty": "^4.2.3",
     "negotiator": "^0.6.3",
     "next": "13.4.4",
     "next-connect": "^1.0.0-next.4",
     "pretty-bytes": "^6.1.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
+    "encoding": "^0.1.13",
     "sass": "^1.62.1"
   }
 }

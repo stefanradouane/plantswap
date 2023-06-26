@@ -28,11 +28,11 @@ const Switcher = ({ flowdata, myPlant, data }) => {
   const { flowData, setFlowData } = flowdata;
   const usedData = dummydata.stekjes;
   const myplant = {
-    naam: "Monstera",
-    latin: "Monstera deliciosa",
+    naam: flowData.plantinfo.name,
+    latin: flowData.plantinfo.latinName,
     fotos: [
       {
-        url: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+        url: flowData.plant.url,
       },
     ],
   };
@@ -51,6 +51,14 @@ const Switcher = ({ flowdata, myPlant, data }) => {
         <FooterCard myplant={flowData.chosenplant} type={"new"} />
 
         <Button
+          next={() => {
+            setFlowData((prev) => {
+              return {
+                ...prev,
+                step: prev.step + 1,
+              };
+            });
+          }}
           className={styles["plantswitcher__footer-cta"]}
           disabled={!flowData.chosenplant.naam}>
           Plant omruilen

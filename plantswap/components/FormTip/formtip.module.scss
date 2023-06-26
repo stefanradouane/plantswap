@@ -1,47 +1,40 @@
 .tooltip {
-    $tooltip-description-max-width: 19rem;
+  $tooltip-description-max-width: 20rem;
 
-    $tooltip-border-radius: var(--border-radius);
-    $tooltip-background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  background-color: var(--color-green);
+  color: var(--color-white);
 
-    width: 25rem;
+  &__content_wrapper {
+    padding: var(--S-spacer);
 
-    border-radius: $tooltip-border-radius;
+    display: flex;
 
-    background-color: $tooltip-background-color;
+    gap: var(--M-spacer);
 
-    &__content_wrapper {
-        padding: var(--S-spacer);
+    width: 100%;
+    height: 100%;
+  }
 
-        display: flex;
+  &__icon {
+    display: grid;
+    place-content: center;
 
-        gap: var(--M-spacer);
+    flex-shrink: 0;
 
-        width: 100%;
-        height: 100%;
-    }
+    width: 1.5rem;
+    height: 1.5rem;
 
-    &__icon {
-        position: relative;
+    border-radius: 50%;
+    background-color: var(--color-white);
+  }
 
-        display: grid;
+  &__icon::before {
+    content: "i";
+    color: var(--color-green);
+  }
 
-        place-content: center;
-
-        width: 2rem;
-        height: 2rem;
-
-        border: 1px solid var(--color-black);
-        border-radius: 99px;
-    }
-
-    &__icon::before {
-        content:"i";
-
-        color: var(--color-black);
-    }
-
-    &__description {
-        max-width: $tooltip-description-max-width;
-    }
+  &__description {
+    max-width: $tooltip-description-max-width;
+  }
 }

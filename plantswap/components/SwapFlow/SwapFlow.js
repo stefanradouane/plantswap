@@ -1,5 +1,7 @@
 "use client";
 
+import styles from "./swapflow.module.scss";
+
 import { useEffect, useState } from "react";
 import Switcher from "../Switcher/Switcher";
 import Title from "../Title/Title";
@@ -8,22 +10,21 @@ import SwapFlowReturn from "../SwapFlowReturn/SwapFlowReturn";
 import Uploader from "../Uploader/Uploader";
 import useStorage from "../../utils/useStorage";
 import Results from "../Results/Results";
-import PlantForm from "../Forms/PlantForm";
+import Form from "../Forms/Form";
+import Button from "../Button/Button";
+// import UserForm from "../Forms/UserForm";
 
 const flowdata = {
-  swaptype: "swap",
-  step: 1,
-  plant: {},
   apidata: {},
-  plantinfo: {},
   chosenplant: {},
-  //   // FormData
-  //   // API RESPONSE
-  //   // USER input
-  //   // CHOSEN plant info
+  myplant: {},
+  plant: {},
+  plantinfo: {},
+  step: 1,
+  swaptype: "swap",
 };
 
-const SwapFlow = ({ data, dictionary, locale }) => {
+const SwapFlow = ({ formData, dictionary, locale }) => {
   const { getItem } = useStorage();
   const [flowData, setFlowData] = useState(flowdata);
   const totalSteps = 6;
@@ -40,16 +41,24 @@ const SwapFlow = ({ data, dictionary, locale }) => {
   }, [flowData]);
 
   return (
-    <section style={{ padding: "1rem" }}>
+    <section className={styles.swapflow}>
       <SwapFlowReturn
+        className={styles.swapflow__return}
         flowData={flowData}
         setFlowData={setFlowData}
         totalSteps={totalSteps}
       />
-      <Title title={"h1"} modifier={"gentle-appear"}>
+      {/* <Header /> */}
+      <Title
+        title={"h1"}
+        className={styles.swapflow__title}
+        modifier={"gentle-appear"}>
         {dictionary.swapflow.steptitle[`step-${flowData.step}`]}
       </Title>
-      <Text>
+      <Text className={styles.swapflow__surtitle} modifier={["italic"]}>
+        Plant ruilen
+      </Text>
+      <Text modifier={"small"} className={styles.swapflow__description}>
         {dictionary.swapflow.stepdescription[`step-${flowData.step}`]}
       </Text>
       <FlowBase />
@@ -64,32 +73,39 @@ const SwapFlow = ({ data, dictionary, locale }) => {
     };
     switch (flowData.step) {
       case 1:
-        return (
-          <Uploader
-            // data={data}
-            flowdata={{ flowData, setFlowData }}
-            locale={locale}
-            dummydata={null}
-          />
-        ); // identifier
+        return <Uploader data={data} />; // identifier
       case 2:
         return (
           <Results
+            mydata={data}
             flowdata={{ flowData, setFlowData }}
             data={flowData.apidata}
           />
-        ); // dit is mijn plant
+        );
       case 3:
-        // return <h1>Page under construction 🚧</h1>; // formulier
-        return <PlantForm data={data} />; 
+        return <Form formData={formData} data={data} form={"plantforms"} />;
       case 4:
+        if (flowData.swaptype === "donate")
+          return <Form formData={formData} data={data} form={"userForms"} />;
+
         return <Switcher flowdata={{ flowData, setFlowData }} data={data} />;
       case 5:
-        return <Switcher flowdata={{ flowData, setFlowData }} data={data} />;
-      case 6:
-        return <Switcher flowdata={{ flowData, setFlowData }} data={data} />;
+        if (flowData.swaptype === "donate")
+          return (
+            <h1>
+              Bedankt voor het invullen van het formulier, controleer nu de
+              gegevens
+            </h1>
+          );
+
+        return <Form formData={formData} data={data} form={"userForms"} />;
       default:
-        return <h1>Step undefined</h1>;
+        return (
+          <h1>
+            Bedankt voor het invullen van het formulier, controleer nu de
+            gegevens
+          </h1>
+        );
     }
   }
 };

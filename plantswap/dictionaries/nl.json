@@ -1,51 +1,72 @@
 {
+  "plantsNickName": "groene kanidaten",
   "homepage": {
     "title": "Welkom bij Plant Swap",
     "intro": "Ontdek Plant Swap - de webapplicatie die je buurt socialer maakt en je plantenkennis vergroot! Ruil, doneer en bekijk stekjes op ons platform. Kom naar de bibliotheek en word onderdeel van onze groeiende community. Laat je groene pareltjes floreren en maak nieuwe vrienden met dezelfde passie. Doe mee met Plant Swap en ontdek een wereld vol groene magie!"
   },
   "nav": {
+    "about": "Over-ons",
     "home": "Home",
     "plant": "Alle stekjes",
-    "about": "Over-ons",
     "swap": "Swap"
   },
   "language": {
     "hint": "Selecteer een taal",
-    "switch": "🇬🇧"
-  },
-  "server-component": {
-    "title": "Plantjes Ruil",
-    "identify": "Identificeer <br/> plant"
+    "switch": "NL",
+    "options": {
+      "en": "Engels",
+      "nl": "Nederlands"
+    }
   },
   "swapflow": {
+    "return": {
+      "title": "Vorige stap",
+      "step": "Stap"
+    },
     "steptitle": {
-      "step-1": "Indentificeer Plant",
-      "step-2": "Selecteer Plant",
+      "step-1": "Plant Indentificeren",
+      "step-2": "Plant Identificaties",
       "step-3": "Plant Informatie",
-      "step-4": "Ruil Selecteren."
+      "step-4": "Ruil Selecteren.",
+      "step-5": "Persoonlijke Gegevens"
     },
     "stepdescription": {
       "step-1": "Maak een foto of upload deze hieronder. Wij helpen je om de naam en behoeftes van je plant te vinden.",
       "step-2": "Selecteer de plant die overeenkomt met jouw plant.",
       "step-3": "Vul de volgende informatie in over de plant.",
-      "step-4": "Selecteer een plant om mee te ruilen."
+      "step-4": "Selecteer een plant om mee te ruilen.",
+      "step-5": "Beschrijvende tekst, voor het maken van een afspraak."
+    },
+    "uploader": {
+      "title": "Tik om een foto te uploaded of te maken van je plant.",
+      "maxSize": "Maximale bestandsgrootte: 10 MB",
+      "button": {
+        "new": "Nieuwe foto",
+        "text": "Identificeer plant",
+        "load": "Bezig met indentificeren"
+      },
+      "fileError": {
+        "size": {
+          "type": "File error",
+          "description": "Bestand te groot"
+        }
+      }
+    },
+    "myplant": {
+      "title": "Resultaten",
+      "error": "Geen groene vrienden gevonden",
+      "button": {
+        "new": "Mijn plant",
+        "recent": "Gekozen plant"
+      },
+      "found": "gevonden",
+      "extra": "Resterende"
     }
   },
-  "counter": {
-    "increment": "Plus 1",
-    "decrement": "Min 1"
+  "plantforms": {
+    "tip_description": "In het formulier hebben we alvast enkele gegevens over de geïdentificeerde plant voor je ingevuld."
   },
-  "plant-list": {
-    "title": "Plantjes",
-    "add": "Voeg plantje toe",
-    "remove": "Verwijder plantje",
-    "plant-description": "Plant omschrijving",
-    "plant-image": "Plant foto",
-    "plant-quantity": "Plant aantal",
-    "plant-quantity-unit": "Plant aantal eenheid"
-  },
-  "plant_form": {
-    "tip_description": "In het formulier hebben we alvast enkele gegevens over de geïdentificeerde plant voor je ingevuld." 
+  "userForms": {
+    "tip_description": "We reserveren de plant tot uiterlijk 3 dagen nadat je hebt aangegeven deze op te komen halen."
   }
 }
-

@@ -2,28 +2,37 @@ $prim-color: #64ff00;
 
 .title {
   color: var(--header-color);
-  // font-family: GT-Flexa, sans-serif;
+  font-weight: bold;
 
   &--h1 {
-    // text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 1.5em;
+    font-size: 2.5rem;
+    // Change to clamp(x, x, 2.5rem) when supported
+    // and to variable size when not suported.
+    // --
+    // Font size 2.5rem is overflowing on mobile screen sizes
+    // < 300px wide.
   }
 
   &--h2 {
-    color: mediumvioletred;
+    font-size: 1.5rem;
   }
 
   &--h3 {
-    color: darkorchid;
+    font-size: 1rem;
+    // color: darkorchid;
   }
 
   &--h4 {
-    color: darkslateblue;
+    font-size: 0.875rem;
   }
 
   &--h5 {
+    font-size: 0.75em;
     color: darkslategray;
+  }
+
+  &--small {
+    font-size: 0.875em;
   }
 
   &--card-size {
