@@ -1,5 +1,3 @@
-$prim-color: #64ff00;
-
 .title {
   color: var(--header-color);
   // font-family: GT-Flexa, sans-serif;
@@ -58,8 +56,4 @@ $prim-color: #64ff00;
     transform: translateX(0);
     opacity: 1;
   }
-}
-
-:export {
-  primColor: $prim-color;
 }
