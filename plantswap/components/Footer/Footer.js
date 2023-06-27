@@ -3,8 +3,9 @@ import styles from "./footer.module.scss";
 
 const Footer = ({ locale, dictionary }) => {
   return (
-    <footer>
+    <footer className={styles.footer}>
       <Title title={"h1"}>Footer</Title>
+      <div></div>
     </footer>
   );
 };

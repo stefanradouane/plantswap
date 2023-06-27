@@ -47,6 +47,23 @@ export default async function Page({ params }) {
 
           <Hero />
         </section>
+        <section className={styles.page__introcontainer}>
+            <Title className={styles.page__introheader} title={"h2"}>Hoe werkt het?</Title>
+            <section className={styles.page__introleft}>
+            <Title className={styles.page__introheader} title={"h3"}>Ruilen</Title>
+              <Text title={"p"}>Binnen Plantswap kun je kiezen uit de opties ruilen of doneren. Met de optie ‘ruilen’ kies je uit onze beschikbare stekjes uit de stekjeskast. Vul het formulier in en kom je stekje bij ons ruilen!</Text>
+            </section>
+             <section className={styles.page__introright}>
+             <Title className={styles.page__introheader} title={"h3"}>Ruilen</Title>
+              <Text title={"p"}>Binnen Plantswap kun je kiezen uit de opties ruilen of doneren. Met de optie ‘ruilen’ kies je uit onze beschikbare stekjes uit de stekjeskast. Vul het formulier in en kom je stekje bij ons ruilen!</Text>
+            </section>
+
+            <section className={styles.page__introleft}>
+            <Title className={styles.page__introheader} title={"h3"}>Ruilen</Title>
+              <Text title={"p"}>Binnen Plantswap kun je kiezen uit de opties ruilen of doneren. Met de optie ‘ruilen’ kies je uit onze beschikbare stekjes uit de stekjeskast. Vul het formulier in en kom je stekje bij ons ruilen!</Text>
+            </section>
+          
+        </section>
       </main>
     </Layout>
   );

@@ -5,6 +5,7 @@
   height: var(--header-height);
   width: 100%;
   background-color: var(--color-green);
+  scroll-snap-align: start;
 
   &__logo {
     width: auto;
