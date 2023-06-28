@@ -2,27 +2,33 @@ import Text from "../Text/Text";
 import styles from "./swapflowreturn.module.scss";
 
 /** @todo change div to button for acccesability  */
-const SwapFlowReturn = ({ flowData, setFlowData, totalSteps }) => {
+const SwapFlowReturn = ({ className, flowData, setFlowData, totalSteps }) => {
   function handleClick() {
     if (flowData.step > 1) {
       setFlowData((prev) => {
         return { ...prev, step: prev.step - 1 };
       });
+    } else if (flowData.step < 0) {
+      setFlowData((prev) => {
+        return { ...prev, step: 1 };
+      });
     }
   }
   return (
-    <section className={styles.swapflowreturn}>
+    <section className={styles.swapflowreturn + " " + className}>
       {flowData.step !== 1 ? (
         <section className={styles.swapflowreturn__click} onClick={handleClick}>
           <div className={styles.swapflowreturn__icon}>
             <Svg />
           </div>
-          <Text className={styles.swapflowreturn__text}>Keer terug</Text>
+          <Text className={styles.swapflowreturn__text}>Vorige stap</Text>
         </section>
       ) : (
         <section></section>
       )}
-      <section>Step {flowData.step}</section>
+      <section>
+        Step {flowData.step} - {totalSteps}
+      </section>
     </section>
   );
 };

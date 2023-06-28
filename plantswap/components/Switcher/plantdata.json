@@ -1,6 +1,69 @@
 {
   "stekjes": [
     {
+<<<<<<< HEAD
+      "additionalWaterInfo": "",
+      "latinName": "Roselium bulbiferum",
+      "maintenance": "2",
+      "origin": "SouthAmerica",
+      "plantName": "Roos",
+      "poisonous": "idk",
+      "poisonousFor": "",
+      "fertilizer": "",
+      "fertilizerDisclosure": "",
+      "waterFrequency": 1,
+      "waterFrequencyCheckbox": false,
+      "waterInterval": "Monthly",
+      "id": "clducoort5cgq0bw4ky24kef8",
+      "fotos": [{ "url": "https://media.graphassets.com/59Zr7yKpTQhby52jNfgs" }]
+    },
+    {
+      "additionalWaterInfo": "",
+      "latinName": "Loro bulbife",
+      "maintenance": "2",
+      "origin": "SouthAmerica",
+      "plantName": "Graanbloem",
+      "poisonous": "idk",
+      "poisonousFor": "",
+      "fertilizer": "",
+      "fertilizerDisclosure": "",
+      "waterFrequency": 1,
+      "waterFrequencyCheckbox": false,
+      "waterInterval": "Monthly",
+      "id": "clducoort5cgq0bw4ky24kef8",
+      "fotos": [{ "url": "https://media.graphassets.com/PGzJOgntTrqgtSZ328yG" }]
+    },
+    {
+      "additionalWaterInfo": "",
+      "latinName": "Blominos Bloso",
+      "maintenance": "2",
+      "origin": "SouthAmerica",
+      "plantName": "Blomo",
+      "poisonous": "idk",
+      "poisonousFor": "",
+      "fertilizer": "summer",
+      "fertilizerDisclosure": "",
+      "waterFrequency": 1,
+      "waterFrequencyCheckbox": false,
+      "waterInterval": "Monthly",
+      "id": "clducoort5cgq0bw4ky24kef8",
+      "fotos": [{ "url": "https://media.graphassets.com/YmOyLHwR5mm4UcTcG3g4" }]
+    },
+    {
+      "additionalWaterInfo": "",
+      "latinName": "Tesj",
+      "maintenance": "2",
+      "origin": "SouthAmerica",
+      "plantName": "Tats",
+      "poisonous": "idk",
+      "poisonousFor": "",
+      "fertilizer": "",
+      "fertilizerDisclosure": "",
+      "waterFrequency": 1,
+      "waterFrequencyCheckbox": false,
+      "waterInterval": "Monthly",
+      "id": "clducoort5cgq0bw4ky24kef8",
+=======
       "naam": "Scindapsus",
       "slug": "scindapsus",
       "moeilijkheidsgraad": "Makkelijk",
@@ -113,6 +176,7 @@
       "herkomst": "Azië",
       "waterbehoefte": "Standaard",
       "id": "clfsbnshz7irm0aw67ey5uf0b",
+>>>>>>> ac8dfb57459497664140f159f39bcbfbdc2431a3
       "fotos": [{ "url": "https://media.graphassets.com/RUd1CEa5R4iYNwVSajOX" }]
     }
   ]

@@ -1,8 +1,13 @@
 .swapflowreturn {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 0.5rem;
-  color: palevioletred;
+  height: 3rem;
+
+  width: 100%;
+  color: var(--text-color);
+  font-weight: bold;
 
   &__click {
     display: flex;
@@ -12,8 +17,8 @@
   }
 
   &__icon {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,5 +28,11 @@
 
   &__text {
     font-size: 0.875rem;
+  }
+
+  svg {
+    height: 1rem;
+    width: 1rem;
+    color: var(--color-white);
   }
 }

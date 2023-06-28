@@ -1,6 +1,6 @@
 .title {
   color: var(--header-color);
-  // font-family: GT-Flexa, sans-serif;
+  font-weight: bold;
 
   &--h0 {
     font-weight: 700;
@@ -11,33 +11,40 @@
   }
 
   &--h1 {
-    font-weight: bolder;
-    font-size: 1.5em;
+    font-size: 2.5rem;
+    // Change to clamp(x, x, 2.5rem) when supported
+    // and to variable size when not suported.
+    // --
+    // Font size 2.5rem is overflowing on mobile screen sizes
+    // < 300px wide.
   }
 
   &--h2 {
-    padding-bottom: var(--XXS-spacer);
+     padding-bottom: var(--XXS-spacer);
 
     font-weight: bolder;
-    font-size: 2em;
-  }
-
+    font-size: 1.5rem;
+   
+    
   &--h3 {
     font-weight: normal;
-    font-size: 1.25em;
-
+    font-size: 1rem;
     color: var(--primary-text-color);
   }
 
   &--h4 {
-    font-size: 1em;
+    font-size: 0.875rem;
     color: font;
   }
 
   &--h5 {
+    font-size: 0.75em;
     color: darkslategray;
   }
 
+  &--small {
+    font-size: 0.875em;
+  }
 
 
   &--card-size {

@@ -16,20 +16,29 @@
     padding: 1rem;
 
     &-card {
-      &-old {
-        display: grid;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      align-items: flex-end;
+      gap: 4px;
+      height: fit-content;
+
+      &--old {
         grid-area: old;
-        grid-template-areas: "img title svg" "img text svg";
-        grid-template-columns: 4rem 1fr auto;
-        grid-template-rows: 1fr auto;
-        align-items: flex-end;
-        gap: 4px;
+        grid-template-areas: "img title icon" "img text icon";
+        grid-template-columns: 3rem 1fr auto;
+      }
+
+      &--new {
+        grid-area: new;
+        grid-template-areas: "img title" "img text";
+        grid-template-columns: 3rem auto;
       }
 
       &-img {
         border-radius: 4px;
         grid-area: img;
-        width: 4rem;
+        width: 3rem;
+        height: 3rem;
         aspect-ratio: 1/1;
         object-fit: cover;
 
@@ -38,31 +47,36 @@
         }
       }
 
-      &-new {
-        grid-area: new;
+      &-icon {
+        grid-area: icon;
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid var(--color-grey);
+        border-radius: 50%;
         display: grid;
-        grid-template-areas: "img title" "img text";
-        grid-template-columns: 4rem auto;
-        grid-template-rows: 1fr auto;
-        align-items: flex-end;
-        gap: 4px;
-      }
-
-      &-svg {
-        grid-area: svg;
+        place-content: center;
       }
 
       &-title {
         grid-area: title;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
       }
 
       &-text {
         grid-area: text;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        height: 1lh;
+        font-size: 0.75rem;
       }
     }
     &-cta {
       grid-area: cta;
       display: flex;
+      justify-self: flex-end;
     }
   }
 }

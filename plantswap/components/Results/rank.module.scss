@@ -1,0 +1,41 @@
+.rank {
+  --size-icon: 30px;
+  grid-area: rank;
+  display: flex;
+  gap: var(--XXS-spacer);
+  align-items: center;
+  height: var(--size-icon);
+  justify-self: flex-end;
+  font-weight: bold;
+  position: relative;
+
+  &__ribbon {
+    display: flex;
+    //   gap: var(--S-spacer);
+    align-items: center;
+    font-weight: bold;
+    position: relative;
+  }
+
+  &__place {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__icon {
+    height: var(--size-icon);
+    width: var(--size-icon);
+    display: block;
+    fill: var(--color-blue-dark);
+  }
+
+  &__value {
+    font-size: 0.75rem;
+  }
+
+  &__grade {
+    font-size: 0.75rem;
+  }
+}

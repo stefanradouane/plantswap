@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import styles from "./formtip.module.scss";
 
@@ -6,14 +6,16 @@ import Text from "../Text/Text";
 
 const FormTip = ({ description }) => {
   return (
-    <div className={styles.tooltip}>
-      <div className={styles.tooltip__content_wrapper}>
-        <div className={styles.tooltip__icon}></div>
-        <Text className={styles.tooltip__description} modifier={"small"}>
+    <section className={styles.tooltip}>
+      <section className={styles.tooltip__content_wrapper}>
+        <section className={styles.tooltip__icon}></section>
+        <Text
+          className={styles.tooltip__description}
+          modifier={["small", "white"]}>
           {description}
         </Text>
-      </div>
-    </div>
+      </section>
+    </section>
   );
 };
 

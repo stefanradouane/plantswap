@@ -1,24 +1,29 @@
 .filetile {
-  --preview-size: 60px;
+  --preview-size: 4rem;
   column-gap: 0.5rem;
   display: grid;
   grid-template-areas: "preview name loader" "preview size loader";
   grid-template-columns: var(--preview-size) auto 24px;
+  grid-template-rows: 1fr auto;
   border-radius: var(--border-radius);
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--color-grey);
   padding: 0.5rem;
   align-items: center;
+  width: 100%;
 
   &__name {
     grid-area: name;
     font-weight: 400;
     margin-bottom: 0.25rem;
+    align-self: flex-end;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   &__size {
     grid-area: size;
     margin: 0;
-    opacity: 0.6;
     font-size: 0.9rem;
     line-height: 1.5;
     max-width: 30ch;
@@ -77,9 +82,9 @@
 
     svg:nth-of-type(2) {
       position: absolute;
-      width: calc(100% - 2px);
-      height: calc(100% - 2px);
-      stroke: var(--text-color);
+      width: 100%;
+      height: 100%;
+      stroke: var(--color-grey);
       stroke-width: 1px;
       overflow: visible;
       stroke-dasharray: 100;

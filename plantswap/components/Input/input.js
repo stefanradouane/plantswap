@@ -1,4 +1,4 @@
-import styles from './input.module.scss';
+import styles from "./input.module.scss";
 
 const FromInput = ({
 	id,
@@ -8,13 +8,15 @@ const FromInput = ({
 	question,
 	task,
 	required,
-	value,
+	defaultValue,
 	subject,
 	next,
 	preventDefault,
+
 }) => {
-	// Check if boolean is true or false, if true it is a sub element
-	let style = mainWrapper ? styles.form__wrapper : styles.form__sub_wrapper;
+  // Check if boolean is true or false, if true it is a sub element
+  let style = mainWrapper ? styles.form__wrapper : styles.form__sub_wrapper;
+
 
 	return (
 		<section className={style}>
@@ -35,7 +37,7 @@ const FromInput = ({
 				aria-describedby={id + 'Desc'}
 				placeholder={placeholder}
 				required={required}
-				value={value}
+				defaultValue={defaultValue}
 				onChange={(e) => {
 					if (preventDefault !== false) {
 						e.preventDefault();

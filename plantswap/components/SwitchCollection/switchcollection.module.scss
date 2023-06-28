@@ -3,12 +3,13 @@
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
   margin-bottom: 175px;
+  width: 100%;
 
   &-base {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 }

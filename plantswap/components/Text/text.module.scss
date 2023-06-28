@@ -4,8 +4,17 @@
   font-weight: 400;
   color: var(--text-color);
 
+  &--italic {
+    font-style: italic;
+  }
+
   &--bold {
     font-weight: 700;
+  }
+
+
+  &--thin {
+    font-weight: 300;
   }
 
   &--black {
@@ -23,5 +32,17 @@
 
   &--x-small {
     font-size: 0.65rem;
+  }
+
+  &--xx-small {
+    font-size: 0.625rem;
+  }
+
+  &--grey {
+    color: var(--color-dark-grey);
+  }
+
+  &--white {
+    color: var(--color-white);
   }
 }
