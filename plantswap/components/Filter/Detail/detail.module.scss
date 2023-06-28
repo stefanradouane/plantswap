@@ -1,0 +1,76 @@
+.details {
+	text-align: left;
+	color: var(--color-black);
+
+	&[open] &--summery::after {
+		transform: rotate(0deg);
+	}
+
+	&--summery {
+		display: block;
+		font-size: 1.5em;
+		margin-bottom: var(--M-spacer);
+		text-transform: capitalize;
+		color: var(--color-black);
+
+		font-weight: 700;
+
+		&::marker {
+			list-style-type: '/25bc';
+			text-align: right !important;
+		}
+
+		&::after {
+			margin-left: 1ch;
+			display: inline-block;
+			transition: 0.2s;
+			transform: rotate(-48deg);
+			// content: '\203A';
+			content: '🐛';
+		}
+	}
+
+	section {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		text-align: left;
+		margin-bottom: var(--S-spacer);
+
+		input {
+			align-self: flex-start;
+			text-align: left;
+
+			-webkit-appearance: none;
+			appearance: none;
+			/* creating a custom design */
+			width: 1.5em;
+			height: 1.5em;
+			padding: 0;
+			border-radius: 0.15em;
+			margin-right: 0.5em;
+			border: 0.15em solid var(--color-black);
+			outline: none;
+			cursor: pointer;
+
+			&:checked {
+				position: relative;
+				background-color: #29593f;
+
+				&::before {
+					content: '✔';
+					font-size: 1.5em;
+					color: #fff;
+					position: absolute;
+					right: 1px;
+					top: -6px;
+				}
+			}
+		}
+		label {
+			flex: 3;
+			align-self: flex-end;
+			height: 1.5em;
+		}
+	}
+}

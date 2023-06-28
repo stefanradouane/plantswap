@@ -1,21 +1,12 @@
 .hero {
-  position: relative;
-  color: firebrick;
-  isolation: isolate;
+	width: 100%;
+	flex-grow: 2;
+	flex-basis: 28em;
 
-  &__image {
-    z-index: 1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &__test {
-    width: 35vmin;
-    min-width: 24em;
-    border-radius: 50%;
-    aspect-ratio: 1;
-    background-color: #7aa556;
-  }
+	&__image {
+		width: calc(100% - 2rem);
+    object-fit: contain;
+    height: auto;
+    max-width: 48em;
+	}
 }
