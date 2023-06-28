@@ -1,0 +1,141 @@
+{
+  "plantinfo": [
+    {
+      "title": "Groene gegevens",
+      "fields": [
+        {
+          "name": "plantName",
+          "title": "Naam van de plant",
+          "placeholder": "Plant naam",
+          "description": "Vul hier de naam van de bloem in",
+          "type": "text"
+        },
+        {
+          "name": "latinName",
+          "title": "Latijnse naam van de plant",
+          "placeholder": "Latijnse plant naam",
+          "description": "Vul hier de latijnse naam in",
+          "type": "text"
+        },
+        {
+          "title": "Herkomst van de plant",
+          "name": "origin",
+          "description": "Vul hier de herkomst van de plant in",
+          "defaultOption": "Selecteer een continent",
+          "type": "options",
+          "as": "select",
+          "options": [
+            { "name": "Afrika", "key": "Africa" },
+            { "name": "Azië", "key": "Asia" },
+            { "name": "Europa", "key": "Europe" },
+            { "name": "Noord-Amerika", "key": "NorthAmerica" },
+            { "name": "Oceanië", "key": "Oceania" },
+            { "name": "Zuid-Amerika", "key": "SouthAmerica" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Onderhoud",
+      "fields": [
+        {
+          "title": "Groene vingers",
+          "name": "onderhoud",
+          "description": "Hoeveel groene vingers heb je nodig voor deze plant?",
+          "defaultOption": "Selecteer een moeilijkheidsgraad",
+          "as": "select",
+          "type": "options",
+          "options": ["1", "2", "3", "4", "5"]
+        }
+      ]
+    },
+    {
+      "title": "Verzorging",
+      "fields": [
+        {
+          "type": "quantity",
+          "title": "Behoefte aan water",
+          "name": "waterInterval",
+          "description": "Vul hier de waterbehoefte in.",
+          "options": [
+            { "key": "daily", "name": "Dagelijks" },
+            { "key": "weekly", "name": "Weekelijks" },
+            { "key": "monthly", "name": "Maandelijks" },
+            { "key": "yearly", "name": "Jaarlijks" }
+          ]
+        },
+        {
+          "title": "Behoefte aan voeding",
+          "name": "voeding",
+          "description": "Vul hier de behoefte aan voeding in.",
+          "placeholder": "In de zomer om de twee maandend, plantenvoeding geven.",
+          "type": "options",
+          "as": "select",
+          "options": [
+            { "name": "Zomer", "key": "summer" },
+            { "name": "Winter", "key": "winter" },
+            { "name": "Lente", "key": "spring" },
+            { "name": "Herfst", "key": "autumn" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Giftigheid",
+      "fields": [
+        {
+          "type": "disclosure",
+          "title": "Is de plant giftig?",
+          "name": "giftigCheckbox",
+          "description": "Vul hier in of de plant giftig is.",
+          "disclosure": {
+            "title": "Giftig voor",
+            "name": "giftigAddon",
+            "description": "Vul hier in voor wie deze plant giftig is.",
+            "placeholder": "Deze plant kan giftig zijn voor...",
+            "type": "text"
+          }
+        }
+      ]
+    }
+  ],
+  "user": [
+    {
+      "title": "Persoonlijke gegevens",
+      "fields": [
+        {
+          "name": "fullName",
+          "title": "Volledige naam",
+          "placeholder": "Volledige naam",
+          "description": "Vul hier je volledige naam in",
+          "type": "text"
+        },
+        {
+          "name": "email",
+          "title": "E-mailadres",
+          "description": "Vul hier je e-mailadres in",
+          "placeholder": "naam@voorbeeeld.nl",
+          "type": "email"
+        }
+      ]
+    },
+    {
+      "title": "Moment van ophalen",
+      "fields": [
+        {
+          "name": "date",
+          "title": "Ophaaldatum",
+          "description": "Vul hier in wanneer je de plant wil komen ophalen",
+          "placeholder": "Datum",
+          "type": "date"
+        },
+        {
+          "name": "time",
+          "title": "Tijd",
+          "description": "Vul hier het tijdstip in wanneer je de plant komt ophalen",
+          "type": "time"
+        }
+      ]
+    }
+  ]
+}

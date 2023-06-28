@@ -1,30 +1,51 @@
-$prim-color: #64ff00;
-
 .title {
   color: var(--header-color);
-  // font-family: GT-Flexa, sans-serif;
+  font-weight: bold;
+
+  &--h0 {
+    font-weight: 700;
+    font-size: calc(1rem + 3vw);
+    line-height: 1em;
+    color: var(--color-text);
+
+  }
 
   &--h1 {
-    // text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 1.5em;
+    font-size: 2.5rem;
+    // Change to clamp(x, x, 2.5rem) when supported
+    // and to variable size when not suported.
+    // --
+    // Font size 2.5rem is overflowing on mobile screen sizes
+    // < 300px wide.
   }
 
   &--h2 {
-    color: mediumvioletred;
-  }
+     padding-bottom: var(--XXS-spacer);
 
+    font-weight: bolder;
+    font-size: 1.5rem;
+   
+    
   &--h3 {
-    color: darkorchid;
+    font-weight: normal;
+    font-size: 1rem;
+    color: var(--primary-text-color);
   }
 
   &--h4 {
-    color: darkslateblue;
+    font-size: 0.875rem;
+    color: font;
   }
 
   &--h5 {
+    font-size: 0.75em;
     color: darkslategray;
   }
+
+  &--small {
+    font-size: 0.875em;
+  }
+
 
   &--card-size {
     font-weight: 400;
@@ -51,8 +72,4 @@ $prim-color: #64ff00;
     transform: translateX(0);
     opacity: 1;
   }
-}
-
-:export {
-  primColor: $prim-color;
 }

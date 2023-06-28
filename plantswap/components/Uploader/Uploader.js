@@ -18,17 +18,20 @@ import useXML from "./useXML";
 const { newXML } = useXML();
 const xml = newXML();
 
-const Uploader = ({ flowdata, locale }) => {
+const Uploader = ({ data }) => {
   const [uploadedValue, setUploadedValue] = useState(100);
+  const uploader = useRef(null);
+  const { locale, flowdata, dictionary } = data;
   const { flowData, setFlowData } = flowdata;
   const API_URL = "/api/identify";
 
   const fetchData = (e) => {
-    if (e?.target?.files && e?.target?.files[0]) {
+    const file = e.target.files[0];
+
+    if (e?.target?.files && file) {
       var formdata = new FormData();
       let filereader = new FileReader();
       xml.open("POST", API_URL, true);
-      const file = e.target.files[0];
       formdata.append("image", file);
       formdata.append("lang", locale);
       xml.upload.addEventListener("progress", (event) => {
@@ -52,8 +55,9 @@ const Uploader = ({ flowdata, locale }) => {
               ...prev,
               plant: {
                 error: {
-                  type: "File error",
-                  description: "Bestand te groot",
+                  type: dictionary.swapflow.uploader.fileError.size.type,
+                  description:
+                    dictionary.swapflow.uploader.fileError.size.description,
                 },
               },
             };
@@ -96,10 +100,17 @@ const Uploader = ({ flowdata, locale }) => {
         e.preventDefault();
       }}>
       <label className={styles.uploader__holder}>
-        <Icon iconName="plus" />
-        <Title title={"h3"}>Tik om een foto te uploaden of te maken</Title>
-        <Text modifier={"small"}>Maximale bestandsgrootte: 10MB</Text>
+        <Icon iconName={"plus"} modifier={"primcolor"} />
+        <Title className={styles.uploader__description} title={"h3"}>
+          {dictionary.swapflow.uploader.title}
+        </Title>
+        <Text
+          modifier={["x-small", "thin", "grey"]}
+          className={styles.uploader__filesize}>
+          {dictionary.swapflow.uploader.maxSize}
+        </Text>
         <input
+          ref={uploader}
           className={styles.uploader__file}
           type="file"
           accept="image/*"
@@ -108,23 +119,34 @@ const Uploader = ({ flowdata, locale }) => {
           onChange={fetchData}
           disabled={flowData.plant?.file?.name}
         />
-      </label>
-      <Button
-        disabled={!flowData.apidata?.query}
-        next={(e) => {
-          setFlowData((prev) => {
-            return { ...prev, step: 2 };
-          });
-        }}>
-        {!flowData.apidata?.loading ? (
-          "Identificeer mijn plant"
+        {!flowData.plant?.url ? (
+          <Button
+            rotateIcon={0}
+            next={(e) => {
+              uploader.current.click();
+            }}>
+            {dictionary.swapflow.uploader.button.new}
+          </Button>
         ) : (
-          <>
-            Bezig met identificeren
-            <Loader disabled={!flowData.apidata?.loading} />
-          </>
+          <Button
+            disabled={!flowData.apidata?.query}
+            rotateIcon={flowData.apidata?.loading ? 0 : 90}
+            next={(e) => {
+              setFlowData((prev) => {
+                return { ...prev, step: 2 };
+              });
+            }}>
+            {!flowData.apidata?.loading ? (
+              dictionary.swapflow.uploader.button.text
+            ) : (
+              <>
+                {dictionary.swapflow.uploader.button.load}
+                {/* <Loader disabled={!flowData.apidata?.loading} /> */}
+              </>
+            )}
+          </Button>
         )}
-      </Button>
+      </label>
       <FileTile
         data={flowData}
         uploadedValue={uploadedValue}

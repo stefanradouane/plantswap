@@ -1,9 +1,11 @@
 .header {
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: var(--header-height);
   width: 100%;
+  z-index: 10;
   background-color: var(--color-green);
   scroll-snap-align: start;
 

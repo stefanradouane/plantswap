@@ -4,15 +4,45 @@
   font-weight: 400;
   color: var(--text-color);
 
+  &--italic {
+    font-style: italic;
+  }
+
   &--bold {
     font-weight: 700;
+  }
+
+
+  &--thin {
+    font-weight: 300;
+  }
+
+  &--black {
+    color: var(--color-black);
   }
 
   &--small {
     font-size: 0.875rem;
   }
 
+  &--meta {
+    font-size: 0.65rem;
+    color: #ccc;
+  }
+
   &--x-small {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
+  }
+
+  &--xx-small {
+    font-size: 0.625rem;
+  }
+
+  &--grey {
+    color: var(--color-dark-grey);
+  }
+
+  &--white {
+    color: var(--color-white);
   }
 }

@@ -1,12 +1,66 @@
 .icon {
   fill: currentColor;
 
+  &--minus {
+    height: 40px;
+    width: 40px;
+  }
+
   &--plus {
     height: 40px;
-    fill: #3f3f3f;
+    width: 40px;
+  }
+  &--small {
+    width: 24px;
+    height: 24px;
+  }
+
+  &--switcher {
+    width: 20px;
+    height: auto;
+  }
+
+  &--primcolor {
+    color: var(--color-blue);
   }
 
   &--yellow {
     fill: yellow;
+  }
+
+  &--rotate-0 {
+    --rotate: 0deg;
+    // animation: spin 200ms ease-in-out forwards;
+    // transform: rotate(90deg);
+  }
+
+  &--rotate-90 {
+    --rotate: 90deg;
+    animation: spin var(--transition-settings) forwards;
+    // transform: rotate(90deg);
+  }
+
+  &--rotate-180 {
+    // --rotate: 180deg;
+    // animation: spin 200ms ease-in-out forwards;
+
+    transform: rotate(180deg);
+  }
+
+  &--rotate-270 {
+    // --rotate: 270deg;
+    // animation: spin 200ms ease-in-out forwards;
+
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(calc(var(--rotate) - 90deg));
+  }
+
+  to {
+    transform: rotate(var(--rotate));
   }
 }

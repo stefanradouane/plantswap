@@ -4,14 +4,12 @@ const Hero = () => {
   return (
     <section className={styles.hero}>
       <Image
-        src={"/images/kast.png"}
-        alt={"main image"}
+        src={"/images/hero.png"}
+        alt={"Hero image"}
         className={styles.hero__image}
-        width={250}
-        height={250}
+        width={500}
+        height={500}
       />
-
-      <div className={styles.hero__test}></div>
     </section>
   );
 };

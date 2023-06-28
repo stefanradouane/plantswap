@@ -1,13 +1,12 @@
 import styles from "./text.module.scss";
 import { createElement } from "react";
+import createClassnames from "../../utils/createClassnames";
 
-const Text = ({ modifier, children, className }) => {
+const Text = ({ className, modifier, children }) => {
   return createElement(
     "p",
     {
-      className: `${styles.text} ${
-        modifier ? styles[`text--${modifier}`] : ""
-      } ${className ? className : ""}`,
+      className: createClassnames(styles, "text", className, modifier),
     },
     children
   );

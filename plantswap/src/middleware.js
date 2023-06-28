@@ -12,7 +12,7 @@ let defaultLocale = "nl";
 
 function getLocale(request) {
   return match(languages, locales, defaultLocale);
-}
+} 
 
 export default function middleware(request) {
   // Check if there is any supported locale in the pathname

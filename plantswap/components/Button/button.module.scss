@@ -1,47 +1,81 @@
 .button {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	gap: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--S-spacer);
+  background-color: var(--color-blue);
+  // box-shadow: 0px 4px 4px
+  //   color-mix(in srgb, var(--color-black) 70%, transparent);
+  padding: 1rem 1.5rem;
+  border-radius: 4em;
+  border: none;
+  width: fit-content;
+  //   font-weight: bold;
+  font-size: 0.875rem;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  transition: var(--transition-settings);
 
-	background-color: var(--color-orange);
-	box-shadow: 0px 4px 4px var(--shadow);
-	padding: 12px 22px;
-	border-radius: 1em;
-	border: none;
-	font-weight: bold;
-	font-size: 18px;
-	line-height: 1.4;
-	cursor: pointer;
+  &:hover,
+  &:active,
+  &:target,
+  &:focus-visible {
+    background: var(--color-blue-dark);
+  }
 
-	&[disabled] {
-		cursor: default;
-	}
+  svg {
+    height: 24px;
+    width: 24px;
+    display: block;
+  }
 
-	&__submit {
-		cursor: pointer;
+  &--square {
+    height: var(--header-height);
+    width: var(--header-height);
+    border-radius: 0;
+    box-shadow: none;
 
-		justify-self: end;
+    svg {
+      display: none;
+    }
+  }
 
-		padding: 1rem 2rem;
+  &--rounded {
+    padding: 1rem;
+  }
 
-		border: none;
-		border-radius: var(--pill-border-radius);
+  &--small {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.75rem;
+    gap: var(--XS-spacer);
+  }
 
-		background-color: var(--wireframe-btn-background-color);
-	}
+  &--chosen {
+    background: var(--color-blue-dark);
+  }
 
-	&__submit:active {
-		cursor: pointer;
+  &[disabled] {
+    background: var(--color-blue-light);
+    cursor: default;
+  }
 
-		justify-self: end;
+  &--inline {
+    background-color: transparent;
+    padding: 0;
+    border-radius: none;
+    color: var(--color-blue);
 
-		padding: 1rem 2rem;
+    &:hover {
+      background-color: transparent;
+      color: var(--color-blue-darker);
+    }
+  }
 
-		border: none;
-		border-radius: var(--pill-border-radius);
-
-		background-color: black;
-	}
+  &--left {
+    &-1 {
+      margin: var(--S-spacer);
+    }
+  }
 }

@@ -15,7 +15,7 @@ const FileTile = ({ data, uploadedValue, onDelete }) => {
         <Title title={"h4"} className={styles.filetile__name}>
           {image.error ? image.error : image.name}
         </Title>
-        <Text modifier={"small"} className={styles.filetile__size}>
+        <Text modifier={["xx-small", "grey"]} className={styles.filetile__size}>
           {prettyBytes(image.size)}
         </Text>
 
@@ -67,7 +67,7 @@ const FileTile = ({ data, uploadedValue, onDelete }) => {
         <Title title={"h4"} className={styles.filetile__name}>
           {data.plant.error.type}
         </Title>
-        <Text modifier={"small"} className={styles.filetile__size}>
+        <Text modifier={["grey", "xx-small"]} className={styles.filetile__size}>
           {data.plant.error.description}
         </Text>
         <div className={styles.filetile__preview}></div>

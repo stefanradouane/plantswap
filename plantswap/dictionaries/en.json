@@ -1,7 +1,11 @@
 {
+  "plantsNickName": "green options",
   "homepage": {
-    "title": "Welcome to Plant Swap",
-    "intro": "Discover Plant Swap - the web application that makes your neighborhood more social and increases your plant knowledge! Exchange, donate and view cuttings on our platform. Come to the library and become part of our growing community. Let your green gems flourish and make new friends with the same passion. Join Plant Swap and discover a world full of green magic!"
+    "title": "Connect Learn, and Contribute to a Green Neighborhood",
+    "intro": "Swap your cutting, or donate it. Choose from our collection of available seedlings and come and exchange your exchange your cutting with us!",
+    "button": "Plant donation",
+    "sideNote": "There is more",
+    "subTitle" : "Our Collection"
   },
   "nav": {
     "home": "Home",
@@ -11,7 +15,7 @@
   },
   "language": {
     "hint": "Select your language",
-    "switch": "🇳🇱"
+    "switch": "EN"
   },
   "server-component": {
     "title": "Plant Swap",
@@ -22,30 +26,77 @@
       "step-1": "Identify plant",
       "step-2": "Choose your plant",
       "step-3": "Plant info",
-      "step-4": "Select Swap"
+      "step-4": "Select Swap",
+      "step-5": "Persoonlijke gegevens"
     },
     "stepdescription": {
       "step-1": "Take a picture or upload one below. We will help you to find the name and needs of your plant.",
       "step-2": "Select the plant that matches your plant.",
       "step-3": "Fill in the details of your plant.",
-      "step-4": "Select a plant to swap with."
+      "step-4": "Select a plant to swap with.",
+      "step-5": "Beschrijvende tekst, voor het maken van een afspraak."
+    },
+    "stepsurtitle": {
+      "swap": "Plant swap",
+      "donate": "Plant donate"
+    },
+    "uploader": {
+      "title": "Tap to take or upload an image of your plant.",
+      "maxSize": "Maximum filesize: 10 MB",
+      "button": {
+        "text": "Identify my plant",
+        "load": "Plant identification in progress"
+      },
+      "fileError": {
+        "size": {
+          "type": "File error",
+          "description": "Bestand te groot"
+        }
+      }
+    },
+    "myplant": {
+      "title": "Results",
+      "error": "No green friends found",
+      "button": {
+        "new": "My plant",
+        "recent": "Chosen plant"
+      },
+      "found": "found",
+      "extra": "Next"
     }
   },
-  "counter": {
-    "increment": "Increment",
-    "decrement": "Decrement"
+  "plantforms": {
+    "tip_description": "In het formulier hebben we alvast enkele gegevens over de geïdentificeerde plant voor je ingevuld."
   },
-  "plant-list": {
-    "title": "Plant List",
-    "add-plant": "Add Plant",
-    "plant-name": "Plant Name",
-    "plant-type": "Plant Type",
-    "plant-description": "Plant Description",
-    "plant-image": "Plant Image",
-    "plant-quantity": "Plant Quantity",
-    "plant-quantity-unit": "Plant Quantity Unit"
+  "userForms": {
+    "tip_description": "We reserveren de plant tot uiterlijk 3 dagen nadat je hebt aangegeven deze op te komen halen."
   },
-  "plant_form": {
-    "tip_description": "In the form, we have already filled in some details about the identified plant for you." 
+  "swapcheck": {
+    "swap": {
+      "from": "Swap from",
+      "mine": "My plant",
+      "to": "Swap with",
+      "ours": "From our collection"
+    },
+    "donate": {
+      "from": "Donatable plant",
+      "mine": "My plant"
+    },
+    "data": [
+      {
+        "title": "Personal data",
+        "fields": [
+          { "title": "Full name", "prop": "fullName" },
+          { "title": "E-mailadress", "prop": "email" }
+        ]
+      },
+      {
+        "title": "Pick-up data",
+        "fields": [
+          { "title": "Pick-up date", "prop": "date" },
+          { "title": "Pick-up time", "prop": "time" }
+        ]
+      }
+    ]
   }
 }
