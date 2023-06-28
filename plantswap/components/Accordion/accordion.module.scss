@@ -1,0 +1,48 @@
+.accordion {
+    --icon-size: 1.2rem;
+    --icon-transform-duration: 0.25s;
+
+    padding: var(--L-spacer);
+    width: 100%;
+
+    summary {
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        margin-right: var(--M-spacer);
+        width: var(--icon-size);
+        height: var(--icon-size);
+
+        div {
+            position: absolute;
+            background-color: var(--color-black);
+            transition: transform var(--icon-transform-duration), opacity var(--icon-transform-duration);
+
+            &:nth-child(1) {
+                top: calc(50% - 1px);
+                width: 100%;
+                height: 1.5px;
+            }
+
+            &:nth-child(2) {
+                left: calc(50% - 1px);
+                width: 1.5px;
+                height: 100%;
+            }
+        }
+    }
+
+    &[open] .accordion__icon div:nth-child(2) {
+        transform: rotate(90deg);
+        background-color: transparent;
+        transition: 0.25s;
+    }
+}

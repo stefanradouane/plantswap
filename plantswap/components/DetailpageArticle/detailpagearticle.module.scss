@@ -2,3 +2,7 @@
     margin: 0 var(--S-spacer);
     padding-bottom: var(--M-spacer);
 }
+
+.detailpagearticle:last-of-type {
+    padding-bottom: var(--XL-spacer);
+}

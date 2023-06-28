@@ -1,8 +1,14 @@
-$prim-color: #64ff00;
-
 .title {
   color: var(--header-color);
   font-weight: bold;
+
+  &--h0 {
+    font-weight: 700;
+    font-size: calc(1rem + 3vw);
+    line-height: 1em;
+    color: var(--color-text);
+
+  }
 
   &--h1 {
     font-size: 2.5rem;
@@ -14,16 +20,21 @@ $prim-color: #64ff00;
   }
 
   &--h2 {
-    font-size: 1.5rem;
-  }
+     padding-bottom: var(--XXS-spacer);
 
+    font-weight: bolder;
+    font-size: 1.5rem;
+   
+    
   &--h3 {
+    font-weight: normal;
     font-size: 1rem;
-    // color: darkorchid;
+    color: var(--primary-text-color);
   }
 
   &--h4 {
     font-size: 0.875rem;
+    color: font;
   }
 
   &--h5 {
@@ -34,6 +45,7 @@ $prim-color: #64ff00;
   &--small {
     font-size: 0.875em;
   }
+
 
   &--card-size {
     font-weight: 400;
@@ -60,8 +72,4 @@ $prim-color: #64ff00;
     transform: translateX(0);
     opacity: 1;
   }
-}
-
-:export {
-  primColor: $prim-color;
 }

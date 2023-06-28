@@ -12,16 +12,26 @@
     font-weight: 700;
   }
 
+
   &--thin {
     font-weight: 300;
+  }
+
+  &--black {
+    color: var(--color-black);
   }
 
   &--small {
     font-size: 0.875rem;
   }
 
+  &--meta {
+    font-size: 0.65rem;
+    color: #ccc;
+  }
+
   &--x-small {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
   }
 
   &--xx-small {
