@@ -2,88 +2,83 @@
     &__previousSectionIcon {
        transform: rotate(180deg);
     }
+    &__indicator {
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
+        display: flex;
+        justify-content:  center;
+        li {
+            background-color: #3e3e3e;
+            width: 7.5px;
+            height: 7.5px;
+            border-radius: 100px;
+        }
+    }
+    &__indicatorSection1 {
+        flex-direction: column;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        
+        li:first-of-type {
+            width: 12.5px;
+            height: 12.5px;
+        }
+    }
+    &__indicatorSection2 {
+        flex-direction: column;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        
+        li:nth-of-type(2) {
+            width: 12.5px;
+            height: 12.5px;
+        }
+    }
+    &__indicatorSection3 {
+        flex-direction: column;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+       
+        li:nth-of-type(3) {
+            width: 12.5px;
+            height: 12.5px;
+        }
+    }
+    &__indicatorSection4 {
+        flex-direction: column;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        
+        li:nth-of-type(4) {
+            width: 12.5px;
+            height: 12.5px;
+        }
+    }
+  
 }
 
-.about .indicator {
-    
-    position: fixed;
-    right: 15px;
-    bottom: 15px;
-    display: flex;
-    justify-content:  center;
-    li {
-        background-color: #3e3e3e;
-        width: 7.5px;
-        height: 7.5px;
-        border-radius: 100px;
-    }
-}
 
 
-.about .indicatorSection1 {
-    flex-direction: column;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    
-    li:first-of-type {
-        width: 12.5px;
-        height: 12.5px;
-    }
-}
 
-.about .indicatorSection2 {
-    flex-direction: column;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    
-    li:nth-of-type(2) {
-        width: 12.5px;
-        height: 12.5px;
-    }
-}
-.about .indicatorSection3 {
-    flex-direction: column;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-   
-    li:nth-of-type(3) {
-        width: 12.5px;
-        height: 12.5px;
-    }
-}
-.about .indicatorSection4 {
-    flex-direction: column;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    
-    li:nth-of-type(4) {
-        width: 12.5px;
-        height: 12.5px;
-    }
-}
 
-.about .indicatorSection5 {
-    flex-direction: column;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    
-    li:nth-of-type(5) {
-        width: 12.5px;
-        height: 12.5px;
-    }
-}
+
+
+
+
+
+
 
 @media (max-width: 800px) {
     .about {
         &__previousSectionIcon {
             display: none;
         }
-        .indicator {
+        &__indicator {
             li {
                 display: none;
             }

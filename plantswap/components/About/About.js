@@ -8,7 +8,6 @@ import Image from "next/image";
 
 const About = () => {
   const [currentSection, setCurrentSection] = useState(1);
-  const [isVisible, setIsVisible] = useState(false);
   const sectionRefs = useRef([]);
 
   const callBackFunction = (entries) => {
@@ -47,15 +46,13 @@ const About = () => {
     // Define your different class names for each section
     switch (sectionNumber) {
       case 1:
-        return styles.indicatorSection1;
+        return styles.about__indicatorSection1;
       case 2:
-        return styles.indicatorSection2;
+        return styles.about__indicatorSection2;
       case 3:
-        return styles.indicatorSection3;
+        return styles.about__indicatorSection3;
       case 4:
-        return styles.indicatorSection4;
-      case 5:
-        return styles.indicatorSection5;
+        return styles.about__indicatorSection4;
       default:
         return "";
     }
@@ -82,7 +79,7 @@ const About = () => {
   return (
     <main className={styles.about}>
         
-      <ul className={`${styles.indicator} ${getIndicatorClassName(currentSection)}`}>
+      <ul className={`${styles.about__indicator} ${getIndicatorClassName(currentSection)}`}>
        
         <section className={styles.about__SectionBtn} onClick={goToPreviousSection} disabled={currentSection === 1}>
           <div className={styles.about__previousSectionIcon}>
@@ -96,7 +93,6 @@ const About = () => {
           </div>
          
         </section>
-        <li></li>
         <li></li>
         <li></li>
         <li></li>
@@ -154,10 +150,10 @@ const About = () => {
             buttonText={"Workshops"}
             style={{backgroundColor: '#F0F0F0'}}
             reverse={true} />
-        <Contact 
+        {/* <Contact 
         index={5} 
         ref={sectionRef(4)} 
-        />
+        /> */}
     </main>
   );
 };

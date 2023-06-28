@@ -17,7 +17,7 @@ const AboutSection = forwardRef(( { imageSrc, altText, text, title, buttonText, 
   : `${styles.aboutsection__imgcol} ${styles.order2}`;
 
   return (
-        <section className={`${styles.aboutsection__section} ${styles.section}`} style={style} ref={ref} data-index={index}>
+        <section className={`${styles.aboutsection__section}`} style={style} ref={ref} data-index={index}>
             <div className={textColClassName}>
                     <Title title="h1">
                     {title}
