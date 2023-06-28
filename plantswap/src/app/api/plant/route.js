@@ -23,9 +23,9 @@ export async function POST(req, res) {
   const locale = JSON.parse(reqFormData.get("locale"));
   //   const data = client.request(query(id));
   console.log(newplant);
-  const data2 = await client.request(
-    query2({ ...newplant, reserved: false, registered: false }, locale)
-  );
+  //   const data2 = await client.request(
+  //     query2({ ...newplant, reserved: false, registered: false }, locale)
+  //   );
   return NextResponse.json({ done: true });
   //   console.log(data);
 

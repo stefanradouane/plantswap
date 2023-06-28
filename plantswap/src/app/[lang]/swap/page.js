@@ -1,34 +1,19 @@
-import Image from "next/image";
-import styles from "./page.module.scss";
-import Title from "@/../components/Title/Title";
-import Header from "@/../components/Header/Header";
-import Text from "@/../components/Text/Text";
-import Uploader from "@/../components/Uploader/Uploader";
 import Layout from "../../../../components/Layout/Base";
+import SwapFlow from "../../../../components/SwapFlow/SwapFlow";
 import { getDictionary } from "../../../../get-dictionary";
-import dataset from "./data.json";
-import Results from "../../../../components/Results/Results";
-
-// console.log(data);
-const dummydata = dataset;
-// process.env.NEXT_PUBLIC_DEVELOPMENT === "false" ? dataset : null;
+import { getData } from "../../../../utils/getFormData";
 
 export default async function Home({ params }) {
   const dictionary = await getDictionary(params.lang);
+  const formData = await getData(params.lang);
   return (
-    <Layout locale={params.lang} dictionary={dictionary}>
-      <main className={styles.main}>
-        <Title title={"h1"}>
-          Plant
-          <br />
-          Identificeren.
-        </Title>
-        <Text>
-          Maak een foto of upload deze hieronder. Wij helpen je om de naam en
-          behoeftes van je plant te vinden.
-        </Text>
-        <Results data={dataset.data} />
-        {/* <Uploader locale={params.lang} dummydata={dummydata?.data} /> */}
+    <Layout locale={params.lang} dictionary={dictionary} noFooter={true}>
+      <main>
+        <SwapFlow
+          formData={formData}
+          dictionary={dictionary}
+          locale={params.lang}
+        />
       </main>
     </Layout>
   );

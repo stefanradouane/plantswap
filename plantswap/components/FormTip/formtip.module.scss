@@ -5,11 +5,10 @@
   background-color: var(--color-green);
   color: var(--color-white);
 
-
   &__content_wrapper {
     padding: var(--S-spacer);
     display: flex;
-    border-radius:12px
+    border-radius: 12px;
 
     gap: var(--M-spacer);
 

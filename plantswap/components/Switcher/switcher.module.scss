@@ -9,7 +9,7 @@
     display: grid;
     grid-template-areas: "old new" "cta cta";
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
+    gap: var(--S-spacer);
     position: fixed;
     inset: auto 0 0 0;
     width: 100%;

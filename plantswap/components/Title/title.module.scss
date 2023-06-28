@@ -7,7 +7,6 @@
     font-size: calc(1rem + 3vw);
     line-height: 1em;
     color: var(--color-text);
-
   }
 
   &--h1 {
@@ -20,45 +19,44 @@
   }
 
   &--h2 {
-     padding-bottom: var(--XXS-spacer);
+    padding-bottom: var(--XXS-spacer);
 
     font-weight: bolder;
     font-size: 1.5rem;
-   
-    
-  &--h3 {
-    font-weight: normal;
-    font-size: 1rem;
-    color: var(--primary-text-color);
-  }
 
-  &--h4 {
-    font-size: 0.875rem;
-    color: font;
-  }
+    &--h3 {
+      font-weight: normal;
+      font-size: 1rem;
+      color: var(--primary-text-color);
+    }
 
-  &--h5 {
-    font-size: 0.75em;
-    color: darkslategray;
-  }
+    &--h4 {
+      font-size: 0.875rem;
+      color: font;
+    }
 
-  &--small {
-    font-size: 0.875em;
-  }
+    &--h5 {
+      font-size: 0.75em;
+      color: darkslategray;
+    }
 
+    &--small {
+      font-size: 0.875em;
+    }
 
-  &--card-size {
-    font-weight: 400;
-    font-size: 0.875em;
-  }
+    &--card-size {
+      font-weight: 400;
+      font-size: 0.875em;
+    }
 
-  &--red {
-    color: red;
-  }
+    &--red {
+      color: red;
+    }
 
-  &--gentle-appear {
-    animation-name: gentle-appear;
-    animation-duration: 2s;
+    &--gentle-appear {
+      animation-name: gentle-appear;
+      animation-duration: 2s;
+    }
   }
 }
 
