@@ -1,13 +1,17 @@
 .label {
-    display: flex;
-    align-items: center;
-    gap: var(--S-spacer);
-    background-color: #ccc;
-    padding: 2px var(--XS-spacer);
-    border-radius: 4px;
+	display: flex;
+	align-items: center;
+	gap: var(--S-spacer);
+	background-color: #ccc;
+	padding: 2px var(--XS-spacer);
+	border-radius: 4px;
 
-    &--icon {
-        aspect-ratio: 1/1;
-        width: .8em;
-    }
+	p {
+		font-size: clamp(12px, 1em, 1vw);
+	}
+
+	&--icon {
+		aspect-ratio: 1/1;
+		width: 0.8em;
+	}
 }

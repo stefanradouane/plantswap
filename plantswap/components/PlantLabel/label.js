@@ -61,7 +61,7 @@ const PlantLabel = ({type}) => {
 				height={16}
 			/> 
 
-			<Text className={styles['label--text']} modifier={'x-small'}>
+			<Text className={styles['label--text']} >
 				{ discription ? discription : "Groene vingers" }
 			 </Text>
 		</div>

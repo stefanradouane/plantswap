@@ -2,27 +2,28 @@
 	display: flex;
 	flex-direction: column;
 	background-color: var(--color-white);
-	padding: var(--S-spacer);
-	// aspect-ratio: 16/10;
-	aspect-ratio: 1/1;
+	padding: var(--M-spacer);
 	border-radius: 4px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	transition: box-shadow 1s cubic-bezier(0.66, 0.08, 0.19, 0.97);
-
 
 	&__header {
 		display: flex;
 		align-items: center;
 		gap: var(--XS-spacer);
 	}
-	
+
 	&__image {
 		aspect-ratio: 1/1;
-		width: 70%;
+		width: 80%;
 		height: auto;
 		margin: var(--S-spacer) auto;
 		border-radius: 0.5em;
 		transition: all 0.8s cubic-bezier(0.66, 0.08, 0.19, 0.97);
+
+		@media screen and (max-width: 768px) {
+			width: 100%;
+		}
 	}
 
 	&__wrapper {
@@ -40,7 +41,7 @@
 
 	&__info {
 		&--name {
-			font-size: clamp(14px, 4vw, 18px);
+			font-size: clamp(16px, 2em, 1.25vw);
 			font-weight: 800;
 			word-break: break-word;
 		}
@@ -50,21 +51,28 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		gap: var(--XS-spacer);
 		font-size: 0.75rem;
 		color: var(--quaternary-text-color);
 		margin-bottom: 0.5em;
+
+		&--latin {
+			font-size: clamp(12px, 2em, 0.75vw);
+		}
 
 		&--read {
 			display: flex;
 			align-items: center;
 			gap: var(--XXS-spacer);
 		}
-		
+
 		&--icon {
 			filter: invert(1);
 		}
-		
+
 		&--black {
+			text-wrap: nowrap;
+			font-size: clamp(12px, 1.5em, 0.75vw);
 			color: var(--color-black);
 		}
 	}

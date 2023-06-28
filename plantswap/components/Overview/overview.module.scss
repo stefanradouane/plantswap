@@ -3,15 +3,12 @@
 	padding: var(--M-spacer);
 	height: fit-content;
 
-	&:has(.window.filterWindow ) {
-		background-color: red;
-	}
-
 	&__plants {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 		grid-gap: var(--M-spacer);
 		margin: 0 auto;
+		max-width: 1200px;
 
 		@media (min-width: 900px) {
 			grid-template-columns: repeat(3, minmax(240px, 1fr));
@@ -22,7 +19,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		font-size: 0.75rem;
+		font-size: clamp(12px, 2em, 0.75vw);
 		margin-bottom: var(--M-spacer);
 
 		color: var(--color-black);

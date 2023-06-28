@@ -6,14 +6,12 @@ import PlantLabel from '../PlantLabel/Label';
 import styles from './item.module.scss';
 
 const PlantCard = ({ slug, name, latin, difficulty, poisend, image }) => {
-
 	return (
 		<Link href={`/plant/${slug}`} className={styles.plant}>
-		<header className={styles.plant__header}> 
+			<header className={styles.plant__header}>
 			{poisend ? ( <PlantLabel type={'giftig'} /> ) : ( "" )}
-			<PlantLabel type={difficulty} />
-
-		</header>
+				<PlantLabel type={difficulty} />
+			</header>
 
 			<Image
 				className={styles.plant__image}
@@ -28,7 +26,7 @@ const PlantCard = ({ slug, name, latin, difficulty, poisend, image }) => {
 				</Title>
 
 				<footer className={styles.plant__meta}>
-					<Text modifier={'meta'} className={styles['plant__meta-latine']}>
+					<Text modifier={'meta'} className={styles['plant__meta--latin']}>
 						{latin}
 					</Text>
 
@@ -41,7 +39,7 @@ const PlantCard = ({ slug, name, latin, difficulty, poisend, image }) => {
 						</Text>
 
 						<Image
-						className={styles['plant__meta--icon']}
+							className={styles['plant__meta--icon']}
 							src="/images/icons/Arrow-right.svg"
 							alt="arrow"
 							width={18}
