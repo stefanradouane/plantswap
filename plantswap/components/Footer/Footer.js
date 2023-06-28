@@ -1,10 +1,11 @@
 import Title from "../Title/Title";
 import styles from "./footer.module.scss";
+import Contact from "../contact/Contact";
 
 const Footer = ({ locale, dictionary }) => {
   return (
-    <footer>
-      <Title title={"h1"}>Footer</Title>
+    <footer className={styles.footer}>
+      <Contact />
     </footer>
   );
 };

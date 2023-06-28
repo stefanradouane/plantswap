@@ -82,6 +82,34 @@
 	}
 }
 
+.page {
+
+
+&__introcontainer {
+  
+   h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--color-black);
+  }
+  
+}
+&__introright {
+  width: 18rem;
+ 
+  margin-left: auto;
+}
+&__introleft {
+  width: 20rem;
+ 
+}
+&__introright, &__introleft {
+  padding: 20px;
+  
+}
+}
+
+
 @keyframes gentle-appear {
 	0% {
 		transform: translateX(-100px);
@@ -104,4 +132,17 @@
 		transform: translateX(0);
 		opacity: 1;
 	}
+}
+
+@media (max-width: 800px) {
+  .page {
+    &__content {
+      section {
+        &:nth-of-type(2) {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+  
 }

@@ -5,20 +5,10 @@
   align-items: baseline;
   justify-content: space-between;
   width: 100%;
-  // max-width: 500px;
-  // margin: auto;
-  // animation: fadeIn 200ms ease-in-out forwards;
-  // transform: translateY(100%);
-
-  &__count {
-    // margin-left: auto;
-  }
 }
 
 .result {
   display: grid;
-  // grid-template-columns: 2fr 4fr 3fr;
-  // grid-template-rows: 1fr auto auto;
   width: 100%;
   border-radius: var(--border-radius);
   color: var(--text-color);
@@ -75,7 +65,6 @@
     white-space: nowrap;
     align-self: flex-end;
     height: 1lh;
-    // padding-left: 20px;
   }
 
   &__btn {
@@ -100,12 +89,3 @@
     }
   }
 }
-
-// @media (max-width: 600px) {
-//   .result {
-//     &__name {
-//       grid-row: 2;
-//       align-self: end;
-//     }
-//   }
-// }

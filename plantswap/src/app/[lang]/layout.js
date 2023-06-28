@@ -21,10 +21,17 @@ const customFont = localFont({
   ],
 });
 
-export default function RootLayout({ children, params }) {
+export default function RootLayout(props) {
+  const { children, params,req } = props;
+  console.log(props)
+  
   return (
     <html lang={params.lang}>
-      <body className={customFont.className}>{children}</body>
+      <body style={{
+    scrollSnapType: "y mandatory", display: "flex", flexDirection: "column",
+    overflow: "scroll", maxHeight: "100dvh"
+
+      }} className={customFont.className}>{children}</body>
     </html>
   );
 }
