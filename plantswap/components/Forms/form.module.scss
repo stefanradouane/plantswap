@@ -6,6 +6,10 @@
   width: 100%;
   height: 100%;
 
+  &__button {
+    align-self: flex-end;
+  }
+
   &__indicator {
     height: 6rem;
     width: 6rem;
@@ -36,7 +40,10 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    gap: var(--XS-spacer);
+
+    & > & {
+      margin-top: var(--S-spacer);
+    }
 
     &:is(details) {
       background-color: var(--color-white);
@@ -45,7 +52,12 @@
       flex-wrap: nowrap;
     }
 
+    &:not([open]) &-title:is(summary) {
+      margin-bottom: 0;
+    }
+
     &[open] &-title:is(summary) {
+      margin-bottom: 0.3rem;
       &:after {
         transform: rotate(180deg);
       }
@@ -59,14 +71,15 @@
     }
 
     &-disclosure {
-      margin-top: var(--M-spacer);
+      margin-top: var(--S-spacer);
       display: flex;
       flex-direction: column;
-      gap: var(--S-spacer);
+      gap: var(--M-spacer);
     }
 
     &-description {
       width: 100%;
+      margin-bottom: 0.25rem;
     }
 
     &-title {
@@ -76,6 +89,7 @@
       align-items: center;
       justify-content: space-between;
       width: 100%;
+      margin-bottom: 0.3rem;
 
       &:is(summary) {
         cursor: pointer;
@@ -147,7 +161,7 @@
         background-color: var(--color-blue-lighter);
       }
 
-      &[for^="onderhoud"] {
+      &[for^="maintenance"] {
         width: calc(20% - calc(var(--XS-spacer) / (5 / 4)));
         padding: 0.8rem;
         @media screen and (max-width: 420px) {
@@ -171,7 +185,7 @@
         border: 1px solid var(--wireframe-btn-background-color);
         border-radius: 50%;
 
-        :not(&--row):checked {
+        &:not(&--row):checked {
           border: none;
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg id='Group_188' data-name='Group 188' transform='translate(-3916 -10735)'%3E%3Ccircle id='Ellipse_14' data-name='Ellipse 14' cx='12' cy='12' r='12' transform='translate(3916 10735)' fill='%230096ff'/%3E%3Cg id='noun-checkmark-1273241' transform='translate(3902.002 10712.021)'%3E%3Cg id='Group_156' data-name='Group 156' transform='translate(19.998 30.98)'%3E%3Cpath id='Path_40' data-name='Path 40' d='M31.907,983.348a.63.63,0,0,0-.368.191c-2.091,2.095-4.566,4.2-6.75,6.349l-3.779-2.833a.631.631,0,1,0-.762,1.005l4.206,3.155a.631.631,0,0,0,.828-.059c2.214-2.219,4.878-4.453,7.15-6.73a.631.631,0,0,0-.526-1.078Z' transform='translate(-19.998 -983.342)' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
         }
@@ -220,6 +234,11 @@
     color: var(--primary-text-color);
     background-color: var(--color-white);
 
+    &[type="checkbox"] {
+      appearance: none;
+      display: none;
+    }
+
     &:read-only {
       border-style: dashed;
       cursor: default;
@@ -227,6 +246,33 @@
 
     &::-webkit-calendar-picker-indicator {
       filter: invert(1);
+    }
+  }
+
+  &__additional {
+    &-label {
+      display: flex;
+      align-items: center;
+      gap: var(--XS-spacer);
+      font-size: 0.875rem;
+    }
+
+    [type="checkbox"] {
+      display: none;
+      appearance: none;
+    }
+  }
+}
+
+.field {
+  &__errormessage {
+    width: 100%;
+    font-size: 0.875rem;
+    color: var(--color-grey-darker);
+
+    &::before {
+      content: "ⓘ";
+      margin-right: var(--XXS-spacer);
     }
   }
 }

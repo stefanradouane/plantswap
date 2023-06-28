@@ -1,73 +1,67 @@
 {
   "stekjes": [
     {
-      "naam": "Scindapsus",
-      "slug": "scindapsus",
-      "categories": [{ "naam": "Makkelijk" }],
+      "additionalWaterInfo": "",
+      "latinName": "Roselium bulbiferum",
+      "maintenance": "2",
+      "origin": "SouthAmerica",
+      "plantName": "Roos",
+      "poisonous": "idk",
+      "poisonousFor": "",
+      "fertilizer": "",
+      "fertilizerDisclosure": "",
+      "waterFrequency": 1,
+      "waterFrequencyCheckbox": false,
+      "waterInterval": "Monthly",
       "id": "clducoort5cgq0bw4ky24kef8",
-      "fotos": [{ "url": "https://media.graphassets.com/wokvE7y2R8iyOo3Lwb8h" }]
-    },
-    {
-      "naam": "Aglaonema 'Spotted Star'",
-      "slug": "aglaonema-spotted-star",
-      "categories": [{ "naam": "Makkelijk" }],
-      "id": "cle42skfl13d30bvzvrgj9yxh",
-      "fotos": [{ "url": "https://media.graphassets.com/uy5y3w0FSxuPvUEQthVu" }]
-    },
-    {
-      "naam": "Gynura 'Fluweelplant'",
-      "slug": "gynura-fluweelplant",
-      "categories": [{ "naam": "Makkelijk" }],
-      "id": "cle43dpv715z90atagmwug3hv",
-      "fotos": [{ "url": "https://media.graphassets.com/nhr8M0tmTD0gjjbSctqA" }]
-    },
-    {
-      "naam": "Tradescantia zebrina 'Vaderplant'",
-      "slug": "tradescantia-zebrina-vaderplant",
-      "categories": [{ "naam": "Makkelijk" }],
-      "id": "cle43qk1h15620bvzakh4qil0",
-      "fotos": [{ "url": "https://media.graphassets.com/mFLyjpdHSJar2MrshNuo" }]
-    },
-    {
-      "naam": "Asparagus Plumosus 'Sierasperge'",
-      "slug": "asparagus-plumosus-sierasperge",
-      "categories": [{ "naam": "Makkelijk" }],
-      "id": "clee2rtj49iq60bw0api9f4bq",
-      "fotos": [{ "url": "https://media.graphassets.com/i0QK7buwTwmjGw6jJoEW" }]
-    },
-    {
-      "naam": "Chlorophytum comosum 'Graslelie'",
-      "slug": "chlorophytum-comosum-graslellie",
-      "categories": [{ "naam": "Makkelijk" }],
-      "id": "clee2wel89gdx0aw174hglobv",
-      "fotos": [{ "url": "https://media.graphassets.com/KBrpsI9MQCOEIH7R0Cil" }]
-    },
-    {
-      "naam": "Philodendron scandens 'Heartleaf'",
-      "slug": "philodendron-scandens-heartleaf",
-      "categories": [{ "naam": "Makkelijk" }],
-      "id": "clf9h6b6x1aii0bus1zgbnbjh",
       "fotos": [{ "url": "https://media.graphassets.com/59Zr7yKpTQhby52jNfgs" }]
     },
     {
-      "naam": "Calathea Fusion White",
-      "slug": "calathea-fusion-white",
-      "categories": [{ "naam": "Uitdagend" }],
-      "id": "clfcqxa340rx30btd3y0xuvq7",
+      "additionalWaterInfo": "",
+      "latinName": "Loro bulbife",
+      "maintenance": "2",
+      "origin": "SouthAmerica",
+      "plantName": "Graanbloem",
+      "poisonous": "idk",
+      "poisonousFor": "",
+      "fertilizer": "",
+      "fertilizerDisclosure": "",
+      "waterFrequency": 1,
+      "waterFrequencyCheckbox": false,
+      "waterInterval": "Monthly",
+      "id": "clducoort5cgq0bw4ky24kef8",
       "fotos": [{ "url": "https://media.graphassets.com/PGzJOgntTrqgtSZ328yG" }]
     },
     {
-      "naam": "Calathea Musaica",
-      "slug": "calathea-musaica",
-      "categories": [{ "naam": "Uitdagend" }],
-      "id": "clfqto1z847hu0aw62jebr5g6",
+      "additionalWaterInfo": "",
+      "latinName": "Blominos Bloso",
+      "maintenance": "2",
+      "origin": "SouthAmerica",
+      "plantName": "Blomo",
+      "poisonous": "idk",
+      "poisonousFor": "",
+      "fertilizer": "summer",
+      "fertilizerDisclosure": "",
+      "waterFrequency": 1,
+      "waterFrequencyCheckbox": false,
+      "waterInterval": "Monthly",
+      "id": "clducoort5cgq0bw4ky24kef8",
       "fotos": [{ "url": "https://media.graphassets.com/YmOyLHwR5mm4UcTcG3g4" }]
     },
     {
-      "naam": "Aglaonema 'Pink Princess'",
-      "slug": "aglaonema-pink-princess",
-      "categories": [{ "naam": "Makkelijk" }],
-      "id": "clfsbnshz7irm0aw67ey5uf0b",
+      "additionalWaterInfo": "",
+      "latinName": "Tesj",
+      "maintenance": "2",
+      "origin": "SouthAmerica",
+      "plantName": "Tats",
+      "poisonous": "idk",
+      "poisonousFor": "",
+      "fertilizer": "",
+      "fertilizerDisclosure": "",
+      "waterFrequency": 1,
+      "waterFrequencyCheckbox": false,
+      "waterInterval": "Monthly",
+      "id": "clducoort5cgq0bw4ky24kef8",
       "fotos": [{ "url": "https://media.graphassets.com/RUd1CEa5R4iYNwVSajOX" }]
     }
   ]

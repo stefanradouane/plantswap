@@ -2,7 +2,7 @@ import "server-only";
 import { GraphQLClient, gql } from "graphql-request";
 
 const client = new GraphQLClient(
-  "https://eu-central-1-shared-euc1-02.cdn.hygraph.com/content/clij3imw706zl01uk9hgh5uw6/master"
+  "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clij3imw706zl01uk9hgh5uw6/master"
 );
 
 export async function getData(lang) {
@@ -16,6 +16,24 @@ export async function getData(lang) {
 const query = (lang) => {
   return gql`
       query {
+        plants(locales: ${lang}) {
+          id
+          plantName
+          latinName
+          origin
+          maintenance
+          waterInterval
+          waterFrequency
+          waterFrequencyCheckbox
+          additionalWaterInfo
+          fertilizer
+          fertilizerDisclosure
+          poisonous
+          poisonousFor
+          image
+          reserved
+          registered
+        }
         userForms(locales: ${lang}) {
           formSection {
             ... on FormSection {
@@ -24,8 +42,39 @@ const query = (lang) => {
                 title
                 name
                 type
+                quantityType
+                additionalInfo
+                required
+                description
                 placeholder
                 errorMessage
+                optionList {
+                    listOrientation
+                    optionsHint {
+                        ... on ListHint {
+                            hintLow
+                            hintHigh
+                        }
+                    }
+                    optionName {
+                      ... on Option {
+                        name
+                        key
+                      }
+                    }
+                  }
+  
+                disclosure {
+                    title
+                    name
+                    type
+                    quantityType
+                    additionalInfo
+                    required
+                    description
+                    placeholder
+                    errorMessage
+                }
               }
             }
           }

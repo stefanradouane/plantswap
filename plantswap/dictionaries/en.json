@@ -12,7 +12,7 @@
   },
   "language": {
     "hint": "Select your language",
-    "switch": "🇳🇱"
+    "switch": "EN"
   },
   "server-component": {
     "title": "Plant Swap",
@@ -32,6 +32,10 @@
       "step-3": "Fill in the details of your plant.",
       "step-4": "Select a plant to swap with.",
       "step-5": "Beschrijvende tekst, voor het maken van een afspraak."
+    },
+    "stepsurtitle": {
+      "swap": "Plant swap",
+      "donate": "Plant donate"
     },
     "uploader": {
       "title": "Tap to take or upload an image of your plant.",
@@ -63,5 +67,33 @@
   },
   "userForms": {
     "tip_description": "We reserveren de plant tot uiterlijk 3 dagen nadat je hebt aangegeven deze op te komen halen."
+  },
+  "swapcheck": {
+    "swap": {
+      "from": "Swap from",
+      "mine": "My plant",
+      "to": "Swap with",
+      "ours": "From our collection"
+    },
+    "donate": {
+      "from": "Donatable plant",
+      "mine": "My plant"
+    },
+    "data": [
+      {
+        "title": "Personal data",
+        "fields": [
+          { "title": "Full name", "prop": "fullName" },
+          { "title": "E-mailadress", "prop": "email" }
+        ]
+      },
+      {
+        "title": "Pick-up data",
+        "fields": [
+          { "title": "Pick-up date", "prop": "date" },
+          { "title": "Pick-up time", "prop": "time" }
+        ]
+      }
+    ]
   }
 }

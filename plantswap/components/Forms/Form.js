@@ -4,24 +4,24 @@ import styles from "./Form.module.scss";
 import Button from "../Button/Button";
 import { Formik, Form } from "formik";
 import {
-  FormPartType,
   DisplayingErrorMessagesSchema,
   initialFormValues,
-  FormPart,
-  FormIndicator,
+  // FormIndicator,
 } from "./utils";
 import formdata from "./formdata.json";
 import FormTip from "../FormTip/FormTip";
 import { useState } from "react";
+import FormPart from "./FormPart";
+import { FormIndicator } from "./FormIndicator";
+import { FieldPartType } from "../FormField/FormField";
 
 const SwapForm = ({ data, form, formData }) => {
   const { flowData, setFlowData } = data.flowdata;
   console.log(formData);
-  const currentForm = formData[form].map((form) => form.formSection[0]); // change json file to headless CMS (strapi/hygraph)
 
-  const [currentStep, setCurrentStep] = useState(3);
-  // console.log(formData["plantforms"].map((form) => form.formSection[0]));
-  // console.log(=== currentStep);
+  const currentForm = formData[form].map((form) => form.formSection[0]);
+  const [currentStep, setCurrentStep] = useState(1);
+
   return (
     <Formik
       initialValues={initialFormValues(flowData, form, currentForm)}
@@ -50,20 +50,24 @@ const SwapForm = ({ data, form, formData }) => {
                   setCurrentStep={setCurrentStep}
                   currentStep={currentStep}>
                   <FormIndicator step={i + 1} currentStep={currentStep} />
+
                   {step.fields.map((field, i) => {
-                    return <FormPartType key={i} field={field} props={props} />;
+                    return (
+                      <FieldPartType key={i} field={field} props={props} />
+                    );
                   })}
                 </FormPart>
               );
             })}
 
             <Button
+              rotateIcon={90}
               type={"submit"}
               disabled={!props.isValid}
               children={
                 flowData.step === 5 ? "Gegevens controleren" : "Volgende stap"
               }
-              className={styles.form__submit}
+              className={styles.form__button}
             />
           </Form>
         );

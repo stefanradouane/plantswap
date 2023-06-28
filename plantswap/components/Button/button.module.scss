@@ -47,7 +47,7 @@
   }
 
   &--small {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.8rem;
     font-size: 0.75rem;
     gap: var(--XS-spacer);
   }
@@ -61,29 +61,21 @@
     cursor: default;
   }
 
-  //   &__submit {
-  //     cursor: pointer;
+  &--inline {
+    background-color: transparent;
+    padding: 0;
+    border-radius: none;
+    color: var(--color-blue);
 
-  //     justify-self: end;
+    &:hover {
+      background-color: transparent;
+      color: var(--color-blue-darker);
+    }
+  }
 
-  //     padding: 1rem 2rem;
-
-  //     border: none;
-  //     border-radius: var(--pill-border-radius);
-
-  //     background-color: var(--wireframe-btn-background-color);
-  //   }
-
-  //   &__submit:active {
-  //     cursor: pointer;
-
-  //     justify-self: end;
-
-  //     padding: 1rem 2rem;
-
-  //     border: none;
-  //     border-radius: var(--pill-border-radius);
-
-  //     background-color: black;
-  //   }
+  &--left {
+    &-1 {
+      margin: var(--S-spacer);
+    }
+  }
 }

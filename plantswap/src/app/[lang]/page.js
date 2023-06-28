@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 // import { NextResponse } from "next/server";
 
 import Layout from "../../../components/Layout/Base";
+import { getData } from "../../../utils/getFormData";
 
 // Maak het fancy :)
 export default async function Page({ params }) {
@@ -17,6 +18,9 @@ export default async function Page({ params }) {
   // console.log(NextResponse)
   // console.log(await getDictionary(params.lang));
   const dictionary = await getDictionary(params.lang);
+
+  const data = await getData(params.lang);
+  console.log(data);
   return (
     <Layout locale={params.lang} dictionary={dictionary}>
       <main className={styles.page}>

@@ -10,6 +10,15 @@
     height: 40px;
     width: 40px;
   }
+  &--small {
+    width: 24px;
+    height: 24px;
+  }
+
+  &--switcher {
+    width: 20px;
+    height: auto;
+  }
 
   &--primcolor {
     color: var(--color-blue);

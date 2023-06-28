@@ -6,6 +6,7 @@ import Text from "../Text/Text";
 import Button from "../Button/Button";
 import Rank from "./Rank";
 import ucFirst from "../../utils/ucFirst";
+import PlantCard from "../PlantCard/PlantCard";
 // import dataset from "../Switcher/"
 const Results = ({ mydata, data }) => {
   const { flowdata, dictionary } = mydata;
@@ -21,13 +22,21 @@ const Results = ({ mydata, data }) => {
       {data.results.map((result, i) => (
         <Result
           key={i}
-          flowData={flowdata.flowData}
-          setFlowData={flowdata.setFlowData}
-          dictionary={dictionary}
+          plant={{
+            plantName: result.species.commonNames[0],
+            latinName: result.species.scientificNameWithoutAuthor,
+            image: result.images[0].url.m,
+            score: result.score,
+            position: i + 1,
+            topPosition: i <= 2,
+            totalResults: data.results.length,
+            recent: flowdata.flowData.myplant.gbif.id === result.gbif.id,
+          }}
+          data={mydata}
           result={result}
-          bestQuess={i <= 2}
-          position={i + 1}
-          totolResults={data.results.length}
+          // bestQuess={i <= 2}
+          // position={i + 1}
+          // totolResults={data.results.length}
           // className={`${styles.result} ${getClassByIndex(i)}`}
         />
       ))}
@@ -35,77 +44,85 @@ const Results = ({ mydata, data }) => {
   );
 };
 
-export const Result = ({
-  bestQuess,
-  position,
-  result,
-  dictionary,
-  flowData,
-  setFlowData,
-  totolResults,
-}) => {
-  console.log(position);
-  // const { flowData, setFlowData } = mydata.flowdata;
-  // console.log(mydata.flowdata.setFlowData);
+export const Result = ({ data, plant, result }) => {
+  const {
+    flowdata: { flowData, setFlowData },
+    dictionary,
+  } = data;
+
+  console.log(plant);
+
+  const resultStyle = () => {
+    if (!plant.position && !plant.score) {
+      return styles["result--overview"];
+    }
+    return styles["result--position"];
+  };
+
+  return <PlantCard data={data} plant={plant} result={result} />;
+
   return (
     <>
       <section
-        data-position={position}
-        className={`${styles.result} ${
-          bestQuess && styles[`result--best-quess`]
-        }`}>
+        data-position={plant.position}
+        className={styles.result + " " + resultStyle()}>
         <Title className={styles.result__name} title={"h4"}>
-          {result.species.commonNames[0]}
+          {plant.plantName}
         </Title>
         <Title className={styles.result__latin} title={"h5"}>
-          {result.species.scientificNameWithoutAuthor}
+          {plant.latinName}
         </Title>
 
-        <Rank
-          bestQuess={bestQuess}
-          rank={position}
-          score={Number.parseFloat(result.score * 100).toFixed(1) + "%"}
-        />
-
         <Image
-          src={result.images[0].url.m}
+          src={plant.fotos[0].url}
           alt="Foto van de plant"
           className={styles.result__img}
           height={200}
           width={200}
         />
 
-        <Button
-          rotateIcon={90}
-          className={styles.result__btn}
-          modifier={["small", flowData.myplant === result ? "chosen" : "fresh"]}
-          next={() => {
-            setFlowData((prev) => {
-              if (prev.myplant !== result) {
+        {plant.position && plant.score && (
+          <Rank
+            topPosition={plant.topPosition}
+            rank={plant.position}
+            score={Number.parseFloat(plant.score * 100).toFixed(1) + "%"}
+          />
+        )}
+
+        {plant.position && plant.score && (
+          <Button
+            rotateIcon={90}
+            className={styles.result__btn}
+            modifier={["small", plant.recent ? "chosen" : "fresh"]}
+            next={() => {
+              setFlowData((prev) => {
+                if (prev.myplant !== result) {
+                  return {
+                    ...prev,
+                    plantinfo: {},
+                    myplant: result,
+                    step: prev.step + 1,
+                  };
+                }
+
                 return {
                   ...prev,
-                  plantinfo: {},
                   myplant: result,
                   step: prev.step + 1,
                 };
-              }
-
-              return {
-                ...prev,
-                myplant: result,
-                step: prev.step + 1,
-              };
-            });
-          }}>
-          {flowData.myplant === result
-            ? dictionary.swapflow.myplant.button.recent
-            : dictionary.swapflow.myplant.button.new}
-        </Button>
+              });
+            }}>
+            {plant.recent
+              ? dictionary.swapflow.myplant.button.recent
+              : dictionary.swapflow.myplant.button.new}
+          </Button>
+        )}
       </section>
-      {position === 3 && (
-        <Text className={styles.result__remaining} title={"p"}>
+
+      {plant.position === 3 && (
+        <Text className={styles.result__remaining}>
           <span>
-            {dictionary.swapflow.myplant.extra} {totolResults - 3}
+            {dictionary.swapflow.myplant.extra} {plant.totolResults - 3}
           </span>{" "}
           {dictionary.plantsNickName}.
         </Text>

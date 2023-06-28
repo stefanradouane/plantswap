@@ -1,10 +1,10 @@
 import Text from "../Text/Text";
 import styles from "./rank.module.scss";
 
-const Rank = ({ bestQuess, rank, score }) => {
+const Rank = ({ topPosition, rank, score }) => {
   return (
     <section className={styles.rank}>
-      {bestQuess && (
+      {topPosition && (
         <section className={styles.rank__ribbon}>
           <svg
             className={styles.rank__icon}

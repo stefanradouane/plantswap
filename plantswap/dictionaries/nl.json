@@ -26,16 +26,24 @@
     "steptitle": {
       "step-1": "Plant Indentificeren",
       "step-2": "Plant Identificaties",
-      "step-3": "Plant Informatie",
-      "step-4": "Ruil Selecteren.",
-      "step-5": "Persoonlijke Gegevens"
+      "step-3": "Ruiltype Wijzigen",
+      "step-4": "Plant Informatie",
+      "step-5": "Ruil Selecteren.",
+      "step-6": "Persoonlijke Gegevens",
+      "step-7": "Controleer gegevens"
     },
     "stepdescription": {
       "step-1": "Maak een foto of upload deze hieronder. Wij helpen je om de naam en behoeftes van je plant te vinden.",
       "step-2": "Selecteer de plant die overeenkomt met jouw plant.",
-      "step-3": "Vul de volgende informatie in over de plant.",
-      "step-4": "Selecteer een plant om mee te ruilen.",
-      "step-5": "Beschrijvende tekst, voor het maken van een afspraak."
+      "step-3": "Wil je het huidige ruiltype wijzigen?",
+      "step-4": "Vul de volgende informatie in over de plant.",
+      "step-5": "Selecteer een plant om mee te ruilen.",
+      "step-6": "Beschrijvende tekst, voor het maken van een afspraak.",
+      "step-7": "Controleer de gegevens en bevestig de ruil."
+    },
+    "stepsurtitle": {
+      "swap": "Plant ruilen",
+      "donate": "Plant doneren"
     },
     "uploader": {
       "title": "Tik om een foto te uploaded of te maken van je plant.",
@@ -68,5 +76,33 @@
   },
   "userForms": {
     "tip_description": "We reserveren de plant tot uiterlijk 3 dagen nadat je hebt aangegeven deze op te komen halen."
+  },
+  "swapcheck": {
+    "swap": {
+      "from": "Ruil van",
+      "mine": "Mijn plant",
+      "to": "Ruil naar",
+      "ours": "Uit onze collectie"
+    },
+    "donate": {
+      "from": "Doneerbare plant",
+      "mine": "Mijn plant"
+    },
+    "data": [
+      {
+        "title": "Persoonlijke gegevens",
+        "fields": [
+          { "title": "Volledige naam", "prop": "fullName" },
+          { "title": "E-mailadres", "prop": "email" }
+        ]
+      },
+      {
+        "title": "Ophaal gegevens",
+        "fields": [
+          { "title": "Ophaaldatum", "prop": "date" },
+          { "title": "Ophaaltijd", "prop": "time" }
+        ]
+      }
+    ]
   }
 }

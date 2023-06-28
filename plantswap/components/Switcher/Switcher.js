@@ -9,13 +9,13 @@ import { useState } from "react";
 import SwitcherCard from "../SwitcherCard/SwitcherCard";
 import SwitchCollection from "../SwitchCollection/SwitchCollection";
 import Image from "next/image";
+import Icon from "../Icon/Icon";
 
 const Svg = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
-    className={styles["plantswitcher__footer-card-svg"]}
     viewBox="0 0 24 24">
     <path
       fill="currentColor"
@@ -24,24 +24,30 @@ const Svg = () => (
   </svg>
 );
 
-const Switcher = ({ flowdata, myPlant, data }) => {
+const Switcher = ({ formData, flowdata, myPlant, data }) => {
   const { flowData, setFlowData } = flowdata;
-  const usedData = dummydata.stekjes;
+  const usedData = formData;
   const myplant = {
-    naam: flowData.plantinfo.name,
-    latin: flowData.plantinfo.latinName,
-    fotos: [
-      {
-        url: flowData.plant.url,
-      },
-    ],
+    ...flowData.plantforms,
+    image: flowData.plant.url,
   };
+
+  console.log(formData);
+  // const myplant = {
+  //   naam: flowData.plantforms.plantName,
+  //   latin: flowData.plantforms.latinName,
+  //   fotos: [
+  //     {
+  //       url: flowData.plant.url,
+  //     },
+  //   ],
+  // };
 
   return (
     <section className={styles.plantswitcher}>
       <SwitchCollection
         styles={styles}
-        collection={usedData}
+        collection={usedData.plants}
         flowData={flowData}
         setFlowData={setFlowData}
       />
@@ -51,6 +57,7 @@ const Switcher = ({ flowdata, myPlant, data }) => {
         <FooterCard myplant={flowData.chosenplant} type={"new"} />
 
         <Button
+          rotateIcon={90}
           next={() => {
             setFlowData((prev) => {
               return {
@@ -60,8 +67,8 @@ const Switcher = ({ flowdata, myPlant, data }) => {
             });
           }}
           className={styles["plantswitcher__footer-cta"]}
-          disabled={!flowData.chosenplant.naam}>
-          Plant omruilen
+          disabled={!flowData.chosenplant.plantName}>
+          Plant selecteren
         </Button>
       </footer>
     </section>
@@ -70,14 +77,20 @@ const Switcher = ({ flowdata, myPlant, data }) => {
 
 const FooterCard = ({ myplant, type }) => {
   return (
-    <section className={styles[`plantswitcher__footer-card-${type}`]}>
-      {myplant && myplant.fotos ? (
+    <section
+      className={
+        styles[`plantswitcher__footer-card`] +
+        " " +
+        styles[`plantswitcher__footer-card--${type}`]
+      }>
+      {myplant && myplant.image ? (
         <Image
-          src={myplant?.fotos[0]?.url}
-          width={48}
-          height={48}
+          src={myplant.image}
+          width={64}
+          height={64}
           className={styles["plantswitcher__footer-card-img"]}
-          alt={myplant.naam}
+          alt={myplant.plantName}
+          priority={true}
         />
       ) : (
         <div
@@ -88,14 +101,18 @@ const FooterCard = ({ myplant, type }) => {
         title={"h3"}
         modifier={"card-size"}
         className={styles["plantswitcher__footer-card-title"]}>
-        {myplant?.naam ? myplant.naam : "Groene vriend"}
+        {myplant?.plantName ? myplant.plantName : "Groene vriend"}
       </Title>
       <Text
         modifier={"small"}
         className={styles["plantswitcher__footer-card-text"]}>
-        {myplant?.latin ? myplant.latin : "Kies een plant om te ruilen"}
+        {myplant?.latinName ? myplant.latinName : "Kies een plant om te ruilen"}
       </Text>
-      {type === "old" && <Svg />}
+      {type === "old" && (
+        <div className={styles["plantswitcher__footer-card-icon"]}>
+          <Icon iconName={"switcher"} />
+        </div>
+      )}
     </section>
   );
 };
