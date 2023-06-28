@@ -1,7 +1,10 @@
 {
   "homepage": {
-    "title": "Welcome to Plant Swap",
-    "intro": "Discover Plant Swap - the web application that makes your neighborhood more social and increases your plant knowledge! Exchange, donate and view cuttings on our platform. Come to the library and become part of our growing community. Let your green gems flourish and make new friends with the same passion. Join Plant Swap and discover a world full of green magic!"
+    "title": "Connect Learn, and Contribute to a Green Neighborhood",
+    "intro": "Swap your cutting, or donate it. Choose from our collection of available seedlings and come and exchange your exchange your cutting with us!",
+    "button": "Plant donation",
+    "sideNote": "There is more",
+    "subTitle" : "Our Collection"
   },
   "nav": {
     "home": "Home",
