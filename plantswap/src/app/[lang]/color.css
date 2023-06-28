@@ -1,27 +1,46 @@
 :root {
-	/* Color mixer */
+	/* Shades of green */
 	--color: 130;
-	--green-1: oklch(99% 0.05 var(--color));
+	--green-1: oklch(99% 0.05 var(--color)); /* lightest; */
 	--green-2: oklch(89% 0.1 var(--color));
-	--green-3: oklch(79% 0.15 var(--color));
+	--green-9: oklch(19% 0.15 var(--color)); /* darksest; */
+
+	/* --green-3: oklch(79% 0.15 var(--color));
 	--green-4: oklch(69% 0.2 var(--color));
 	--green-5: oklch(59% 0.3 var(--color));
 	--green-6: oklch(49% 0.3 var(--color));
 	--green-7: oklch(39% 0.25 var(--color));
 	--green-8: oklch(29% 0.2 var(--color));
-	--green-9: oklch(19% 0.15 var(--color));
-	--green-10: oklch(10% 0.1 var(--color)); /* darksest; */
+	--green-10: oklch(10% 0.1 var(--color));  */
 
-	--gray-1: oklch(99% 0 var(--color));
-	--gray-2: oklch(89% 0 var(--color));
-	--gray-3: oklch(79% 0 var(--color));
-	--gray-4: oklch(69% 0 var(--color));
-	--gray-5: oklch(59% 0 var(--color));
-	--gray-6: oklch(49% 0 var(--color));
-	--gray-7: oklch(39% 0 var(--color));
-	--gray-8: oklch(29% 0 var(--color));
-	--gray-9: oklch(19% 0 var(--color));
-	--gray-10: oklch(10% 0 var(--color)); /* darksest; */
+
+	/* Shades of gray */
+	--gray_shade-2: oklch(89% 0 var(--color)); /* lightest; */
+	--gray_shade-5: oklch(59% 0 var(--color));
+	--gray_shade-9: oklch(19% 0 var(--color));
+	--gray_shade-10: oklch(10% 0 var(--color)); /* darksest; */
+
+	/* --gray_shade-1: oklch(99% 0 var(--color));
+	--gray_shade-3: oklch(79% 0 var(--color));
+	--gray_shade-4: oklch(69% 0 var(--color));
+	--gray_shade-6: oklch(49% 0 var(--color));
+	--gray_shade-7: oklch(39% 0 var(--color));
+	--gray_shade-8: oklch(29% 0 var(--color)); */
+
+
+	/* Shades of blue */
+	--hue: 250;
+	--blue_shade-1: oklch(99% 0.05 var(--hue)); /* lightest; */
+	--blue_shade-2: oklch(89% 0.1 var(--hue));
+	--blue_shade-4: oklch(69% 0.2 var(--hue));
+	--blue_shade-5: oklch(59% 0.3 var(--hue));
+	--blue_shade-9: oklch(19% 0.15 var(--hue));	/* darksest; */
+	
+	/* --blue_shade-3: oklch(79% 0.15 var(--hue));
+	--blue_shade-6: oklch(49% 0.3 var(--hue));
+	--blue_shade-7: oklch(39% 0.25 var(--hue));
+	--blue_shade-8: oklch(29% 0.2 var(--hue));
+	--blue_shade-10: oklch(10% 0.1 var(--hue)); */
 
 	/* https: //codepen.io/argyleink/pen/qBQBoBz?editors=0100 */
 
@@ -36,22 +55,23 @@
 	--XXXL-spacer: 56px;
 
 	/* Text */
-	--primary-text-color: var(--gray-9);
-	--secondary-text-color: var(--gray-1);
-	--tertiary-text-color: var(--gray-5);
-	--quaternary-text-color: var(--gray-10);
+	/* --primary-text-color: var(--gray_shade-9);
+	--secondary-text-color: var(--gray_shade-1);
+	--tertiary-text-color: var(--gray_shade-5);
+	--quaternary-text-color: var(--gray_shade-10); */
 
 	/* Background */
-	--primary-background-color: var(--green-2);
+	/* --primary-background-color: var(--green-2);
 	--secondary-background-color: #f36621;
 	--tertiary-background-color: var(--green-9);
-	--quaternary-background-color: var(--green-1); /* #blauw; */
+	--quaternary-background-color: var(--green-1); #blauw; */
 
 	/* most used colors */
-	--primary-color: var(--gray-10); /* black; */
-	--secondary-color: var(--gray-1); /* white; */
-	--tertiary-color: var(--green-9); /* light gray; */
-	--quaternary-color: var(--green-1); /* #blauw; */
+	--primary-color: var(--gray_shade-10); /* black; */
+	--secondary-color: #fff; 
+	--tertiary-color: #f36621; 
+	--quaternary-color: var(--blue_shade-4); /* blue; */
+
 
 	/* Details */
 	--alert: #ff0000;
@@ -155,6 +175,6 @@ ul {
 /* Mobile */
 @media (min-width: 44em) {
 	:root {
-		--column-count: 3;
+		--column-count: 2;
 	}
 }
