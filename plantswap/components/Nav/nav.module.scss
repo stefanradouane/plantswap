@@ -2,11 +2,12 @@ $transition-speed: 200ms;
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  
   font-size: 0.9em;
   height: 100%;
-  color: black;
+  color: var(--color-black);
 
   &__list {
     position: fixed;
@@ -16,8 +17,9 @@ $transition-speed: 200ms;
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2.5rem;
     transition: all $transition-speed;
 
     @media screen and (max-width: 48em) {

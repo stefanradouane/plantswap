@@ -32,9 +32,9 @@
   }
 
   &--square {
-    height: var(--header-height);
-    width: var(--header-height);
-    border-radius: 0;
+    // height: var(--header-height);
+    // width: var(--header-height);
+    border-radius: 20px;
     box-shadow: none;
 
     svg {

@@ -1,19 +1,28 @@
 .header {
   position: sticky;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: var(--header-height);
-  width: 100%;
+  width: 90%;
+  left: 5%;
   z-index: 10;
-  background-color: var(--color-green);
+  // background-color: var(--color-white);
+  background-color: white;
   scroll-snap-align: start;
-
+  border-radius: 100px;
+  margin-top: 2em;
+  &__links {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
   &__logo {
     width: auto;
-    height: 100%;
+    height: 90%;
     display: block;
-    padding: 0.5rem;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    filter: invert(1);
 
     &_link {
       height: 100%;
