@@ -6,7 +6,7 @@ $transition-speed: 200ms;
   align-items: center;
   font-size: 0.9em;
   height: 100%;
-  color: black;
+  color: var(--nav-text-color);
 
   &__list {
     position: fixed;
@@ -32,8 +32,6 @@ $transition-speed: 200ms;
       display: flex;
       align-items: center;
       justify-content: center;
-      // padding: 1em;
-      // min-width: 1.5em;
       font-size: 1.2em;
       color: inherit;
       cursor: pointer;
@@ -41,8 +39,8 @@ $transition-speed: 200ms;
       border-bottom: 5px solid transparent;
 
       &--active {
-        color: #7aa556;
-        border-bottom: 5px solid #7aa556;
+        color: var(--color-green-light);
+        border-bottom: 5px solid var(--color-green-light);
       }
     }
   }

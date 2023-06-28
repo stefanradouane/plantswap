@@ -35,7 +35,7 @@
     height: var(--preview-size);
     aspect-ratio: 1/1;
     border-radius: var(--border-radius);
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--color-black);
     object-fit: cover;
   }
 
@@ -44,8 +44,6 @@
     width: 24px;
     height: 24px;
     aspect-ratio: 1/1;
-    // border-radius: var(--border-radius);
-    // border: 3px solid var(--text-color);
     object-fit: cover;
     display: flex;
     justify-content: center;

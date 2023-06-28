@@ -55,12 +55,12 @@
 
 			&:checked {
 				position: relative;
-				background-color: #29593f;
+				background-color: var(--color-green);
 
 				&::before {
 					content: '✔';
 					font-size: 1.5em;
-					color: #fff;
+					color: var(--color-white);
 					position: absolute;
 					right: 1px;
 					top: -6px;

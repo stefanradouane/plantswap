@@ -4,6 +4,7 @@ import Header from '@/../components/Header/Header';
 import Text from '@/../components/Text/Text';
 import Cta from '@/../components/Cta/Cta';
 import Hero from '@/../components/Hero/Hero';
+import Canavs from '@/../components/Canvas/Canvas';
 import { getDictionary } from '@/../get-dictionary';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/navigation';
@@ -33,6 +34,7 @@ export default async function Page({ params }) {
 								{dictionary.homepage.button}
 							</Cta>
 						</article>
+						<Canavs/>
 					</aside>
 					<Hero />
 					<p className={styles['page--sideNote']}>

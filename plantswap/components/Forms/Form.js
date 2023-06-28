@@ -8,6 +8,8 @@ import {
   initialFormValues,
   // FormIndicator,
 } from "./utils";
+import Canvas from "../Canvas/Canvas";
+
 import formdata from "./formdata.json";
 import FormTip from "../FormTip/FormTip";
 import { useState } from "react";
@@ -39,7 +41,7 @@ const SwapForm = ({ data, form, formData }) => {
         return (
           <Form className={styles.form}>
             <FormTip description={data.dictionary[form].tip_description} />
-
+<Canvas />
             {currentForm.map((step, i) => {
               return (
                 <FormPart

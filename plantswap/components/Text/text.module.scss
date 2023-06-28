@@ -2,7 +2,7 @@
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 400;
-  color: var(--text-color);
+  color: var(--primary-text-color);
 
   &--italic {
     font-style: italic;
@@ -27,7 +27,7 @@
 
   &--meta {
     font-size: 0.65rem;
-    color: #ccc;
+    color: var(--color-grey-light);
   }
 
   &--x-small {
