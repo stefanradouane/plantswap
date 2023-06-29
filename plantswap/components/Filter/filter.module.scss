@@ -17,6 +17,8 @@
     // margin-bottom: 1rem;
     // margin-bottom: 1.875rem;
     z-index: 5;
+		font-size: clamp(12px, 2em, 0.75vw);
+    
     font-size: 0.65rem;
   }
 
@@ -58,6 +60,8 @@
     padding: var(--S-spacer) 0;
     border-bottom: 2px solid var(--color-black);
     width: 100%;
+		font-size: clamp(12px, 2em, 0.75vw);
+    
     font-size: 0.65rem;
     color: #ccc;
 

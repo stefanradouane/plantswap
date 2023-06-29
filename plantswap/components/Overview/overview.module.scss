@@ -24,7 +24,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.75rem;
+		font-size: clamp(12px, 2em, 0.75vw);
+    
     margin-bottom: var(--S-spacer);
     padding: var(--S-spacer) 0;
 

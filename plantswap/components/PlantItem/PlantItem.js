@@ -66,7 +66,6 @@ const PlantCard = ({ plant, options }) => {
           <Text modifier={"meta"} className={styles["plant__meta-latine"]}>
             {latinName}
           </Text>
-
           <aside className={styles["plant__meta-link"]}>
             <Text modifier={"small"} className={styles["plant__meta-text"]}>
               Lees meer

@@ -16,7 +16,9 @@ const Header = ({ locale, dictionary }) => {
           priority
         />
       </Link>
-      <Nav locale={locale} dictionary={dictionary} />
+      <div className={styles.header__links}>
+        <Nav locale={locale} dictionary={dictionary} />
+      </div>
     </header>
   );
 };
