@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import LangChanger from "../LangChanger/LangChanger";
 
 export default function NavLink({ item, styles, locale, menu }) {
   const pathname = usePathname();
@@ -21,6 +22,7 @@ export default function NavLink({ item, styles, locale, menu }) {
       <Link href={item.href} className={styles.nav__item}>
         {item.text}
       </Link>
+      
     </li>
   );
 }

@@ -92,8 +92,9 @@
   );
 
   --button-color: #000000;
-
-  --header-height: 52px;
+  --header-offset: 2em;
+  --header-inner: 52px;
+  --header-height: calc(var(--header-inner) + calc(var(--header-offset) * 2));
   --column-count: 1;
   --transition-settings: 200ms ease-in-out;
 }
@@ -183,7 +184,10 @@ ul {
 @media (min-width: 44em) {
   :root {
     --column-count: 2;
-    --header-height: 70px;
+    --header-offset: 2.5em;
+    --header-inner: 70px;
+    /* --header-height: calc(70px + calc(var(--header-offset) * 2)); */
+
     --page-padding: 2rem;
   }
 }
