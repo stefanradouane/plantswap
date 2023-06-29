@@ -5,6 +5,7 @@ import LangChanger from "../LangChanger/LangChanger";
 import NavLink from "./NavLink";
 import NavToggle from "../NavToggle/NavToggle";
 import { useState, useEffect, useRef } from "react";
+// import LangChanger from "../LangChanger/LangChanger";
 
 const getMenu = (dictionary, locale) => {
   return [
@@ -36,7 +37,9 @@ const Nav = ({ locale, dictionary }) => {
             menu={menu_list}
           />
         ))}
+        
       </ul>
+      <LangChanger locale={locale} dictionary={dictionary} className={styles.langchanger}/>
       <div
         className={styles.nav__toggle}
         onClick={() => {
@@ -46,7 +49,7 @@ const Nav = ({ locale, dictionary }) => {
         <span></span>
       </div>
       {/* <NavToggle styles={styles} setOpen={setOpen}  /> */}
-      <LangChanger locale={locale} dictionary={dictionary} open={open} />
+     
     </nav>
   );
 };

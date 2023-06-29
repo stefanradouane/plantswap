@@ -4,47 +4,51 @@ $transition-speed: 200ms;
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  font-size: 0.9em;
+  font-size: 0.875em;
   height: 100%;
+  
   color: var(--color-black);
 
   &__list {
     position: fixed;
-    top: 52px;
+    top:var(--header-height);
+    font-size: 1em;
     right: -100%;
-    width: 100vw;
-    height: 100%;
+    // height: calc(100% - var(--header-height));
+    height: fit-content;
+    padding: 2em;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 2.5rem;
+    // justify-content: space-around;
+    
+    gap: 2.5em;
     transition: all $transition-speed;
-
+    width: calc(100% - calc(var(--page-padding) * 2));
+    background-color: white;
+    border-radius: var(--border-radius);
+    &-langbutton {
+      margin-left: auto;
+    }
     @media screen and (max-width: 48em) {
       &--active {
-        right: 0;
-        background-color: #ffffff5c;
-        backdrop-filter: blur(9px);
-      }
-    }
+        right: var(--page-padding);
+        bottom: 0;
 
+      }
+     
+    }
     &-item {
       display: flex;
       align-items: center;
-      justify-content: center;
-      // padding: 1em;
-      // min-width: 1.5em;
       font-size: 1.2em;
       color: inherit;
       cursor: pointer;
       height: 100%;
-      border-bottom: 5px solid transparent;
+     
 
       &--active {
-        color: #7aa556;
-        border-bottom: 5px solid #7aa556;
+        color: var(--color-blue);
+        // border-bottom: 5px solid var(--color-blue);
       }
     }
   }
@@ -65,11 +69,11 @@ $transition-speed: 200ms;
 
   &__toggle {
     cursor: pointer;
-    background: var(--color-green);
+    background: transparent;
     border: none;
-    margin: 0 auto;
-    height: var(--header-height);
-    width: var(--header-height);
+    // margin: 0 auto;
+    height: 52px;
+    width: 52px;
     aspect-ratio: 1/1;
     display: flex;
     flex-direction: column;
@@ -77,6 +81,8 @@ $transition-speed: 200ms;
     justify-content: center;
     padding: 0.5rem;
     z-index: 1;
+    filter: invert(1);
+
 
     span {
       display: block;
@@ -95,7 +101,9 @@ $transition-speed: 200ms;
     }
   }
 
+  
   @media screen and (min-width: 48em) {
+    
     gap: 1.5rem;
 
     &__toggle {
@@ -107,7 +115,17 @@ $transition-speed: 200ms;
       display: flex;
       flex-direction: row;
       width: auto;
+      // justify-content: space-around;
       height: 100%;
+      margin-left: 2em;
     }
   }
 }
+
+@media screen and (min-width: 48em) {
+  .nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+

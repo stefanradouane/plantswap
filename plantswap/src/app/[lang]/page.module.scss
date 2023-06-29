@@ -7,7 +7,11 @@
 
   max-width: var(--max-width);
 
-  margin: auto;
+		&--intro {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: var(--S-spacer) 0;
 
   &__hero {
     position: relative;
@@ -75,7 +79,7 @@
   //     }
   //   }
 }
-
+}
 @keyframes Bounce {
   from {
     transform: translateY(0);

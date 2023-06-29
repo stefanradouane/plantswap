@@ -11,3 +11,28 @@
     }
   }
 }
+.langchanger {
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        place-content: center;
+        filter: brightness(0) saturate(100%) hue-rotate(240deg);
+     
+    }
+    
+  }
+ 
+}
+
+@media screen and (max-width: 48em) {
+  .langchanger {
+    display: none;
+  }
+
+}

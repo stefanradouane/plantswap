@@ -1,23 +1,24 @@
 .header {
-  position: sticky;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: var(--header-height);
-  width: 90%;
-  left: 5%;
+  height: var(--header-inner);
+  width: calc(100% - calc(var(--page-padding) * 2));
+  left: var(--page-padding);
   z-index: 10;
   // background-color: var(--color-white);
   background-color: white;
   scroll-snap-align: start;
-  top: 0;
+  top: var(--header-offset);
   border-radius: 100px;
-  margin-top: 2em;
-  
+  margin-top: var(--header-offset);
+  font-size: .875em;
+  position: sticky;
   &__links {
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-right: 1.5em;
   }
   
   &__logo {
@@ -29,6 +30,14 @@
 
     &_link {
       height: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .header {
+    &__links {
+      justify-content: center;
     }
   }
 }
