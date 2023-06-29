@@ -1,13 +1,16 @@
 import React from "react";
 import styles from "./title.module.scss";
+import createClassnames from "../../utils/createClassnames";
 
 const Title = ({ title, modifier, children, className }) => {
+  const usedTitle = title === "h0" ? "h1" : title;
   return React.createElement(
-    title,
+    usedTitle,
     {
-      className: `${styles.title} ${styles[`title--${title}`]} ${
-        modifier ? styles[`title--${modifier}`] : ""
-      } ${className ? className : ""}`,
+      className:
+        styles[`title--${title}`] +
+        " " +
+        `${createClassnames(styles, "title", className, modifier)}`,
     },
     children
   );

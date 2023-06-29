@@ -13,6 +13,7 @@ export async function getData(lang) {
   const data = await client.request(query(lang));
   return data;
 }
+
 const query = (lang) => {
   return gql`
       query {

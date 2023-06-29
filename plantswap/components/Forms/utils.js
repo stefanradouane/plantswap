@@ -1,17 +1,4 @@
 import * as Yup from "yup";
-import Title from "../Title/Title";
-import Text from "../Text/Text";
-import { Field, useField, useFormikContext } from "formik";
-import { useEffect, useRef, useState } from "react";
-import dateLimit from "../../utils/date";
-import ContinentIcon from "../ContinentIcon/ContinentIcon";
-import Icon from "../Icon/Icon";
-import WaterCount from "../WaterCount/WaterCount";
-import Button from "../Button/Button";
-
-import styles from "./Form.module.scss";
-import SeasonIcon from "../SeasonIcon/SeasonIcon";
-import { ErrorMessage, Hints } from "../FormField/utils";
 
 export const existingFormData = (flowData, form, key) => {
   const usedKey = flowData[form] ? flowData[form][key] : undefined;
@@ -33,7 +20,7 @@ export const existingFormData = (flowData, form, key) => {
     return false;
   }
 
-  if (key == "waterFrequence") {
+  if (key == "waterFrequency") {
     return 1;
   }
 
@@ -121,8 +108,6 @@ export const initialFormValues = (flowData, form, currentForm) => {
       );
     }
   });
-
-  // console.log(ls);
 
   return ls;
 };

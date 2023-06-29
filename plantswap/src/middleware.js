@@ -8,11 +8,9 @@ let headers = { "accept-language": "nl-NL,nl;q=0.5" };
 let languages = new Negotiator({ headers }).languages();
 let defaultLocale = "nl";
 
-// console.log(languages);
-
 function getLocale(request) {
   return match(languages, locales, defaultLocale);
-} 
+}
 
 export default function middleware(request) {
   // Check if there is any supported locale in the pathname

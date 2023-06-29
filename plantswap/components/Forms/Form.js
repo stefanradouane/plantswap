@@ -3,12 +3,7 @@
 import styles from "./Form.module.scss";
 import Button from "../Button/Button";
 import { Formik, Form } from "formik";
-import {
-  DisplayingErrorMessagesSchema,
-  initialFormValues,
-  // FormIndicator,
-} from "./utils";
-import formdata from "./formdata.json";
+import { DisplayingErrorMessagesSchema, initialFormValues } from "./utils";
 import FormTip from "../FormTip/FormTip";
 import { useState } from "react";
 import FormPart from "./FormPart";
@@ -17,7 +12,6 @@ import { FieldPartType } from "../FormField/FormField";
 
 const SwapForm = ({ data, form, formData }) => {
   const { flowData, setFlowData } = data.flowdata;
-  console.log(formData);
 
   const currentForm = formData[form].map((form) => form.formSection[0]);
   const [currentStep, setCurrentStep] = useState(1);

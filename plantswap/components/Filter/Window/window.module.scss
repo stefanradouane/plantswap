@@ -1,57 +1,64 @@
 .filterWindow {
-	position: fixed;
-	visibility: hidden;
-	top: 0%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	// padding-top: 20vh;
-	background-color: var(--background-light);
+  position: fixed;
+  visibility: hidden;
+  top: -100%;
+  left: 0%;
+  display: flex;
+  flex-direction: column;
+  // transform: translate(-50%, -50%);
+  // padding-top: 20vh;
+  background-color: var(--background-light);
 
-	height: 100vh;
-	width: 100vw;
-	z-index: 1;
-	overflow: overlay;
-	overflow-y: auto;
+  height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height));
+  width: 100vw;
+  z-index: 1;
+  overflow: overlay;
+  overflow-y: auto;
 
-	transition: all 0.8s ease-in;
+  transition: all 0.8s ease-in;
 
-	&[aria-collapsed='false'] {
-		visibility: visible;
-		position: fixed;
-		top: 60%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		transition: all 0.8s linear;
-	}
-	&__list {
-		display: flex;
-		gap: var(--S-spacer);
-		text-align: center;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
-		padding: var(--M-spacer);
-	}
+  &[aria-expanded="true"] {
+    visibility: visible;
+    position: fixed;
+    top: var(--header-height);
+    left: 0%;
+    // transform: translate(-50%, -50%);
+    transition: all 0.8s linear;
+  }
+  &__list {
+    display: flex;
+    gap: var(--S-spacer);
+    text-align: center;
+    flex-wrap: wrap;
+    // justify-content: space-evenly;
+    padding: calc(var(--page-padding) * 2) var(--page-padding) 0;
+    @media screen and (min-width: 70em) {
+      padding: calc(var(--page-padding) * 1) var(--page-padding) 0;
+    }
+  }
 
-	&__result {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: var(--S-spacer);
+  &__result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--S-spacer);
 
-		background-color: var(--color-black);
-		margin-top: auto;
-		margin: 0 auto;
-		padding: var(--M-spacer);
-		width: 100%;
+    background-color: var(--color-black);
+    margin-top: auto;
+    // margin: 0 auto;
+    padding: var(--M-spacer);
+    width: 100%;
+    align-self: flex-end;
 
-		position: fixed;
-		bottom: auto;
-		right: 0px;
-	}
+    // position: fixed;
+    // bottom: auto;
+    // right: 0px;
+  }
 
-	@media (max-width: 768px) {
-		&__list {
-			justify-content: start;
-		}
-	}
+  @media (max-width: 768px) {
+    &__list {
+      justify-content: start;
+    }
+  }
 }

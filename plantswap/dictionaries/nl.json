@@ -5,7 +5,12 @@
     "intro": "Ruil jouw stekje om, of doneer deze. Maak een keuze uit onze collectie beschikbare stekjes en kom je gekozen stekje bij ons omruilen!",
     "button": "Plant Doneren",
     "sideNote": "Er is meer",
-    "subTitle" : "Onze Collectie"
+    "subTitle": "Onze Collectie"
+  },
+  "errorplant": {
+    "title": "404 Error",
+    "intro": "We kunnen de door jouw gekozen plant niet vinden, probeer een andere plant.",
+    "button": "Terug naar home"
   },
   "nav": {
     "about": "Over-ons",

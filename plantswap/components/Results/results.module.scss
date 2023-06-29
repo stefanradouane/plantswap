@@ -42,13 +42,13 @@
     grid-area: grade;
     font-size: 14px;
     font-weight: 400;
-    align-self: start;
-    justify-self: end;
+    align-self: flex-start;
+    justify-self: flex-end;
   }
 
   &__name {
     grid-area: name;
-    align-self: end;
+    align-self: flex-end;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -69,7 +69,7 @@
 
   &__btn {
     grid-area: button;
-    align-self: end;
+    align-self: flex-end;
   }
 
   &__img {

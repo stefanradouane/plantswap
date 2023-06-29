@@ -32,17 +32,6 @@ const Switcher = ({ formData, flowdata, myPlant, data }) => {
     image: flowData.plant.url,
   };
 
-  console.log(formData);
-  // const myplant = {
-  //   naam: flowData.plantforms.plantName,
-  //   latin: flowData.plantforms.latinName,
-  //   fotos: [
-  //     {
-  //       url: flowData.plant.url,
-  //     },
-  //   ],
-  // };
-
   return (
     <section className={styles.plantswitcher}>
       <SwitchCollection

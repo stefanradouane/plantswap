@@ -6,7 +6,6 @@ import Title from "../Title/Title";
 import styles from "./SwapFlowCheck.module.scss";
 
 const SwapFlowCheck = ({ data }) => {
-  console.log(data);
   const {
     flowdata: { flowData },
     dictionary,
@@ -62,8 +61,6 @@ const SwapFlowCheck = ({ data }) => {
           formData.append("swapTime", flowData.userForms.time);
           formData.append("swapWith", flowData.userForms.fullName);
           formData.append("swapWithEmail", flowData.userForms.email);
-          console.log(e);
-          console.log(flowData);
           fetch("/api/plant", {
             method: "POST",
             body: formData,
@@ -90,7 +87,6 @@ const Card = ({ plant, data, usedDict }) => {
 };
 
 const InfoPart = ({ dictionary, flowData, locale }) => {
-  console.log(dictionary.swapcheck.data);
   const d = dictionary.swapcheck.data;
 
   return d.map((sect, i) => (

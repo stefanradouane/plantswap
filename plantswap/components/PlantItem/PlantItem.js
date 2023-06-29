@@ -1,57 +1,82 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import Text from '../Text/Text';
-import Title from '../Title/Title';
-import PlantLabel from '../PlantLabel/Label';
-import styles from './item.module.scss';
+import Image from "next/image";
+import Link from "next/link";
+import Text from "../Text/Text";
+import Title from "../Title/Title";
+import PlantLabel from "../PlantLabel/label";
+import styles from "./item.module.scss";
+import ContinentIcon from "../ContinentIcon/ContinentIcon";
+import Icon from "../Icon/Icon";
 
-const PlantCard = ({ slug, name, latin, difficulty, poisend, image }) => {
+const PlantCard = ({ plant, options }) => {
+  const {
+    plantName,
+    latinName,
+    maintenance,
+    image,
+    origin,
+    difficulty,
+    poisonous,
+    id,
+  } = plant;
 
-	return (
-		<Link href={`/plant/${slug}`} className={styles.plant}>
-		<header className={styles.plant__header}> 
-			{poisend ? ( <PlantLabel type={'giftig'} /> ) : ( "" )}
-			<PlantLabel type={difficulty} />
+  return (
+    <Link href={`/planten/${id}`} className={styles.plant}>
+      <header className={styles.plant__header}>
+        {origin && (
+          <PlantLabel icon={"skull"}>
+            <section>
+              <ContinentIcon iconName={origin} />
+            </section>
+            <Text className={styles["label--text"]} modifier={"x-small"}>
+              {
+                options
+                  .find((option) => option.name === "origin")
+                  .optionList.optionName.find((opt) => opt.key === origin)?.name
+              }
+            </Text>
+          </PlantLabel>
+        )}
+        {poisonous === "yes" && (
+          <PlantLabel icon={"skull"}>
+            <section>
+              <Icon iconName={"skull"} />
+            </section>
+          </PlantLabel>
+        )}
+        <PlantLabel icon={"skull"}>
+          <section>
+            <Icon iconName={"groene-vinger-" + maintenance} />
+          </section>
+        </PlantLabel>
+      </header>
 
-		</header>
+      <Image
+        className={styles.plant__image}
+        src={image}
+        alt={plantName}
+        width={200}
+        height={200}
+      />
+      <article className={styles.plant__info}>
+        <Title title={"h3"} className={styles["plant__info--name"]}>
+          {plantName}
+        </Title>
 
-			<Image
-				className={styles.plant__image}
-				src={image}
-				alt={name}
-				width={200}
-				height={200}
-			/>
-			<article className={styles.plant__info}>
-				<Title title={'h3'} className={styles['plant__info--name']}>
-					{name}
-				</Title>
+        <footer className={styles.plant__meta}>
+          <Text modifier={"meta"} className={styles["plant__meta-latine"]}>
+            {latinName}
+          </Text>
 
-				<footer className={styles.plant__meta}>
-					<Text modifier={'meta'} className={styles['plant__meta-latine']}>
-						{latin}
-					</Text>
-
-					<aside className={styles['plant__meta--read']}>
-						<Text
-							modifier={'meta'}
-							className={styles['plant__meta--black']}
-						>
-							Lees meer
-						</Text>
-
-						<Image
-						className={styles['plant__meta--icon']}
-							src="/images/icons/Arrow-right.svg"
-							alt="arrow"
-							width={18}
-							height={18}
-						/>
-					</aside>
-				</footer>
-			</article>
-		</Link>
-	);
+          <aside className={styles["plant__meta-link"]}>
+            <Text modifier={"small"} className={styles["plant__meta-text"]}>
+              Lees meer
+            </Text>
+            <Icon iconName={"arrowCircle"} rotate={90} />
+          </aside>
+        </footer>
+      </article>
+    </Link>
+  );
 };
 
 export default PlantCard;

@@ -10,13 +10,31 @@ const Overview = (plants) => {
   const [selectedFilters, setSelectedFilters] = useState({});
   const [searchQuery, setSearchQuery] = useState("");
 
+  const options = plants.formInfo
+    .map((a) => a.formSection.map((b) => b.fields))
+    .flat(2)
+    .map((c) => (c.optionList !== null ? c : undefined))
+    .filter((d) => d)
+    .filter((e) => {
+      if (
+        e.name === "origin" ||
+        e.name === "fertilizer" ||
+        e.name === "poisonous"
+      ) {
+        return e;
+      }
+    });
+
   useEffect(() => {
     // Filter the plants based on the selected filters
     const filterResult = plants.data.filter((plant) => {
       return (
         Object.entries(selectedFilters).every(([subject, options]) => {
           // Check if the plant has at least one of the selected options
-          return options.some((option) => plant[subject].includes(option));
+          return options.some((option) => {
+            if (plant[subject] === null) return false;
+            return plant[subject] === option;
+          });
         }) &&
         (searchQuery === "" ||
           plant.plantName.toLowerCase().includes(searchQuery.toLowerCase()))
@@ -31,7 +49,9 @@ const Overview = (plants) => {
   return (
     <section className={styles.overview}>
       <Filter
+        options={options}
         plants={usedPlants}
+        selectedFilters={selectedFilters}
         setSelectedFilters={setSelectedFilters}
         setSearchQuery={setSearchQuery}
       />
@@ -40,7 +60,7 @@ const Overview = (plants) => {
         <p>
           <span>{usedPlants.length}</span> Groene kandidaten
         </p>
-        <aside className={styles["overview__meta-legenda"]}>leganda</aside>
+        {/* <aside className={styles["overview__meta-legenda"]}>leganda</aside> */}
       </section>
 
       <section className={styles.overview__plants}>
@@ -48,15 +68,7 @@ const Overview = (plants) => {
           <p>Geen planten gevonden</p>
         ) : (
           usedPlants.map((plant) => (
-            <PlantCard
-              key={plant.id}
-              slug={plant.slug}
-              name={plant.plantName}
-              latin={plant.latinName}
-              difficulty={plant.onderhoud}
-              poisend={plant.giftig}
-              image={plant.fotos[0].url}
-            />
+            <PlantCard key={plant.id} plant={plant} options={options} />
           ))
         )}
       </section>

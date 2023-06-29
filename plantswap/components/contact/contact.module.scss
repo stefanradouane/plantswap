@@ -1,87 +1,128 @@
 .contact {
-    height: 100vh;
-    width: 100vw;
-    background-color: rgb(229, 229, 229);
+  width: 100vw;
+  position: relative;
+
+  &__wrapper {
+    max-width: var(--max-width);
+    padding: var(--page-padding);
     display: flex;
-    flex-direction: row;
-    input[type="text"] {
-        height: 32px;
+    flex-direction: column;
+    gap: var(--page-padding);
+    margin: auto;
+  }
+
+  &__textarea {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: var(--primary-text-color);
+    font-size: 0.875rem;
+
+    textarea {
+      padding: var(--S-spacer);
+      width: 100%;
+      border: 1px solid var(--wireframe-btn-background-color);
+      border-radius: var(--border-radius);
+      font-family: inherit;
+      resize: none;
+
+      color: var(--primary-text-color);
+      background-color: var(--color-white);
     }
-    &__image {
-        height: 100%;
-        width: auto;
+  }
+
+  &__location {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: var(--XS-spacer);
+
+    img {
+      display: block;
+      max-width: 320px;
+      height: auto;
+      width: 100%;
+      aspect-ratio: 320/220;
+      object-fit: cover;
+    }
+
+    &-info {
+      width: 100%;
+    }
+  }
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    &-contactform {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+
+      &-names {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1em;
+
+        input {
+          width: 100%;
+          max-width: unset;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 880px) {
+    &__wrapper {
+      display: grid;
+      grid-template-columns: minmax(0, var(--max-width)) 320px;
+    }
+
+    &__location {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .contact {
+    input[type="text"] {
+      width: 100%;
     }
     &__container {
-        display: flex;
-        justify-content: center;
+      &-contactform {
         align-items: center;
-        width: 100%;
-        &-contactform {
-            width: 32em;
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-            form {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 1em;
-                textarea {
-                    height: 100px;
-                }
-                button {
-                    max-width: 150px;
-                }
-            }
-            &-names {
-                display: flex;
-                flex-direction: row;
-                gap: 1em;
-                input {
-                    width: 100%;
-                }
-            }
-        }
-    } 
-}
+        &-names {
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+          width: 100%;
 
-@media(max-width: 550px) {
-    .contact {
-        input[type="text"] {
-            width: 450px;
+          input {
+            width: 100%;
+          }
         }
-        &__container {
-            &-contactform {
-                align-items: center;
-                form {
-                    align-items: center;
-                    textarea {
-                        width: 450px;
-                    }
-                    button {
-                        max-width: 150px;
-                    }
-                }
-                article {
-                    width: 450px;
-                }
-                &-names {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1em;
-                    input {
-                        width: 100%;
-                    }
-                }
-            }
-        } 
-    } 
-}
-
-@media(max-width: 880px) {
-    .contact {
-        &__image {
-            display: none;
-        }
+      }
     }
+  }
+}
+
+@media (max-width: 880px) {
+  .contact {
+    &__image {
+      //   display: none;
+    }
+  }
 }

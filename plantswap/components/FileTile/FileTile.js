@@ -5,7 +5,6 @@ import styles from "./filetile.module.scss";
 import prettyBytes from "pretty-bytes";
 
 const FileTile = ({ data, uploadedValue, onDelete }) => {
-  console.log(data);
   if (!data) {
     return <></>;
   } else if (data?.plant?.url) {

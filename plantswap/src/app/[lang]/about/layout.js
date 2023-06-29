@@ -7,7 +7,6 @@ export const metadata = {
 
 export default function RootLayout(props) {
   const { children, params, req } = props;
-  console.log(props);
 
   return (
     <html lang={params.lang}>
