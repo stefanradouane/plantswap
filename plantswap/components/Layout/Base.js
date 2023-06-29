@@ -3,7 +3,6 @@ import Footer from "@/../components/Footer/Footer";
 import { getDictionary } from "../../get-dictionary";
 
 const Layout = async ({ locale, dictionary, children, noFooter }) => {
-  console.log("render layout");
   return (
     <>
       <Header locale={locale} dictionary={dictionary} />

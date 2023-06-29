@@ -1,8 +1,21 @@
 .detailpagearticle {
-    margin: 0 var(--S-spacer);
-    padding-bottom: var(--M-spacer);
-}
+  margin: 0 var(--page-padding);
+  padding-bottom: var(--page-padding);
+  //   padding-bottom: var(--M-spacer);
 
-.detailpagearticle:last-of-type {
-    padding-bottom: var(--XL-spacer);
+  @media screen and (min-width: 70em) {
+    margin: 0 var(--page-padding) 0 calc(var(--page-padding) / 2);
+    padding-bottom: calc(var(--page-padding) / 3);
+  }
+
+  &__value {
+    display: flex;
+    align-items: center;
+    gap: var(--XXS-spacer);
+
+    svg {
+      width: 1.5rem;
+      height: auto;
+    }
+  }
 }

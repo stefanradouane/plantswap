@@ -1,3 +1,12 @@
+/**
+ * This file is a work in progress. It is not used in the current version of the app.
+ * This file contains a serverless function. This function is used to post a plant to the Hygraph API.
+ * Currently this post is not initiated by the app, but by a user in the Hygraph dashboard.
+ *
+ * @todo Make this function work in the app. @nice-to-have
+ * @todo Change the api key to a secret. @must-have
+ */
+
 import { GraphQLClient, gql } from "graphql-request";
 import { NextResponse } from "next/server";
 import FormData from "form-data";
@@ -27,13 +36,6 @@ export async function POST(req, res) {
   //     query2({ ...newplant, reserved: false, registered: false }, locale)
   //   );
   return NextResponse.json({ done: true });
-  //   console.log(data);
-
-  //   console.log(reqFormData.get("swapType"));
-  //   console.log(reqFormData.get("swapTime"));
-  //   console.log(reqFormData.get("swapDate"));
-  //   console.log(reqFormData.get("swapWith"));
-  //   console.log(reqFormData.get("swapWithEmail"));
 }
 
 const query = (id) => gql`

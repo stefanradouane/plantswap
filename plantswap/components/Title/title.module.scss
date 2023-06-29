@@ -19,44 +19,45 @@
   }
 
   &--h2 {
-    padding-bottom: var(--XXS-spacer);
-
     font-weight: bolder;
     font-size: 1.5rem;
+  }
 
-    &--h3 {
-      font-weight: normal;
-      font-size: 1rem;
-      color: var(--primary-text-color);
-    }
+  &--h3 {
+    font-weight: normal;
+    font-size: 1rem;
+    color: var(--primary-text-color);
+  }
 
-    &--h4 {
-      font-size: 0.875rem;
-      color: font;
-    }
+  &--h4 {
+    font-size: 0.875rem;
+    color: font;
+  }
 
-    &--h5 {
-      font-size: 0.75em;
-      color: darkslategray;
-    }
+  &--h5 {
+    font-size: 0.75em;
+    color: darkslategray;
+  }
 
-    &--small {
-      font-size: 0.875em;
-    }
+  &--small {
+    font-size: 0.875em;
+  }
 
-    &--card-size {
-      font-weight: 400;
-      font-size: 0.875em;
-    }
+  &--card-size {
+    font-weight: 400;
+    font-size: 0.875em;
+  }
 
-    &--red {
-      color: red;
-    }
+  &--red {
+    color: red;
+  }
 
-    &--gentle-appear {
-      animation-name: gentle-appear;
-      animation-duration: 2s;
-    }
+  &--gentle-appear {
+    animation: gentle-appear 1s ease-in-out;
+  }
+
+  &--bold {
+    font-weight: bold;
   }
 }
 

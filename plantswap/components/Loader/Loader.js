@@ -17,7 +17,6 @@ const animation = (delay) =>
   `1.11111s linear ${delay} infinite normal forwards running beating`;
 
 const Loader = ({ disabled }) => {
-  console.log(disabled);
   if (disabled) return null;
   return (
     <svg

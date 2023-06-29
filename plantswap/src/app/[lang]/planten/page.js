@@ -1,22 +1,24 @@
 import Layout from "../../../../components/Layout/Base.js";
 import { getDictionary } from "../../../../get-dictionary.js";
-// import dataset from "../swap/data.json";
-import SwapFlow from "../../../../components/SwapFlow/SwapFlow.js";
-
 import { getData } from "../../../../utils/getFormData.js";
-import PlantData from "../../../../components/Switcher/plantdata.json";
 import Overview from "../../../../components/Overview/Overview.js";
+import Title from "../../../../components/Title/Title.js";
+import styles from "../page.module.scss";
 
 export default async function Home({ params }) {
   const dictionary = await getDictionary(params.lang);
-  const formData = await getData(params.lang);
-  // console.log(data[0].formSection[0]);
-  // console.log(data.plantforms.formSection);
+  const data = await getData(params.lang);
+
   return (
     <Layout locale={params.lang} dictionary={dictionary} noFooter={true}>
-      <main>
-        <h1>{dictionary.planten}</h1> {/* CHANGE to title component */}
-        <Overview data={PlantData.stekjes} />
+      <main className={styles.page}>
+        <Title
+          title={"h1"}
+          modifier={"gentle-appear"}
+          className={styles["page--subTitle"]}>
+          {dictionary.homepage.subTitle}
+        </Title>
+        <Overview formInfo={data.plantforms} data={data.plants} />
       </main>
     </Layout>
   );

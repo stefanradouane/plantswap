@@ -5,7 +5,12 @@
     "intro": "Swap your cutting, or donate it. Choose from our collection of available seedlings and come and exchange your exchange your cutting with us!",
     "button": "Plant donation",
     "sideNote": "There is more",
-    "subTitle" : "Our Collection"
+    "subTitle": "Our Collection"
+  },
+  "errorplant": {
+    "title": "404 Error",
+    "intro": "We couldn't find the plant you were looking for.",
+    "button": "Back to home"
   },
   "nav": {
     "home": "Home",

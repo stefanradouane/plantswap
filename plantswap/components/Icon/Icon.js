@@ -3,7 +3,6 @@ import styles from "./icon.module.scss";
 
 const Icon = ({ iconName, lib, rotate, modifier }) => {
   const icon = iconDict(iconName);
-  // console.log(icon);
   const classNames = [
     styles.icon,
     styles[`icon--${iconName}`],
@@ -14,8 +13,6 @@ const Icon = ({ iconName, lib, rotate, modifier }) => {
   if (lib && lib === "continets") {
     return <IconContinent iconName={iconName} />;
   }
-
-  // console.log(classNames.join(" "));
 
   return (
     <svg

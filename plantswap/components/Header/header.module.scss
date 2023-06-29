@@ -10,13 +10,16 @@
   // background-color: var(--color-white);
   background-color: white;
   scroll-snap-align: start;
+  top: 0;
   border-radius: 100px;
   margin-top: 2em;
+  
   &__links {
     display: flex;
     width: 100%;
     justify-content: center;
   }
+  
   &__logo {
     width: auto;
     height: 90%;

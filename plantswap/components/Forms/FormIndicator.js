@@ -1,4 +1,4 @@
-import styles from "./Form.module.scss";
+import styles from "./form.module.scss";
 
 /** @todo Change to rive animation @Dave */
 export const FormIndicator = ({ step }) => {

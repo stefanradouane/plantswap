@@ -1,26 +1,38 @@
 $detailpageheader-background-color: var(--plant-based-background-color);
 
 .detailpageheader {
-    margin-bottom: var(--M-spacer);
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: var(--transition-settings);
+  padding: calc(var(--page-padding) * 2) var(--page-padding) var(--page-padding);
 
-    display: grid;
+  @media screen and (min-width: 70em) {
+    padding: calc(var(--page-padding) * 1) calc(var(--page-padding) / 2)
+      var(--page-padding) var(--page-padding);
+  }
 
-    place-items: center;
+  &__content_wrapper {
+    height: 100%;
 
+    // padding: var(--page-padding) var(--page-padding);
     width: 100%;
-    height: 90dvh;
+    display: flex;
+    flex-direction: column;
+  }
 
-    background-color: red;
+  &__subtitle {
+    margin-bottom: var(--XS-spacer);
 
-    &__content_wrapper {
-        padding: 0 var(--L-spacer);
+    font-weight: 500;
+  }
 
-        width: 100%;
-    }  
-
+  @media screen and (min-width: 35em) {
+    &__title {
+      order: -2;
+    }
     &__subtitle {
-        margin-bottom: var(--XS-spacer);
-
-        font-weight: 500;
-    } 
+      order: -1;
+    }
+  }
 }

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import Title from "../Title/Title";
-import styles from "./Form.module.scss";
+import styles from "./form.module.scss";
 
 const FormPart = ({ title, step, children, setCurrentStep, currentStep }) => {
   const detail = useRef(null);

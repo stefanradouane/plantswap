@@ -1,7 +1,5 @@
-import { Field } from "formik";
-import styles from "../Forms/Form.module.scss";
-import Text from "../Text/Text";
-import Title from "../Title/Title";
+import styles from "../Forms/form.module.scss";
+import { Options, Quantity, SimpleField } from "./FormFieldTypes";
 import {
   ErrorMessage,
   FieldAdditional,
@@ -11,8 +9,6 @@ import {
   FieldResponse,
   Hints,
 } from "./utils";
-import Icon from "../Icon/Icon";
-import { Options, Quantity, SimpleField } from "./FormFieldTypes";
 
 export const FieldPartType = ({ field, props }) => {
   if (field.type === "quantity" || field.type === "options") {

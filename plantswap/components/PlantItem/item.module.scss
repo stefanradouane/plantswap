@@ -1,79 +1,64 @@
 .plant {
-	display: flex;
-	flex-direction: column;
-	background-color: var(--color-white);
-	padding: var(--M-spacer);
-	border-radius: 4px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	transition: box-shadow 1s cubic-bezier(0.66, 0.08, 0.19, 0.97);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  padding: var(--S-spacer);
+  border-radius: 4px;
+  transition: var(--transition-settings);
 
-	&__header {
-		display: flex;
-		align-items: center;
-		gap: var(--XS-spacer);
-	}
+  &:hover {
+    background-color: var(--color-blue);
+  }
 
-	&__image {
-		aspect-ratio: 1/1;
-		width: 80%;
-		height: auto;
-		margin: var(--S-spacer) auto;
-		border-radius: 0.5em;
-		transition: all 0.8s cubic-bezier(0.66, 0.08, 0.19, 0.97);
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: var(--XS-spacer);
+  }
 
-		@media screen and (max-width: 768px) {
-			width: 100%;
-		}
-	}
+  &__image {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 70%;
+    height: auto;
+    margin: var(--M-spacer) auto;
+    border-radius: 0.5em;
+  }
 
-	&__wrapper {
-		display: flex;
-		justify-content: space-between;
-	}
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__icons {
+    display: flex;
+    flex: 1;
+    gap: var(--S-spacer);
+    align-items: center;
+    width: 100%;
+  }
 
-	&__icons {
-		display: flex;
-		flex: 1;
-		gap: var(--S-spacer);
-		align-items: center;
-		width: 100%;
-	}
+  &__info {
+    &--name {
+      font-size: clamp(14px, 4vw, 18px);
+      font-weight: 800;
+      word-break: break-word;
+    }
+  }
 
-	&__info {
-		&--name {
-			font-size: clamp(16px, 2em, 1.25vw);
-			font-weight: 800;
-			word-break: break-word;
-		}
-	}
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    // color: var(--quaternary-text-color);
 
-	&__meta {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		gap: var(--XS-spacer);
-		font-size: 0.75rem;
-		color: var(--quaternary-text-color);
-		margin-bottom: 0.5em;
-
-		&--latin {
-			font-size: clamp(12px, 2em, 0.75vw);
-		}
-
-		&--read {
-			display: flex;
-			align-items: center;
-			gap: var(--XXS-spacer);
-		}
-
-		&--icon {
-			filter: invert(1);
-		}
-
-		&--black {
-			text-wrap: nowrap;
-			font-size: clamp(12px, 1.5em, 0.75vw);
-			color: var(--color-black);
-		}
-	}
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: var(--XXS-spacer);
+      color: var(--color-black);
+      font-size: 0.875rem;
+    }
+  }
 }
