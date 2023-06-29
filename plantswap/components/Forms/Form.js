@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./Form.module.scss";
+import styles from "./form.module.scss";
 import Button from "../Button/Button";
 import { Formik, Form } from "formik";
 import { DisplayingErrorMessagesSchema, initialFormValues } from "./utils";

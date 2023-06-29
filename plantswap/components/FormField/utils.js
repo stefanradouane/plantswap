@@ -1,5 +1,5 @@
 import Text from "../Text/Text";
-import styles from "../Forms/Form.module.scss";
+import styles from "../Forms/form.module.scss";
 import Title from "../Title/Title";
 import React from "react";
 import ContinentIcon from "../ContinentIcon/ContinentIcon";

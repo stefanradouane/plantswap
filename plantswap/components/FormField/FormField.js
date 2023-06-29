@@ -1,4 +1,4 @@
-import styles from "../Forms/Form.module.scss";
+import styles from "../Forms/form.module.scss";
 import { Options, Quantity, SimpleField } from "./FormFieldTypes";
 import {
   ErrorMessage,
