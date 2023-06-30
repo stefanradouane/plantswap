@@ -58,11 +58,9 @@ const SwapForm = ({ data, form, formData }) => {
               rotateIcon={90}
               type={"submit"}
               disabled={!props.isValid}
-              children={
-                flowData.step === 5 ? "Gegevens controleren" : "Volgende stap"
-              }
-              className={styles.form__button}
-            />
+              className={styles.form__button}>
+              {flowData.step === 5 ? "Gegevens controleren" : "Volgende stap"}
+            </Button>
           </Form>
         );
       }}
