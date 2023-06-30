@@ -4,6 +4,7 @@ import Title from "@/../components/Title/Title";
 import Text from "@/../components/Text/Text";
 import Button from "@/../components/Button/Button";
 import { forwardRef } from "react";
+import App from "next/app";
 
 
 const AboutSection = forwardRef(( { imageSrc, altText, text, title, buttonText, style, reverse, index }, ref) => {
@@ -39,5 +40,7 @@ const AboutSection = forwardRef(( { imageSrc, altText, text, title, buttonText, 
             </section>
   );
 });
+
+App.displayName='aboutsection';
 
 export default AboutSection;
