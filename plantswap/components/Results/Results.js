@@ -25,7 +25,7 @@ const Results = ({ mydata, data }) => {
             position: i + 1,
             topPosition: i <= 2,
             totalResults: data.results.length,
-            recent: flowdata.flowData.myplant.gbif.id === result.gbif.id,
+            recent: flowdata.flowData?.myplant?.gbif?.id === result?.gbif?.id,
           }}
           data={mydata}
           result={result}

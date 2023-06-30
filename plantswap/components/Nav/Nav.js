@@ -37,9 +37,12 @@ const Nav = ({ locale, dictionary }) => {
             menu={menu_list}
           />
         ))}
-        
       </ul>
-      <LangChanger locale={locale} dictionary={dictionary} className={styles.langchanger}/>
+      <LangChanger
+        locale={locale}
+        dictionary={dictionary}
+        className={styles.langchanger}
+      />
       <div
         className={styles.nav__toggle}
         onClick={() => {
@@ -49,7 +52,6 @@ const Nav = ({ locale, dictionary }) => {
         <span></span>
       </div>
       {/* <NavToggle styles={styles} setOpen={setOpen}  /> */}
-     
     </nav>
   );
 };
