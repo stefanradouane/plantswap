@@ -80,6 +80,7 @@ const Detailpage = ({ dictionary, plant, form }) => {
               if (field.name === "maintenance")
                 return (
                   <Accordion
+                    key={i}
                     title={field.title}
                     content={
                       <Icon iconName={`groene-vinger-${plant[key]}`} />
@@ -89,6 +90,7 @@ const Detailpage = ({ dictionary, plant, form }) => {
               if (field.name === "waterFrequency")
                 return (
                   <Accordion
+                    key={i}
                     title={field.title}
                     content={<WaterCount count={plant[key]} />}></Accordion>
                 );
@@ -96,6 +98,7 @@ const Detailpage = ({ dictionary, plant, form }) => {
               if (field.name === "waterInterval") {
                 return (
                   <Accordion
+                    key={i}
                     title={field.title}
                     content={
                       fields
@@ -108,7 +111,10 @@ const Detailpage = ({ dictionary, plant, form }) => {
               }
 
               return (
-                <Accordion title={field.title} content={plant[key]}></Accordion>
+                <Accordion
+                  key={i}
+                  title={field.title}
+                  content={plant[key]}></Accordion>
               );
             }
           }
