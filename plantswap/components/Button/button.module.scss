@@ -5,13 +5,10 @@
   align-items: center;
   gap: var(--S-spacer);
   background-color: var(--color-blue);
-  // box-shadow: 0px 4px 4px
-  //   color-mix(in srgb, var(--color-black) 70%, transparent);
   padding: 1rem 1.5rem;
   border-radius: 4em;
   border: none;
   width: fit-content;
-  //   font-weight: bold;
   font-size: 0.875rem;
   cursor: pointer;
   font-family: inherit;
@@ -23,6 +20,7 @@
   &:target,
   &:focus-visible {
     background: var(--color-blue-dark);
+    box-shadow: 0px 4px 4px var(--color-black);
   }
 
   svg {

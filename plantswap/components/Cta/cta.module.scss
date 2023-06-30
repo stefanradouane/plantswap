@@ -10,9 +10,9 @@
   cursor: pointer;
   display: inline-block;
 
-  &:hover {
-    text-decoration: underline;
-  }
+&:hover {
+  box-shadow: 0px 4px 4px var(--color-black);
+}
 
   &--primary {
     background-color: var(--color-orange);

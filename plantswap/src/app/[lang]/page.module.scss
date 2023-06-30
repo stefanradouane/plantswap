@@ -6,6 +6,11 @@
   }
 
   max-width: var(--max-width);
+  margin: 0 auto;
+
+     &__overview {
+       padding-top: 8em;
+     }
 
 		&--intro {
 			display: flex;
@@ -26,10 +31,6 @@
     @media screen and (max-width: 992px) {
       flex-wrap: wrap-reverse;
     }
-
-    @media screen and (min-width: 992px) {
-      //   height: 100vh;
-    }
   }
 
   &__content {
@@ -42,8 +43,7 @@
     padding: 0 var(--M-spacer);
     color: var(--color-text);
 
-    &--intro {
-    }
+
   }
   &--sideNote {
     position: absolute;
@@ -56,28 +56,10 @@
   }
 
   @media (max-width: 768px) {
-    // padding: var(--S-spacer);
-
-    &__content {
-      //   padding: var(--XS-spacer);
-    }
-
     &--sideNote {
       display: none;
     }
   }
-
-  //   @media screen and (max-width: 992px) {
-  //     &__hero {
-  //       flex-wrap: wrap-reverse;
-  //     }
-  //   }
-
-  //   @media screen and (min-width: 992px) {
-  //     &__hero {
-  //       height: 100vh;
-  //     }
-  //   }
 }
 }
 @keyframes Bounce {

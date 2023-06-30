@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./hero.module.scss";
 import Cta from "../Cta/Cta";
 import Text from "../Text/Text";
+import Link from "next/link";
 import Title from "../Title/Title";
 
 const Hero = ({ dictionary, lang, image, linkTo }) => {
@@ -31,9 +32,13 @@ const Hero = ({ dictionary, lang, image, linkTo }) => {
       />
 
       {dictionary.sideNote && (
-        <Text className={styles.hero__sidenote}>
-          {dictionary.sideNote} &#8594;
-        </Text>
+        // <Text className={styles.hero__sidenote}>
+        //   {dictionary.sideNote} &#8594;
+        // </Text>
+
+        <Link href='#overview-heading' className={styles.hero__sidenote}>
+            {dictionary.sideNote} &#8594;
+        </Link>
       )}
     </section>
   );

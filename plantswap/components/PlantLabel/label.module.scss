@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   gap: var(--XXS-spacer);
-  background-color: #ccc;
+  // background-color: #ccc;
+  background-color: var(--background-light);
   padding: var(--XXS-spacer);
   border-radius: var(--border-radius);
 

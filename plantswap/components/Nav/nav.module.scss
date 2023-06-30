@@ -14,12 +14,10 @@ $transition-speed: 200ms;
     top:var(--header-height);
     font-size: 1em;
     right: -100%;
-    // height: calc(100% - var(--header-height));
     height: fit-content;
-    padding: 2em;
+    padding: 1em;
     display: flex;
     flex-direction: column;
-    // justify-content: space-around;
     
     gap: 2.5em;
     transition: all $transition-speed;
@@ -40,14 +38,16 @@ $transition-speed: 200ms;
     &-item {
       display: flex;
       align-items: center;
-      font-size: 1.2em;
+      font-size: 1.5em;
       color: inherit;
       cursor: pointer;
       height: 100%;
      
 
       &--active {
-        color: var(--color-blue);
+        color: #005353;
+        font-weight: 700;
+        // color: var(--color-blue);
         // border-bottom: 5px solid var(--color-blue);
       }
     }
@@ -71,7 +71,6 @@ $transition-speed: 200ms;
     cursor: pointer;
     background: transparent;
     border: none;
-    // margin: 0 auto;
     height: 52px;
     width: 52px;
     aspect-ratio: 1/1;
@@ -115,7 +114,6 @@ $transition-speed: 200ms;
       display: flex;
       flex-direction: row;
       width: auto;
-      // justify-content: space-around;
       height: 100%;
       margin-left: 2em;
     }
