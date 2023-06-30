@@ -15,10 +15,10 @@ import useXML from "./useXML";
  * Possible resource to use for this component:
  * @link https://www.section.io/engineering-education/nextjs-dnd-file-upload/
  */
-const { newXML } = useXML();
-const xml = newXML();
 
 const Uploader = ({ data }) => {
+  const { newXML } = useXML();
+  const xml = newXML();
   const [uploadedValue, setUploadedValue] = useState(100);
   const uploader = useRef(null);
   const { locale, flowdata, dictionary } = data;
