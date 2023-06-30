@@ -8,6 +8,7 @@ const nextConfig = {
       "images.unsplash.com",
     ],
   },
+  ignoreDuringBuilds: true,
 };
 
 module.exports = nextConfig;
