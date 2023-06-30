@@ -80,6 +80,4 @@ const Contact = forwardRef(({ index }, ref) => {
   );
 });
 
-App.displayName = "Contact";
-
 export default Contact;

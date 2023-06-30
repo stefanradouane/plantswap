@@ -175,6 +175,4 @@ const About = () => {
   );
 };
 
-App.displayName = "About";
-
 export default About;
