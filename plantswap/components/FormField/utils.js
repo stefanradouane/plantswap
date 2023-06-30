@@ -51,7 +51,7 @@ export const ErrorMessage = ({ touched, error }) =>
  */
 export const Hints = ({ hintLow, hintHigh }) => (
   <section className={styles["form__part-hints"]}>
-    <Text modifier={["x-small", "grey"]}>🍎'tje 🥚'tje</Text>
+    <Text modifier={["x-small", "grey"]}>🍎&apos;tje 🥚&apos;tje</Text>
 
     <Text modifier={["x-small", "grey"]}>🥵 Heel moeilijk</Text>
   </section>
