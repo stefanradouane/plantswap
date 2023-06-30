@@ -1,3 +1,4 @@
+import ContinentIcon from "../ContinentIcon/ContinentIcon";
 import iconDict from "./Icon-dict";
 import styles from "./icon.module.scss";
 
@@ -11,7 +12,7 @@ const Icon = ({ iconName, lib, rotate, modifier }) => {
   ];
 
   if (lib && lib === "continets") {
-    return <IconContinent iconName={iconName} />;
+    return <ContinentIcon iconName={iconName} />;
   }
 
   return (
