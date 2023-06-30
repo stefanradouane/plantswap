@@ -8,7 +8,9 @@ const nextConfig = {
       "images.unsplash.com",
     ],
   },
-  ignoreDuringBuilds: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;
