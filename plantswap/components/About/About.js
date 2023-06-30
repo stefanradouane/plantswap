@@ -158,4 +158,7 @@ const About = () => {
   );
 };
 
+
+App.displayName='about';
+
 export default About;
